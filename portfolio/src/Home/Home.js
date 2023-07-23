@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
-
+import CV from '../asset/CV/Jasper.pdf'
+import '../style/index.css'
 function Home(){
     const [text] =  useTypewriter({
-        words:['Hello, I am Jasper!', 'A Software Developer'],
+        words:['my name is Jasper!', 'I am a Software Developer'],
         loop:true,
         typeSpeed:120,
         deleteSpeed:80
@@ -12,7 +13,7 @@ function Home(){
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
-        words:['HELLO WORLD'],
+        words:['Hello World,'],
         loop:1,
         typeSpeed:100,
       });
@@ -36,8 +37,15 @@ function Home(){
                  </h1>
                  <h2 className='subTitle'>
                     <span>{text}</span>
-                    <span style={{'color':'blue'}}><Cursor cursorStyle='|'/></span>
+                    <span style={{'color':'#00BE67'}}><Cursor cursorStyle='|'/></span>
                 </h2>
+                
+               <p className='content'>
+                                          With a passion for high quality
+                                          innovation app development, specifically tackling suitable problems.<br/>
+                                          My interest is to investage real world problem, then solving it by using software solution.
+               </p>
+               <a href={CV} download className='Download_CV'>Download My CV</a>
             </div>
           );
 }

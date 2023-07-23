@@ -1,0 +1,37 @@
+
+.container{
+  margin:0;
+  padding:0;
+  display:block;
+}
+
+/* #C252E1 */
+.onion{
+   background-color: #fff;
+   height:200px;
+   width:250px;
+   border-radius: 50% 50% 40% 40% / 40% 40% 60% 60%;
+   position: relative;
+}
+
+.onion::before{
+  background-color: #fff;
+  content: "";
+  height:55px;
+  width:55px;
+  margin: -40px 0 0 100px;
+  border-radius: 40% 40% 60% 60% / 20% 20% 40% 40%;
+  z-index: 5;
+  position: absolute;
+}
+/* #7542da */
+
+
+
+
+
+/* width: 200px; 
+height: 200px;
+background-color: rgb(186, 186, 248);
+border-radius: 0 80% 0 80%;   */
+

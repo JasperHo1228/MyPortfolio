@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+.project-container{
+    padding-top: 100px;
+}
+
+.project_title{
+    color: #F500BD;
+    font-size: 250%;
+    text-align: center;
+    font-family: Tomorrow, sans-serif;
+}
