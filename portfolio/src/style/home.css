@@ -1,0 +1,123 @@
+/* #2A2356; */
+.App{
+  padding-left:25%;
+}
+
+ .Topic{
+  font-family: Tomorrow, sans-serif;
+  color:#00BE67;
+  font-size: 300%;
+ }
+
+.subTitle{
+  font-family: Minecraftia;
+  color:#F500BD;
+}
+
+.content{
+  font-family: Tomorrow, sans-serif;
+  color:#00BE67;
+  font-size: 15px;
+}
+::after,
+::before{
+  box-sizing: border-box;
+}
+
+.Download_CV{
+  top:10px;
+  font-family: Tomorrow, sans-serif;
+  display:inline-block;
+  position: relative;
+  cursor: pointer;
+  color:#F500BD;
+  border: #F500BD 0.125em solid; 
+  text-decoration: none;
+  padding:0.25em 1em;
+  border-radius: 0.35em;
+  text-shadow: 0 0 0.2em #FFF7,
+               0 0 0.3em  #f712c1;
+  box-shadow: inset 0 0 0.6rem  #F500BD,
+                    0 0 0.6rem  #F500BD;
+}
+
+.Download_CV::before{
+  content: "";
+  position: absolute;
+  top: 120%;
+  left:0;
+  width: 100%;
+  height:100%;
+  background-color: #F500BD;
+  transform: 
+    perspective(1em)
+    rotateX(40deg)
+    scale(1,0.4);
+  filter:blur(0.7rem);
+  opacity:0.7;
+  pointer-events: none;
+}
+
+.Download_CV::after{
+  content:"";
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  box-shadow: 0 0 2em 0.5em #F500BD;
+  opacity: 0;
+  transition:opacity 120ms linear;
+}
+
+
+.Download_CV:hover,
+.Download_CV:focus{
+  color:#01111c;
+  background-color: #F500BD;
+  text-shadow: none;
+}
+
+.Download_CV:focus::before,
+.Download_CV:hover::before{
+  opacity: 1;
+}
+
+.Download_CV:focus::after,
+.Download_CV:hover::after{
+  opacity: 1;
+}
+
+
+.social-contact{
+  display: flex;
+  justify-content: center;
+  gap:1.5rem;
+  font-size: 30px;
+  position: relative;
+  margin-left:20%;
+  margin-top: 40px;
+} 
+
+.linkedIn, 
+.github{
+  color: #f712c1;
+  cursor: pointer;
+}
+
+
+.linkedIn:hover{
+  color: #00A1D5;
+}
+
+.github:hover{
+  color: #fcee09;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

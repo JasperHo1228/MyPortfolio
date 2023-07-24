@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
 import CV from '../asset/CV/Jasper.pdf'
-import '../style/index.css'
+import Nav from '../component/navbar.js'
+import MySocialMedia from '../MySocialMedia/MySocialMedia.js'
+import '../style/home.css'
 function Home(){
     const [text] =  useTypewriter({
         words:['my name is Jasper!', 'I am a Software Developer'],
@@ -33,7 +35,7 @@ function Home(){
             <div className="App">
                  <h1 className="Topic">
                     <span>{topic}</span>
-                    {cursorVisible && <span className="cursorTopic" style={{ color: 'blue' }}><Cursor cursorStyle = "|" /></span>}
+                    {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
                  </h1>
                  <h2 className='subTitle'>
                     <span>{text}</span>
@@ -41,12 +43,16 @@ function Home(){
                 </h2>
                 
                <p className='content'>
-                                          With a passion for high quality
-                                          innovation app development, specifically tackling suitable problems.<br/>
-                                          My interest is to investage real world problem, then solving it by using software solution.
+                                          With a passion for high quality, innovative app development,<br/>
+                                          I am specifically focused on tackling complex problems.<br/>
+                                          My interest lies in investigating real-world issues and solving them using software solutions.
                </p>
                <a href={CV} download className='Download_CV'>Download My CV</a>
+               
+              <MySocialMedia/>
+              <Nav/>
             </div>
           );
 }
 export default Home;
+
