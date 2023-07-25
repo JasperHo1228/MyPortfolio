@@ -1,3 +1,174 @@
-.Navbar{
-    position: absolute;
+
+nav{
+  position: fixed;
+  left:20px;
+  background-color: #001D31;;
+  height: 95vh;
+  top:20px;
+  width: 70px;
+  border-radius: 10px;
+  box-sizing: initial;
+  transition: width 0.5s;
+  overflow-x: hidden;
+  z-index: 10; 
+  border: #00A1D5 solid;
+  text-shadow: 0 0 0.2em #FFF7,
+  0 0 0.3em  #00A1D5;
+  box-shadow: inset 0 0 0.6rem #00A1D5,
+          0 0 0.6rem  #00A1D5;
+}
+
+nav#open {
+  width: 300px;
+}
+
+
+nav#open .menu-icon{
+display: none;
+transition: ease-in-out 1ms;
+}
+
+nav#close .close-icon{
+  display: none;
+  transition: ease-in-out 1ms;
+}
+
+
+nav .wholeul{
+  position: absolute;
+  top:130px;
+  left:0;
+  width:100%;
+  padding-left: 5px;
+  padding: 40px 5px 0 5px;
+}
+
+nav .wholeul .remove{
+  position:relative;
+  list-style-type: none;
+  width: 100%;
+}
+
+
+nav .wholeul .remove .barlink{
+  position: relative;
+  display: block;
+  width:100%;
+  display:flex;
+  text-decoration: none;
+  color:aqua;
+  
+}
+
+nav .wholeul .remove .barlink .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+nav .wholeul .remove .barlink .icon ion-icon{
+  font-family: Tomorrow, sans-serif;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+nav .wholeul .remove .barlink title{
+  font-family: Tomorrow, sans-serif;
+  position:relative; 
+  display: block;
+  padding-left: 10px;
+  height:60px;
+  line-height: 60px;
+  white-space: normal;
+  cursor: pointer;
+}
+
+hamburger-icon {
+  position: relative;
+  margin-left: 20px;
+  bottom: 130px;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: aqua;
+}
+
+hamburger-icon:hover{
+  color: #F500BD;
+  animation: hamburger-icon-glowing 2s infinite;
+}
+
+@keyframes hamburger-icon-glowing {
+  0% {
+    opacity: 0.5; /* Initial opacity */
+  }
+  50% {
+    opacity: 1; /* Max opacity */
+  }
+  100% {
+    opacity: 0.5; /* Final opacity */
+  }
+}
+
+
+/* Apply hover effect to the .barlink class */
+nav .wholeul .remove .barlink:hover {
+  background-color: #F500BD;
+  box-shadow: inset 0 0 0.6rem  #F500BD,
+                    0 0 0.6rem  #F500BD;
+  border-radius: 20px;
+  color: black;
+  text-shadow: 0 0 0.2em #FFF7,
+               0 0 0.6em  #1f1d1d;
+  animation: glowing 2s infinite;
+  animation: glowing2 2s infinite;
+  letter-spacing: 3px;
+}
+
+@keyframes glowing {
+  0% {
+    opacity: 0.5; /* Initial opacity */
+  }
+  50% {
+    opacity: 1; /* Initial opacity */
+  }
+  100% {
+    opacity: 0.5; /* Initial opacity */
+  }
+}
+
+@keyframes glowing2 {
+  0% {
+    box-shadow: inset 0 1 0.1rem  #F500BD,
+                      0 1 0.1rem  #F500BD;
+  }
+  50% {
+    box-shadow: inset 0 0 1rem  #F500BD,
+                      0 0 1rem  #F500BD;
+  }
+  100% {
+    box-shadow: inset 0 0 0.1rem  #F500BD,
+                 0 0 0.1rem  #F500BD;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  pointer-events: none; 
+  z-index: 10;
+  display: none; 
+}
+
+/* Apply a transition to smoothly show/hide the overlay */
+.overlay.active {
+  display: block;
+  transition: opacity 0.5s;
+  opacity: 1;
 }

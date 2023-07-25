@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
 import CV from '../asset/CV/Jasper.pdf'
-import Nav from '../component/navbar.js'
-import MySocialMedia from '../MySocialMedia/MySocialMedia.js'
 import '../style/home.css'
+
+
 function Home(){
     const [text] =  useTypewriter({
         words:['my name is Jasper!', 'I am a Software Developer'],
@@ -32,7 +32,7 @@ function Home(){
         }, [topic]);
 
         return (
-            <div className="App">
+            <div className="home-container" id="Home">
                  <h1 className="Topic">
                     <span>{topic}</span>
                     {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
@@ -48,10 +48,8 @@ function Home(){
                                           My interest lies in investigating real-world issues and solving them using software solutions.
                </p>
                <a href={CV} download className='Download_CV'>Download My CV</a>
-               
-              <MySocialMedia/>
-              <Nav/>
             </div>
+ 
           );
 }
 export default Home;

@@ -1,6 +1,7 @@
-/* #2A2356; */
-.App{
+
+.home-container{
   padding-left:25%;
+  margin-top: 250px;
 }
 
  .Topic{
@@ -12,20 +13,23 @@
 .subTitle{
   font-family: Minecraftia;
   color:#F500BD;
+  margin-top:25px;
 }
 
 .content{
   font-family: Tomorrow, sans-serif;
   color:#00BE67;
   font-size: 15px;
+  margin-top:25px;
 }
+
 ::after,
 ::before{
   box-sizing: border-box;
 }
 
 .Download_CV{
-  top:10px;
+  margin-top:25px;
   font-family: Tomorrow, sans-serif;
   display:inline-block;
   position: relative;
@@ -86,32 +90,6 @@
 .Download_CV:focus::after,
 .Download_CV:hover::after{
   opacity: 1;
-}
-
-
-.social-contact{
-  display: flex;
-  justify-content: center;
-  gap:1.5rem;
-  font-size: 30px;
-  position: relative;
-  margin-left:20%;
-  margin-top: 40px;
-} 
-
-.linkedIn, 
-.github{
-  color: #f712c1;
-  cursor: pointer;
-}
-
-
-.linkedIn:hover{
-  color: #00A1D5;
-}
-
-.github:hover{
-  color: #fcee09;
 }
 
 html{
