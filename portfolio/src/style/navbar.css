@@ -22,7 +22,6 @@ nav#open {
   width: 300px;
 }
 
-
 nav#open .menu-icon{
 display: none;
 transition: ease-in-out 1ms;
@@ -32,7 +31,6 @@ nav#close .close-icon{
   display: none;
   transition: ease-in-out 1ms;
 }
-
 
 nav .wholeul{
   position: absolute;
@@ -122,8 +120,8 @@ nav .wholeul .remove .barlink:hover {
   color: black;
   text-shadow: 0 0 0.2em #FFF7,
                0 0 0.6em  #1f1d1d;
-  animation: glowing 2s infinite;
-  animation: glowing2 2s infinite;
+  animation: glowing 1s infinite;
+  animation: glowing2 qs infinite;
   letter-spacing: 3px;
 }
 
@@ -141,16 +139,16 @@ nav .wholeul .remove .barlink:hover {
 
 @keyframes glowing2 {
   0% {
-    box-shadow: inset 0 1 0.1rem  #F500BD,
-                      0 1 0.1rem  #F500BD;
+    box-shadow: inset 0 0 0.1rem  #F500BD,
+                      0 0 0.1rem  #F500BD;
   }
   50% {
-    box-shadow: inset 0 0 1rem  #F500BD,
-                      0 0 1rem  #F500BD;
+    box-shadow: inset 0 0 0.6rem  #F500BD,
+                      0 0 0.6rem  #F500BD;
   }
   100% {
     box-shadow: inset 0 0 0.1rem  #F500BD,
-                 0 0 0.1rem  #F500BD;
+                      0 0 0.1rem  #F500BD;
   }
 }
 

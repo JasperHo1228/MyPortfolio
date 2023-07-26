@@ -1,6 +1,5 @@
 import '../style/navbar.css';
 import React, { useState, useEffect} from 'react';
-import { Link } from 'react-scroll';
 import { myRoute } from '../component/Route.js';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -47,19 +46,14 @@ function NavBar() {
           )}
 
           {myOwnRoute.map((link) => (
+      
             <li className="remove">
-              <Link
-                to={link.title}
-                spy={true}
-                smooth={true}
-                offset={-250}
-                duration={50}
-                className="barlink">
-                <span className="icon">
-                  <ion-icon>{link.icon}</ion-icon>
-                </span>
-                <title>{link.title}</title>
-              </Link>
+                  <a href={link.direct} className="barlink"> 
+                  <span className="icon">
+                   <ion-icon>{link.icon}</ion-icon>
+                  </span>
+              <title>{link.title}</title>
+               </a>
             </li>
           ))}
 

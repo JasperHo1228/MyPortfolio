@@ -1,20 +1,24 @@
 
-.container{
-  display:block;
-  padding-left: 20%;
+#Skills {
+  margin-top: 50%; /* Adjust this value as needed */
 }
 
+/* .container{
+  display:block;
+  padding-left: 20%;
+} */
+
 /* #C252E1 */
-.onion{
+/* .onion{
    background-color: #fff;
    height:200px;
    width:250px;
    border-radius: 50% 50% 40% 40% / 40% 40% 60% 60%;
    position: relative;
 
-}
+} */
 
-.onion::before{
+/* .onion::before{
   background-color: #fff;
   content: "";
   height:55px;
@@ -24,7 +28,7 @@
   z-index: 5;
   position: absolute;
   border: #fff solid;
-}
+} */
 /* #7542da */
 
 .skillsSet{

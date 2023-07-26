@@ -1,10 +1,73 @@
 .project-container{
-   
+   margin-left: 105px;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 7rem;
+   margin-top: 5%;
+   position: absolute;
 }
 
 .project_title{
     font-family: Tomorrow, sans-serif;
     color: #F500BD;
     font-size: 250%;
+    margin-left: 44rem;
+    margin-right:37rem;
+}
+
+img {
+    position: relative;
+    width: 100%; 
+    border-width: 0.5rem;
+  }
+
+.project_item{
+    background-color: #00A1D5;
+    padding:1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: ease-in-out;
+}
+
+.project_item .project_img{
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.btn{
+    font-family: Tomorrow, sans-serif;
+    width: max-content;
+    background-color: #F500BD;
+    color: #00BE67;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    padding:0.75rem 1.2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.project_item h3{
+    margin:1.2rem 0 2rem;
     text-align: center;
+}
+
+.btn2{
+    font-family: Tomorrow, sans-serif;
+    width: max-content;
+    background-color: #00BE67;
+    color: #F500BD;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    padding:0.75rem 1.2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.project_link{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    margin-bottom:1rem;
 }
