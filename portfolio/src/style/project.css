@@ -1,21 +1,36 @@
+
 .project-container{
-   margin-left: 105px;
    display: grid;
    justify-content: center;
    align-items: center;
    grid-template-columns: repeat(3, 1fr);
-   grid-gap: 7rem;
-   margin-top: 5%;
-   position: absolute;
+   grid-gap: 3rem;
+  
 }
 
-.project_title{
-    font-family: Tomorrow, sans-serif;
-    color: #F500BD;
-    font-size: 250%;
-    margin-left: 44rem;
-    margin-right:37rem;
+@media screen and (max-width: 1024px) {
+    .project-container{
+        grid-template-columns:repeat(2, 1fr);
+        gap:1.2rem;
+     }
+
+  }
+
+  @media screen and (max-width: 658px) {
+
+    .project-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+     }
+  }
+
+.project{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
 /* red #ff2770
 blue #45f3ff
 #6B0082 purple
@@ -27,13 +42,18 @@ blue #45f3ff
     border-radius: 0.5rem;
     position: relative;
     overflow: hidden;
+    justify-content: center;
+    height: 100%; /* You can adjust this value as needed */
+    width: 100%;
+
 }
 
 .frame::before{
     content:'';
     position: absolute;
     inset: -50% 20%;
-    background: linear-gradient(32deg, #00ccff, #ff05ff);
+    inset: -100% -200%;   
+    background: linear-gradient(0deg, #85FEA1,#2c7dff);
     transition: 0.5s;
     animation: animation-item 4s linear infinite;
 }
@@ -53,7 +73,8 @@ blue #45f3ff
     content: '';
     position:absolute;
     inset:4px;
-    background-color: #0c1c39;
+    background-color: #000000;
+    filter:blur(40px);
     border-radius: 0.5rem;
     filter:blur(2px)
 }
@@ -62,10 +83,6 @@ blue #45f3ff
     inset: -100% -200%;   
 }
 
-.frame:hover::after{
-    box-shadow: inset 0 0 0.6rem #00ccff,
-                inset 0 0 0.6rem  #d400d4;
-}
 
 .project_item{
     padding:1.2rem;
@@ -82,8 +99,7 @@ blue #45f3ff
 
 .btn{
     font-family: Tomorrow, sans-serif;
-    width: max-content;
-    border: #F500BD solid;
+    border: 2px #F500BD solid;
     color: #F500BD;
     text-shadow: 0 0 0.1em #FFF7,
     0 0 0.3em  #f712c1;
@@ -95,20 +111,117 @@ blue #45f3ff
     cursor: pointer;
     display: inline-block;
     z-index: 1;
+    position: relative;
 }
+
+.btn::before{
+    content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(233, 31, 31, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 0;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+.btn::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+    0% {
+    opacity: 0.27861;
+    }
+    5% {
+    opacity: 0.34769;
+    }
+    10% {
+    opacity: 0.23604;
+    }
+    15% {
+    opacity: 0.90626;
+    }
+    20% {
+    opacity: 0.18128;
+    }
+    25% {
+    opacity: 0.83891;
+    }
+    30% {
+    opacity: 0.65583;
+    }
+    35% {
+    opacity: 0.67807;
+    }
+    40% {
+    opacity: 0.26559;
+    }
+    45% {
+    opacity: 0.84693;
+    }
+    50% {
+    opacity: 0.96019;
+    }
+    55% {
+    opacity: 0.08594;
+    }
+    60% {
+    opacity: 0.20313;
+    }
+    65% {
+    opacity: 0.71988;
+    }
+    70% {
+    opacity: 0.53455;
+    }
+    75% {
+    opacity: 0.37288;
+    }
+    80% {
+    opacity: 0.71428;
+    }
+    85% {
+    opacity: 0.70419;
+    }
+    90% {
+    opacity: 0.7003;
+    }
+    95% {
+    opacity: 0.36108;
+    }
+    100% {
+    opacity: 0.24387;
+    }
+  }
 .btn:hover{
     text-shadow: 0 0 0.2em #FFF7,
                  0 0 0.3em  #f712c1;
     box-shadow: inset 0 0 0.6rem  #F500BD,
                       0 0 0.6rem  #F500BD;
+                      
+  z-index: 1;
+  
 }
 .btn2{
     font-family: Tomorrow, sans-serif;
     width: max-content;
-    background-color: #00ccff;
-    color: #000;
+    border: #00ccff solid;
+    color: #00ccff;
     text-shadow: 0 0 0.1em #FFF7,
-                 0 0 0.1em  #000;
+                 0 0 0.1em  #00ccff;
     box-shadow: inset 0 0 0.2rem  #00ccff,
                       0 0 0.3rem  #00ccff;
     text-decoration: none;
@@ -118,6 +231,7 @@ blue #45f3ff
     display: inline-block;
     z-index: 1;
 }
+
 .btn2:hover{
     text-shadow: 0 0 0.2em #FFF7,
                  0 0 0.3em  #000;
@@ -145,12 +259,12 @@ blue #45f3ff
     text-align: center;
     margin-bottom:1rem;
     z-index: 1;
-    color: #c613ee;
+    color: #00BE67;
     text-shadow: 0 0 0.1em #FFF7,
-    0 0 0em  #c613ee;
+    0 0 0em  #00BE67;
 } 
 
 .title:hover{
     text-shadow: 0 0 0.7em rgba(204, 194, 194, 0.467),
-    0 0 0.2em  #c613ee;
+    0 0 0.2em  #00BE67;
 }

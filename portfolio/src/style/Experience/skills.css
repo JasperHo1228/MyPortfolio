@@ -3,10 +3,9 @@
   margin-top: 50%; /* Adjust this value as needed */
 }
 
-/* .container{
+.container{
   display:block;
-  padding-left: 20%;
-} */
+}
 
 /* #C252E1 */
 /* .onion{
@@ -34,6 +33,9 @@
 .skillsSet{
   color: #fff;
   font-family: Tomorrow, sans-serif;
+  margin-left: 40rem;
+  margin-right:33rem;
+  text-align: center;
 }
 
 

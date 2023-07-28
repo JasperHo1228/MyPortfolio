@@ -29,10 +29,9 @@ function NavBar() {
   }, []);
 
   return (
-    <>
+    <div className='navbar'>
       {/* Overlay to reduce the brightness */}
       {isNavbarOpen && <div className="overlay active" />}
-
       <nav id={isNavbarOpen ? 'open' : 'close'}>
         <ul className="wholeul">
           {isNavbarOpen ? (
@@ -41,6 +40,7 @@ function NavBar() {
             </hamburger-icon>
           ) : (
             <hamburger-icon onClick={togglerNavbar} className="menu-icon">
+
               <GiHamburgerMenu />
             </hamburger-icon>
           )}
@@ -80,7 +80,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
 
