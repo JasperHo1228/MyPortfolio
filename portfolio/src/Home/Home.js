@@ -6,7 +6,7 @@ import '../style/home.css'
 
 function Home(){
     const [text] =  useTypewriter({
-        words:['my name is Jasper!', 'I am a Software Developer'],
+        words:['My name is Jasper', 'A Software Developer'],
         loop:true,
         typeSpeed:120,
         deleteSpeed:80
@@ -15,7 +15,7 @@ function Home(){
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
-        words:['Hello World,'],
+        words:['Hello World!'],
         loop:1,
         typeSpeed:100,
       });

@@ -1,5 +1,225 @@
-#Experience{}
+#Experience{
+    margin-top: 15%;
+}
+
+.timeline_experience{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: relative;
+}
+
+.main-experience-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    max-width: 1200px;
+}
+
+.experience_container{
+    padding: 10px 50px;
+    width: 50%;
+    position: relative;
+    opacity: 0;
+}
 
 
+.experience_container.right_position.animate-container {
+    animation: fadeInRight 1s forwards;
+  }
+  
+  .experience_container.left_position.animate-container {
+    animation: fadeInLeft 1s forwards;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(230px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-230px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
 
 
+.text-box{
+    padding:20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+.left_position{
+    left:0;
+}
+
+.right_position{
+    left:50%;
+}
+
+/* you forgot to set the width and height that's why the backgroud width will increase */
+.experience_container experienceIcon{
+    position: absolute;
+    font-family: Tomorrow, sans-serif;
+    font-size: 2rem;
+    top:30px;
+    width: 40px;
+    height: 43px;
+    z-index: 10;
+    background-color: #f500bd;
+    padding: 4px;
+    border-radius: 50%;
+    right: -20px; 
+    color: #fff;
+}
+
+
+.right_position experienceIcon {
+    left: -21px; 
+}
+
+.timeline_experience::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 0;
+    background-color: #f500bd;
+    top: 120px;
+    left: 50%;
+    margin-left: -6px;
+    z-index: -1;
+    transform-origin: top center;
+    transition: height 1s ease-in-out;
+  }
+  
+  .timeline-container.animate-timeline::after {
+    animation: timelineMove 1s forwards; /* Start the animation when visible */
+  }
+  
+  @keyframes timelineMove {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  
+  
+
+
+.text-box{
+    font-weight: 600;
+}
+
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;;
+}
+
+.left-arrow{
+    height:0;
+    width:0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right:-15px;
+}
+
+.right-arrow{
+    height:0;
+    width:0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left:-15px;
+}
+
+
+@media screen and (max-width: 658px) {
+
+    .timeline_experience{
+        margin: 50px auto;
+     }
+
+     .timeline_experience::after{
+        left:31px;
+     }
+
+     .experience_container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+        position: relative;
+     }
+
+     .text-box{
+        font-size:13px;
+     }
+
+     .text-box small{
+        margin-bottom:10px;
+     }
+
+     .right_position{
+        text-align: left;
+        width:100%;
+        left:0;
+     }
+  
+     .experienceIcon{
+        float: none;
+        clear:none;
+     }
+
+     .right_position experienceIcon,  
+     .left_position experienceIcon {
+        left: 10px;
+      }
+
+
+      .experience_container.left_position.animate-container,
+      .experience_container.right_position.animate-container { 
+        animation: fadeInUp 1s forwards;
+      }
+
+      @keyframes fadeInUp{
+        0% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+     .right-arrow, .left-arrow{
+        border-right:15px solid #fff;
+        border-left: 0;
+        left: -15px;
+     }
+  }

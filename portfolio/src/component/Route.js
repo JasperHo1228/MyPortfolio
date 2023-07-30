@@ -3,9 +3,10 @@ import Home from '../Home/Home.js'
 import Project from '../Project/project.js'
 import Skills from '../Experience/Skills.js'
 import Experience from '../Experience/experience.js'
-import {BiHomeAlt} from 'react-icons/bi'
+import {BiHomeAlt,BiSolidBriefcaseAlt2} from 'react-icons/bi'
 import {GiSkills} from 'react-icons/gi'
 import {PiProjectorScreenChartFill} from 'react-icons/pi'
+import {MdContactMail} from 'react-icons/md'
 export const myRoute = [
     {
         id:1,
@@ -23,19 +24,26 @@ export const myRoute = [
     },
     {
         id:3,
+        direct:"#Experience",
+        title: "Experience", 
+        element:<Experience />,
+        icon:<BiSolidBriefcaseAlt2/>
+    },
+
+    {
+        id:4,
         direct:"#Skills",
         title: "Skills", 
         element:<Skills/>,
         icon:<GiSkills/>
     },
+
     {
-            
-        id:4,
-        direct:"#Experience",
-        title: "Experience", 
-        element:<Experience />,
-        icon:<GiSkills/>
-    
+        id:5,
+        direct:"#ContactMe",
+        title: "Contact Me", 
+        element:"",
+        icon:<MdContactMail/>
     }
 ];
 

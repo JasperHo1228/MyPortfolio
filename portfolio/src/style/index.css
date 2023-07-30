@@ -24,7 +24,7 @@ body{
 }
 
 .main_content{
-    margin-left: 70px;
+    margin-left: 110px;
 }
 
 section{
@@ -37,5 +37,6 @@ section{
     font-family: Tomorrow, sans-serif;
     color: #F500BD;
     font-size: 250%;
+    text-align: center;
 }
 
