@@ -26,7 +26,7 @@ export const project_json = [
        {
         id:3,
         image: holidayApp,
-        title: "HolidaySearchingApp",
+        title: "Holiday Searching App",
         description:"This application is to help people to filter up all the holiday that they want to know.",
         youtube_link: "",
         source_code:"https://github.com/JasperHo1228/HolidaySearchingApp"
