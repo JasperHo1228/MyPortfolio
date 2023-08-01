@@ -24,45 +24,13 @@
     opacity: 0;
 }
 
-
-.experience_container.right_position.animate-container {
-    animation: fadeInRight 1s forwards;
-  }
-  
-  .experience_container.left_position.animate-container {
-    animation: fadeInLeft 1s forwards;
-  }
-  
-  @keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(230px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-230px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-
-
 .text-box{
     padding:20px 30px;
-    background-color: #fff;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
+    font-weight: 600;
+    background-color: #0d3d4d;
 }
 
 
@@ -75,7 +43,7 @@
 }
 
 /* you forgot to set the width and height that's why the backgroud width will increase */
-.experience_container experienceIcon{
+.experience_container .experienceIcon{
     position: absolute;
     font-family: Tomorrow, sans-serif;
     font-size: 2rem;
@@ -87,30 +55,65 @@
     padding: 4px;
     border-radius: 50%;
     right: -20px; 
-    color: #fff;
+    color: #001D31;
 }
 
 
-.right_position experienceIcon {
+.right_position .experienceIcon {
     left: -21px; 
 }
 
+.timeline_container {
+  position: relative;
+}
+
+.timeline_experience::before { 
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #f500bd;
+  position: absolute;
+  left: calc(50% - 15.5px);
+  top: 0;
+  transform: translateY(90px) rotate(-90deg);
+  opacity: 0;
+  z-index: 0; 
+}
+
 .timeline_experience::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 0;
-    background-color: #f500bd;
-    top: 120px;
-    left: 50%;
-    margin-left: -6px;
-    z-index: -1;
-    transform-origin: top center;
-    transition: height 1s ease-in-out;
-  }
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 0;
+  background-color: #f500bd;
+  top: 120px;
+  left: 50%; /* Center the line relative to the parent container */
+  transform: translateX(-50%);
+  z-index: -1; /* Place the line behind the arrow */
+  transition: height 1s ease-in-out;
+}
+  
+.timeline-container.animate-timeline::before {
+  animation: arrowMove 0.3s forwards;
+}
+   @keyframes arrowMove {
+    0%{
+      opacity: 0;
+    }
+    50%{
+       opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+   }
+
   
   .timeline-container.animate-timeline::after {
-    animation: timelineMove 1s forwards; /* Start the animation when visible */
+    animation: timelineMove 1s forwards; 
+    transition: ease-in;
   }
   
   @keyframes timelineMove {
@@ -122,18 +125,6 @@
     }
   }
   
-  
-
-
-.text-box{
-    font-weight: 600;
-}
-
-.text-box small{
-    display: inline-block;
-    margin-bottom: 15px;;
-}
-
 .left-arrow{
     height:0;
     width:0;
@@ -142,7 +133,7 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid #0d3d4d;
     right:-15px;
 }
 
@@ -154,16 +145,176 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid #0d3d4d;
     left:-15px;
 }
 
+.experience-title{
+   color:#0fb8fa;
+   font-family: Tomorrow, sans-serif;
+}
 
-@media screen and (max-width: 658px) {
+.experience-subtitle{
+  color:#0fb8fa;
+  font-family: Tomorrow, sans-serif;
+}
+
+.experience-date{
+   color:#0fb8fa;
+   font-family: Tomorrow, sans-serif;
+}
+
+.experience-contribution{
+   color:#f500bd;
+   font-family: Tomorrow, sans-serif;
+   display: none;
+   animation:close-contribution 1s forwards;
+}
+
+.experience_container.right_position.animate-container {
+  animation: fadeInRight 1s forwards;
+}
+
+.experience_container.left_position.animate-container {
+  animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.TapMebtn{
+  border:#f500bd solid;
+  color:#f500bd;
+  border-radius: 0.5rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding:0.5rem 1.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* action need to be done when trigger the className:moreInfoVisible */
+.moreInfoVisible .experience-contribution{
+  display: block;
+  animation:  contributionInfo 1s forwards;
+}
+
+.moreInfoVisible .TapMebtn{
+  display: none;
+}
+
+/* Trigger closing animation when a new button is clicked */
+.moreInfoVisible.closing {
+  animation: close-contribution 1s forwards;
+}
+
+/* show contribution animation */
+@keyframes contributionInfo {
+  0%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+/* close button control and style */
+.Experience_closebtn{
+  position: absolute;
+  color:#0fb8fa;
+  left:10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.Experience_closebtn.btn-hidden {
+  display: none;
+}
+
+.Experience_closebtn.btn-visible {
+  animation: experience_closebtn 1s forwards;
+  display: block;
+}
+
+/* closing the contribute animation */
+.experience-contribution[closing]{
+  display: block;
+  pointer-events: none;
+  animation: close-contribution 1s forwards;
+}
+
+.text-box[closing]{
+  transition: all .5s linear;
+  animation: textboxClosing 2s forwards;
+}
+
+@keyframes textboxClosing {
+  0%{
+    height:50%
+  }
+  100%{
+    height:0%;
+  }
+}
+@keyframes experience_closebtn {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes close-contribution{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+/* screen sixe tuning */
+@media screen and (max-width: 1160px){
+  .timeline_experience{
+    margin-bottom:25%;
+  }
+}
+
+@media screen and (max-width: 758px) {
 
     .timeline_experience{
         margin: 50px auto;
      }
+    .timeline_experience::before{
+      left:16px;
+    }
 
      .timeline_experience::after{
         left:31px;
@@ -180,10 +331,6 @@
         font-size:13px;
      }
 
-     .text-box small{
-        margin-bottom:10px;
-     }
-
      .right_position{
         text-align: left;
         width:100%;
@@ -195,8 +342,8 @@
         clear:none;
      }
 
-     .right_position experienceIcon,  
-     .left_position experienceIcon {
+     .right_position .experienceIcon,  
+     .left_position .experienceIcon {
         left: 10px;
       }
 
@@ -218,8 +365,14 @@
       }
 
      .right-arrow, .left-arrow{
-        border-right:15px solid #fff;
+        border-right:15px solid #0d3d4d;
         border-left: 0;
         left: -15px;
      }
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .text-box{
+      font-size: 10px;
+    }
   }

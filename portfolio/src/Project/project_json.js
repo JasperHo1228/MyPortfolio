@@ -17,7 +17,7 @@ export const project_json = [
        {   
         id:2,
         image: CM_system,
-        title: "Customer-Managment-System",
+        title: "Customer Managment System",
         description:"This software system is for people who is working as an admin to easily manage customer data.",
         youtube_link: "https://youtu.be/Ribh8SJNaic",
         youtube_link2:"https://youtu.be/LUfA0d6VwHI",

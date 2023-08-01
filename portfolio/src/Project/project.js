@@ -6,27 +6,24 @@ function Project() {
 
     
   const projects = [...project_json];
+
   const [currentProject, setCurrentProject] = useState(null);
-
-
+  
   const handleMoreDetailClick = (index) => {
     const frame = document.getElementById(`frame-${index}`);
-    frame.classList.remove('overlay-hidden')
-    frame.classList.add('overlay-visible');
+    frame.classList.toggle('overlay-visible', true);
     setCurrentProject(index);
   };
-
+  
   const handleOverlayClose = () => {
     const frame = document.getElementById(`frame-${currentProject}`);
-    frame.classList.remove('overlay-visible');
-    frame.classList.add('overlay-hidden');
+    frame.classList.toggle('overlay-visible', false);
     setCurrentProject(null);
   };
   
-  
   return (
     <div className='project' id='Project'>
-      <h1 className='page_title'>Project</h1>
+      <h1 className='project_title'>Project</h1>
       <div className='project-container'>
         {projects.map((link, index) => (
           <div className='frame'
@@ -50,17 +47,18 @@ function Project() {
                 </div>
               </div>
               <div className='project_link'>
-                <button
-                  className='detailbtn'
+                <div
+                  className="detailbtn" 
                   onClick={() => handleMoreDetailClick(index)}
                 >
-                  More Detail
-                </button>
+                   <div class="gradient-text">
+                        More Detail
+                    </div>
+                </div>
               </div>
               {currentProject === index && (
                 <div className='frame-overlay'>
-                <div className='con'>
-                
+                <div className='project_detail'>
                   <h2 className='projectAim'>Project Aim</h2>
                   <p className="project_description">{link.description}</p>
                   <div className='project_link linkInfo'>
