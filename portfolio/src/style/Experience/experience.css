@@ -31,7 +31,9 @@
     font-size: 15px;
     font-weight: 600;
     background-color: #0d3d4d;
+    transition: 1s ease-in;
 }
+
 
 
 .left_position{
@@ -89,16 +91,17 @@
   height: 0;
   background-color: #f500bd;
   top: 120px;
-  left: 50%; /* Center the line relative to the parent container */
+  left: 50%; 
   transform: translateX(-50%);
-  z-index: -1; /* Place the line behind the arrow */
+  z-index: -1; 
   transition: height 1s ease-in-out;
 }
   
 .timeline-container.animate-timeline::before {
-  animation: arrowMove 0.3s forwards;
+  animation: arrowAppear 0.3s forwards;
 }
-   @keyframes arrowMove {
+
+   @keyframes arrowAppear {
     0%{
       opacity: 0;
     }
@@ -121,7 +124,7 @@
       height: 0;
     }
     100% {
-      height: 100%;
+      height: 95%;
     }
   }
   
@@ -168,7 +171,6 @@
    color:#f500bd;
    font-family: Tomorrow, sans-serif;
    display: none;
-   animation:close-contribution 1s forwards;
 }
 
 .experience_container.right_position.animate-container {
@@ -202,15 +204,29 @@
 }
 
 .TapMebtn{
+  position: relative;
+  font-family: Tomorrow, sans-serif;
   border:#f500bd solid;
   color:#f500bd;
   border-radius: 0.5rem;
   display: block;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  left:25%;
   padding:0.5rem 1.2rem;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
+}
+
+.TapMebtn:hover{
+  color:#0d3d4d;
+  background-color: #f500bd;
+  text-shadow: 0 0 0.2em #FFF7,
+               0 0 0.5em  #0d3d4d;
+  box-shadow: inset 0 0 1rem  #F500BD,
+                    0 0 1rem  #F500BD;
+  transition: ease-in-out 1s ;
 }
 
 /* action need to be done when trigger the className:moreInfoVisible */
@@ -231,7 +247,7 @@
 /* show contribution animation */
 @keyframes contributionInfo {
   0%{
-    transform: translateY(50px);
+    transform: translateY(-50px);
   }
   100%{
     transform: translateY(0px);
@@ -244,8 +260,19 @@
   color:#0fb8fa;
   left:10px;
   top: 10px;
+  width: 18px; /* Set equal width and height */
+  height: 18px; /* Set equal width and height */
   cursor: pointer;
+  transition: 1s ease-in;
+  vertical-align: middle;
+  border: #0d3d4d solid;
 }
+
+.Experience_closebtn:hover {
+  color: #F500BD;
+  transform: rotateZ(360deg); /* Rotation on hover */
+}
+
 
 .Experience_closebtn.btn-hidden {
   display: none;
@@ -260,22 +287,10 @@
 .experience-contribution[closing]{
   display: block;
   pointer-events: none;
-  animation: close-contribution 1s forwards;
+  animation: close-contribution 0.5s forwards;
+  transition: ease-out 250ms;
 }
 
-.text-box[closing]{
-  transition: all .5s linear;
-  animation: textboxClosing 2s forwards;
-}
-
-@keyframes textboxClosing {
-  0%{
-    height:50%
-  }
-  100%{
-    height:0%;
-  }
-}
 @keyframes experience_closebtn {
   0%{
     opacity: 0;
@@ -289,8 +304,6 @@
   }
 }
 
-
-
 @keyframes close-contribution{
   0%{
     opacity: 1;
@@ -300,7 +313,7 @@
   }
 }
 
-/* screen sixe tuning */
+/* screen size tuning */
 @media screen and (max-width: 1160px){
   .timeline_experience{
     margin-bottom:25%;
@@ -374,5 +387,9 @@
   @media screen and (max-width: 600px) {
     .text-box{
       font-size: 10px;
+    }
+    .TapMebtn{
+      width: 100%;
+      left: 0;
     }
   }

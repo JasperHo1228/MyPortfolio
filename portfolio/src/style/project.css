@@ -225,9 +225,6 @@ blue #45f3ff
   box-shadow: inset 0 0 1rem #13df83, 0 0 1rem #10fe10;
 }
 
-/* color: transparent; 
--webkit-text-stroke: 2px #000; 
-text-shadow: 0 0 0.1em #FFF7, 0 0 0.1em #111211; */
 
 .gradient-text {
   font-size: 20px;
@@ -336,7 +333,7 @@ text-shadow: 0 0 0.1em #FFF7, 0 0 0.1em #111211; */
   border: #6c0c79 0.2rem solid;
   box-shadow: inset 0 0 2rem  #6c0c79,
               inset 0 0 2rem  #6c0c79;
-              
+  pointer-events: none;
 }
 
 .project_detail{
@@ -349,6 +346,25 @@ text-shadow: 0 0 0.1em #FFF7, 0 0 0.1em #111211; */
 .frame.overlay-visible .frame-overlay {
   opacity: 1;
   animation: coverFrame 1.5s forwards;
+  pointer-events: auto;
+}
+
+.frame-overlay[closing]{
+  animation: closeOverlay 2s forwards;
+}
+
+@keyframes closeOverlay{
+  0%{
+    background-color: rgba(0, 0, 0, 1);
+    transform: translateY(0);
+  }
+  50%{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100%{
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-700px);
+  }
 }
 
 @keyframes coverFrame{
@@ -374,10 +390,13 @@ text-shadow: 0 0 0.1em #FFF7, 0 0 0.1em #111211; */
   z-index: 3;
   left:15px;
   top:20px;
+  transition: 0.5 ease-in;
+  filter: blur(0.5px);
 }
 
 .closebtn:hover{
   color: #00BE67;
+
 }
 
 .closebtn.btn-hidden {

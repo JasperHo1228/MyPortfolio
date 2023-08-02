@@ -19,7 +19,12 @@
   bottom: 5%;
   top: 3%;
 } 
+@media screen and (max-width: 758px) {
+  .sidebar nav {
+    display: none;
+  }
 
+}
 
 nav#open {
   width: 300px;
@@ -192,3 +197,4 @@ nav .wholeul .remove .barlink:hover {
   transition: opacity 0.5s;
   opacity: 1;
 }
+

@@ -52,7 +52,9 @@ function Experience() {
       if (currentProject === index) {
         frame.classList.toggle('moreInfoVisible', false);
         setCurrentProject(null);
-      } else {
+      }
+      
+      else {
         // If another item is already open, close it first
         const currentFrame = document.getElementById(`text-box-${currentProject}`);
         if (currentFrame) {
@@ -69,11 +71,6 @@ function Experience() {
     const handleOverlayClose = () => {
       if (currentProject !== null) {
         const frame = document.getElementById(`text-box-${currentProject}`);
-        frame.setAttribute('closing', '');
-        frame.addEventListener('animationend', () => {
-          frame.removeAttribute('closing');
-        }, { once: true });
-
         const contribution = document.getElementById(`contribution-${currentProject}`);
         contribution.setAttribute('closing', '');
         contribution.addEventListener('animationend', () => {
@@ -109,7 +106,7 @@ function Experience() {
                 <h2 className='experience-title'>{element.title}</h2>
                 <h3 className='experience-subtitle'>{element.subtitle}</h3>
                 <h5 className='experience-date'>{element.date}</h5>
-                <div className="TapMebtn" onClick={() => handleMoreDetailClick(index)}>Tap me</div>
+                <div className="TapMebtn" onClick={() => handleMoreDetailClick(index)}>View More</div>
                 <p className='experience-contribution' id={`contribution-${index}`}>{element.contribution}</p>
                 <span className={element.arrow}></span>
               </div>

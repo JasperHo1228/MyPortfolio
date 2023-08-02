@@ -1,24 +1,22 @@
-import React from 'react'
-import '../style/Experience/skills.css'
-//onion shape
-function Skills(){
-return(
+import React,{useState} from 'react';
+import '../style/Experience/skills.css';
+import Onion from '../component/onion.js'; 
 
-  <div class="container" id="Skills">
+function Skills() {
+  return (
+    <div className="skill-container" id="Skills">
       <h1 className="page_title">Skills</h1>
-      <div class="card">
-  <div class="content">
-    <div class="front">
-      Front
+      <div className='skillset-content'>
+          <Onion />
+          <div className="motto">
+            Software development just like an Onion Layer<br/>
+              Select each layer to show stack skills.
+          </div>
+     
+      </div>
     </div>
-    <div class="back">
-      Back!
-    </div>
-  </div>
-</div>
-      
-    </div>
-  
-);
+  );
 }
-export default Skills
+
+export default Skills;
+

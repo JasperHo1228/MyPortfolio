@@ -11,13 +11,35 @@ function Project() {
   
   const handleMoreDetailClick = (index) => {
     const frame = document.getElementById(`frame-${index}`);
-    frame.classList.toggle('overlay-visible', true);
-    setCurrentProject(index);
+  
+    // If the clicked item is already open, close it
+    if (currentProject === index) {
+      frame.classList.toggle('overlay-visible', false);
+      setCurrentProject(null);
+    } else {
+      // If another item is already open, close it first
+      const currentFrame = document.getElementById(`frame-${currentProject}`);
+      if (currentFrame) {
+        currentFrame.classList.toggle('overlay-visible', false);
+      }
+  
+      // Open the clicked item
+      frame.classList.toggle('overlay-visible', true);
+      setCurrentProject(index);
+    }
   };
+  
+      
+
   
   const handleOverlayClose = () => {
     const frame = document.getElementById(`frame-${currentProject}`);
     frame.classList.toggle('overlay-visible', false);
+    const overlay = document.getElementById(`overlay-${currentProject}`);
+    overlay.setAttribute('closing', '');
+    overlay.addEventListener('animationend', () => {
+      overlay.removeAttribute('closing');
+    }, { once: true });
     setCurrentProject(null);
   };
   
@@ -33,7 +55,7 @@ function Project() {
               <div className='project_img'>
               <div
                   className={`closebtn ${
-                    currentProject === index ? 'btn-visible' : 'btn-hidden'
+                    currentProject === index ? 'btn-visible neon-light' : 'btn-hidden'
                   }`}
                   onClick={handleOverlayClose}
                 >
@@ -56,8 +78,8 @@ function Project() {
                     </div>
                 </div>
               </div>
-              {currentProject === index && (
-                <div className='frame-overlay'>
+              
+                <div className='frame-overlay' id={`overlay-${index}`}>
                 <div className='project_detail'>
                   <h2 className='projectAim'>Project Aim</h2>
                   <p className="project_description">{link.description}</p>
@@ -81,7 +103,7 @@ function Project() {
                   </div>
                   </div>
                 </div>
-              )}
+             
             </div>
           </div>
         ))}
