@@ -16,7 +16,6 @@
   }
 }
 
-
 @media screen and (max-width: 870px) {
   .onion-svg {
     position: relative;
@@ -27,7 +26,6 @@
   .skillset-content {
     display: flex;
     flex-direction: column; 
-
   }
 
   .motto {
@@ -60,9 +58,9 @@
 }
 
 .onion-svg {
-  height:360px;
-  width: 460px; /* Set default width */
-  aspect-ratio: auto 360/460;
+  height:460px;
+  width: 360px; 
+  aspect-ratio: auto;
 }
 
 /* initial onion */
@@ -122,15 +120,22 @@
   stroke-width:6;
 }
 
-
-
-@keyframes changeColor {
+@keyframes clickColor {
   0%{
-    transform: translate(-4%,-1%);
+    transform: translate(-200px,0px);
     opacity: 0;
   }
   100%{
     transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+@keyframes changeColor {
+  0%{
+    opacity: 0;
+  }
+  100%{
     opacity: 1;
   }
 }
@@ -146,11 +151,12 @@
 .skillset-content {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 1px;
   max-width: 870px;
-  margin-top: 5%;
+  margin-top: 50px;
+ 
 }
 
 .skillset-tool {
@@ -164,36 +170,92 @@
   font-size: 140%;
   flex: 1;
   top:0px;
-  bottom:0px;
+  bottom:10px;
   left:10px;
-  margin:auto;
+  margin-bottom:100px;
+}
+
+.motto-content{
+  color:#fd00c6;
 }
 
 
-.left-first-layer:hover{
+.left-first-layer.active-layer{
   fill:#F4C1E2;
-  animation: changeColor 1.5s forwards;
+  animation: clickColor 1.5s forwards;
 }
 
 
-.left-second-layer:hover{
+.left-second-layer.active-layer{
   fill:#E2ACD1; 
-  animation: changeColor 1.5s forwards;
+  animation: clickColor 1.5s forwards;
 }
 
-.left-third-layer:hover{
+
+.left-third-layer.active-layer{
   fill:#D193C1;
-  animation: changeColor 1.5s forwards;
+  animation: clickColor 1.5s forwards;
 }
 
-.left-fourth-layer:hover{
-   fill:#C17CB3;
-   animation: changeColor 1.5s forwards;
+
+
+.left-fourth-layer.active-layer{
+  fill:#C17CB3;
+  animation: clickColor 1.5s forwards;
 }
 
-.left-fifth-layer:hover{
-  fill:#AF64A1; 
-  animation: changeColor 1.5s forwards;
 
+.left-fifth-layer.active-layer{
+  fill:#AF64A1;
+  animation: clickColor 1.5s forwards;
 }
 
+
+.layer-one,
+.layer-two,
+.layer-three,
+.layer-four,
+.layer-five{
+  color: #fff;
+}
+
+.Skillset-title{
+  color: #FF86C9;
+  text-shadow: 0 0 0.2em #FFF7,
+               0 0 0.3em  #f712c1;
+}
+
+.hidden{
+  display: none;
+}
+
+.eachLayerContent{
+  font-family: Tomorrow, sans-serif;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+.Skillset-title{
+  font-size: 110%;
+}
+
+.skillToolContainer{
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:100px;
+  display: flex;
+}
+
+.toolsItem{
+  display: block;
+}
+
+/* 
+display: grid;
+grid-template-columns: repeat(3, 1fr); */
