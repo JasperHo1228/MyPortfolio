@@ -1,7 +1,7 @@
 
-import AR_APP from '../asset/picture_source/project_icon/AR-APP.png';
-import CM_system from '../asset/picture_source/project_icon/CMS-system.png';
-import holidayApp from '../asset/picture_source/project_icon/holidayApp.png';
+import AR_APP from '../asset/picture_source/project_icon/AR-APP.jpg';
+import CM_system from '../asset/picture_source/project_icon/CMS-system.jpg';
+import holidayApp from '../asset/picture_source/project_icon/holidayApp.jpg';
 
 export const project_json = [
        {

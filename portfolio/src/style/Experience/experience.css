@@ -270,7 +270,6 @@
 
 .Experience_closebtn:hover {
   color: #F500BD;
-  transform: rotateZ(360deg); /* Rotation on hover */
 }
 
 

@@ -42,13 +42,22 @@ function Skills() {
            clickedLayer={clickedLayer}
            />
         </div>
-
+        
         {showMotto && (
           <div className="motto" >
             <h3>Software development:<br/> 
-               <div className="motto-content">Layers of Skills, Just Like an Onion!</div>
+               <div className="motto-content">
+                Layers of Skills, Just Like an Onion!
+                </div>
             </h3>
-            Click or Tap each layer of <br /> the half left onion <br />to show stack skills.
+            <div className='Click-hints'>
+            
+                  <click>
+                    Click each layer<br /> 
+                  </click>
+                    of the left half onion to view stack skills.
+               
+              </div>
           </div>
         )}
     

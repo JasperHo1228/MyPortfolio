@@ -6,7 +6,7 @@ import '../style/home.css'
 
 function Home(){
     const [text] =  useTypewriter({
-        words:['My name is Jasper', 'A Software Developer'],
+        words:['Jasper', 'a Software Developer'],
         loop:true,
         typeSpeed:120,
         deleteSpeed:80
@@ -15,7 +15,7 @@ function Home(){
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
-        words:['Hello World!'],
+        words: ["Hello World, I'm"],
         loop:1,
         typeSpeed:100,
       });
@@ -35,7 +35,7 @@ function Home(){
             <div className="home-container" id="Home">
                  <h1 className="Topic">
                     <span>{topic}</span>
-                    {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
+                   {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
                  </h1>
                  <h2 className='subTitle'>
                     <span>{text}</span>

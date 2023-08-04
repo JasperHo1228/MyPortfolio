@@ -5,18 +5,8 @@
 
 
 /* Add media queries for smaller screens */
-@media screen and (max-width: 1034px) {
-  .skillset-tool{
-    font-size: 13px;
-  }
 
-  .skillset-content {
-    display: flex;
-    flex-direction: column; 
-  }
-}
-
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 658px) {
   .onion-svg {
     position: relative;
     justify-content: center;
@@ -24,28 +14,24 @@
   }
 
   .skillset-content {
-    display: flex;
     flex-direction: column; 
+   
   }
 
   .motto {
     text-align: center; 
-    margin-top: 20px; 
+    margin-top: -180px; 
   }
 
   .skillset-tool {
-    font-size: 16px;
-  }
-}
-
-
-
-@media screen and (max-width: 658px) {
-
-  .skillset-tool{
     font-size: 12px;
   }
+  .eachLayerContent{
+    margin-top: -180px;
+  }
 }
+
+
 @media screen and (max-width:458px){
   .onion-svg {
     position: relative;
@@ -120,6 +106,57 @@
   stroke-width:6;
 }
 
+
+@keyframes clickHints {
+  0%{
+      text-shadow: 0 0 0.1em #FFF7,
+      0 0 0.1em  #00f55e;
+  }
+  15%{
+      text-shadow: 0 0 0.15em #FFF7,
+      0 0 0.15em  #00f55e;
+  }
+
+  25%{
+      text-shadow: 0 0 0.25em #FFF7,
+      0 0 0.25em  #00f55e;
+  }
+
+  35%{
+      text-shadow: 0 0 0.35em #FFF7,
+      0 0 0.35em  #00f55e;
+  }
+  45%{
+      text-shadow: 0 0 0.45em #FFF7,
+      0 0 0.45em #00f55e;
+  }
+  55%{
+      text-shadow: 0 0 0.55em #FFF7,
+      0 0 0.55em  #00f55e;
+  }
+  65%{
+    text-shadow: 0 0 0.45em #FFF7,
+    0 0 0.45em  #00f55e;
+  }
+  75%{
+      text-shadow: 0 0 0.35em #FFF7,
+      0 0 0.35em  #00f55e;
+  }
+  85%{
+      text-shadow: 0 0 0.25em #FFF7,
+      0 0 0.25em  #00f55e;
+  }
+  95%{
+      text-shadow: 0 0 0.15em #FFF7,
+      0 0 0.15em  #35e9a4;
+  }
+  100%{
+      text-shadow: 0 0 0.1em rgba(204, 194, 194, 0.467),
+      0 0 0.1em  #06c57c;
+  }
+}
+
+
 @keyframes clickColor {
   0%{
     transform: translate(-200px,0px);
@@ -156,7 +193,6 @@
   padding: 0 1px;
   max-width: 870px;
   margin-top: 50px;
- 
 }
 
 .skillset-tool {
@@ -178,6 +214,23 @@
 .motto-content{
   color:#fd00c6;
 }
+
+.Click-hints{
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  color: #0acb8e;
+  text-shadow: 0 0 0.01em #FFF7,
+               0 0 0.01em  #0cd690;
+}
+
+click{
+  color:#00f55e;
+  text-shadow: 0 0 0.1em #FFF7,
+  0 0 0.1em #00f55e;
+  padding:5px;
+  animation: clickHints 1s infinite;
+}
+
 
 
 .left-first-layer.active-layer{
