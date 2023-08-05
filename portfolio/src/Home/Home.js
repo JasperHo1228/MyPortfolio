@@ -15,7 +15,7 @@ function Home(){
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
-        words: ["Hello World, I'm"],
+        words: ["< / >Hello World, I'm"],
         loop:1,
         typeSpeed:100,
       });
@@ -34,7 +34,7 @@ function Home(){
         return (
             <div className="home-container" id="Home">
                  <h1 className="Topic">
-                    <span>{topic}</span>
+                   <span>{topic}</span>
                    {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
                  </h1>
                  <h2 className='subTitle'>

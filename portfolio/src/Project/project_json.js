@@ -12,7 +12,8 @@ export const project_json = [
                      "allow user easily find their way around"+
                      "the University campus.",
         youtube_link: "https://www.youtube.com/watch?v=UBDnyYBA4eU",
-        source_code:"https://github.com/JasperHo1228/AR_Navigation-Uni_Leeds-"
+        source_code:"https://github.com/JasperHo1228/AR_Navigation-Uni_Leeds-",
+        tools:["ARkit","Mapkit","UIkit","CoreLocation","Cocoapods"]
        },
        {   
         id:2,
@@ -21,7 +22,9 @@ export const project_json = [
         description:"This software system is for people who is working as an admin to easily manage customer data.",
         youtube_link: "https://youtu.be/Ribh8SJNaic",
         youtube_link2:"https://youtu.be/LUfA0d6VwHI",
-        source_code:"https://github.com/JasperHo1228/Customer-Account-Managment"
+        source_code:"https://github.com/JasperHo1228/Customer-Account-Managment",
+        tools:["Spring Boot","JavaScript","Thymeleaf","CSS",
+       "MySQL"]
        },
        {
         id:3,
@@ -29,6 +32,7 @@ export const project_json = [
         title: "Holiday Searching App",
         description:"This application is to help people to filter up all the holiday that they want to know.",
         youtube_link: "",
-        source_code:"https://github.com/JasperHo1228/HolidaySearchingApp"
+        source_code:"https://github.com/JasperHo1228/HolidaySearchingApp",
+        tools:["Spring Boot","Bootstraps","Thymeleaf","H2 Database"]
        }
 ];

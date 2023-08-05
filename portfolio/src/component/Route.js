@@ -3,6 +3,7 @@ import Home from '../Home/Home.js'
 import Project from '../Project/project.js'
 import Skills from '../Experience/Skills.js'
 import Experience from '../Experience/experience.js'
+import ContactMe from '../ContactMe/contactMe.js'
 import {BiHomeAlt,BiSolidBriefcaseAlt2} from 'react-icons/bi'
 import {GiSkills} from 'react-icons/gi'
 import {PiProjectorScreenChartFill} from 'react-icons/pi'
@@ -43,7 +44,7 @@ export const myRoute = [
         id:5,
         direct:"#ContactMe",
         title: "Contact Me", 
-        element:"",
+        element:<ContactMe/>,
         icon:<MdContactMail/>
     }
 ];

@@ -45,7 +45,7 @@ function Project() {
   
   return (
     <div className='project' id='Project'>
-      <h1 className='project_title'>Project</h1>
+      <h1><div className='green-title'>Project</div></h1>
       <div className='project-container'>
         {projects.map((link, index) => (
           <div className='frame'
@@ -81,8 +81,13 @@ function Project() {
               
                 <div className='frame-overlay' id={`overlay-${index}`}>
                 <div className='project_detail'>
-                  <h2 className='projectAim'>Project Aim</h2>
-                  <p className="project_description">{link.description}</p>
+                  <h1 className='projectAim'>Project Aim <br/>& <br/>Used Tools</h1>
+                  <h3 className="project_description">{link.description}</h3>
+                  <div className="project_tool_group">
+                    {link.tools.map((tools) => (
+                    <div className='project_tools'><div className='toolsName'>{tools}</div></div>
+                  ))}
+                  </div>
                   <div className='project_link linkInfo'>
                     <a
                       href={link.youtube_link}

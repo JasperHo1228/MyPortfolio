@@ -1,10 +1,19 @@
 
 #Skills {
-  margin-top: 1%; /* Adjust this value as needed */
+  margin-top: 3%; /* Adjust this value as needed */
 }
 
 
 /* Add media queries for smaller screens */
+@media screen and (max-width: 995px) {
+  .skillset-content{
+    gap: 6rem !important;
+  }
+  .skillToolContainer {
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+}
+
 
 @media screen and (max-width: 658px) {
   .onion-svg {
@@ -15,7 +24,6 @@
 
   .skillset-content {
     flex-direction: column; 
-   
   }
 
   .motto {
@@ -33,19 +41,30 @@
 
 
 @media screen and (max-width:458px){
-  .onion-svg {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
   .skillset-tool{
     font-size: 12px;
   }
 }
+@media screen and (max-width:400px){
+  .onion-svg {
+    height:360px;
+    width:360px;
+  }
+}
+@media screen and (max-width:340px){
+  .onion-svg {
+    height:260px !important;
+    width:260px !important;
+  }
+  .motto {
+    text-align: center; 
+    margin-top: -380px; 
+  }
+}
 
 .onion-svg {
-  height:460px;
-  width: 360px; 
+  height:480px;
+  width: 350px; 
   aspect-ratio: auto;
 }
 
@@ -89,21 +108,21 @@
 .right-first-layer{
   fill:#a92a7c;
   stroke: #b949c3;
-  stroke-width:6;
+  stroke-width:8;
 }
 
 
 .right-second-layer{
   fill:#ba2c86;
   stroke: #b53fc0;
-  stroke-width:6;
+  stroke-width:8;
 
 }
 
 .right-third-layer{
   fill:#b95498;
   stroke: #c95dd3;
-  stroke-width:6;
+  stroke-width:8;
 }
 
 
@@ -188,11 +207,11 @@
 .skillset-content {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 12rem;
   width: 100%;
   padding: 0 1px;
   max-width: 870px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .skillset-tool {
@@ -231,7 +250,10 @@ click{
   animation: clickHints 1s infinite;
 }
 
-
+.onion-img{
+  height: 340px;
+  margin-bottom: 200px;
+}
 
 .left-first-layer.active-layer{
   fill:#F4C1E2;
@@ -251,7 +273,6 @@ click{
 }
 
 
-
 .left-fourth-layer.active-layer{
   fill:#C17CB3;
   animation: clickColor 1.5s forwards;
@@ -262,7 +283,6 @@ click{
   fill:#AF64A1;
   animation: clickColor 1.5s forwards;
 }
-
 
 .layer-one,
 .layer-two,
@@ -292,23 +312,23 @@ click{
   align-content: center;
   text-align: center;
 }
+
 .Skillset-title{
   font-size: 110%;
 }
 
 .skillToolContainer{
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  margin-bottom:100px;
-  display: flex;
+  margin-bottom:120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  
+  min-width: 0;
 }
 
 .toolsItem{
   display: block;
 }
 
-/* 
-display: grid;
-grid-template-columns: repeat(3, 1fr); */

@@ -33,12 +33,20 @@ section{
     scroll-snap-align: start; 
 }
 
-.page_title{
+.red-title{
     font-family: Tomorrow, sans-serif;
     color: #F500BD;
-    font-size: 250%;
     text-align: center;
+    font-size: 200%;
 }
+
+.green-title{
+    font-family: Tomorrow, sans-serif;
+    color:#00BE67;
+    text-align: center;
+    font-size: 200%;
+}
+
 
 @media screen and (max-width: 760px) {
     .app{
@@ -49,6 +57,12 @@ section{
         justify-content: center;
         margin-right: 6%;
         margin-left: 6%;
-        font-size: 90%;
+        
+    }
+}
+
+@media screen and (max-width:280px){
+    .main_content{
+        font-size: 10px;
     }
 }

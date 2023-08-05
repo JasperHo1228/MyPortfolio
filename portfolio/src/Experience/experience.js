@@ -83,7 +83,7 @@ function Experience() {
     
   return (
     <div className='timeline_experience timeline-container' id='Experience'>
-      <h1 className='page_title'>Experience</h1>
+      <h1><div className='red-title'>Experience</div></h1>
       <div className='main-experience-container'>
         {experience_json.map((element,index) => {
           let isWorkIcon = element.icon === "workIcon";

@@ -34,7 +34,7 @@ function Skills() {
 
   return (
     <div className="skill-container" id="Skills">
-      <h1 className="page_title">Skills</h1>
+     <h1><div className="red-title">Skills</div></h1> 
       <div className="skillset-content">
         <div className="onion-img"  ref={onionRef}>
           <Onion layers={LayerData} 
@@ -51,12 +51,11 @@ function Skills() {
                 </div>
             </h3>
             <div className='Click-hints'>
-            
+
                   <click>
                     Click each layer<br /> 
-                  </click>
                     of the left half onion to view stack skills.
-               
+                  </click>
               </div>
           </div>
         )}

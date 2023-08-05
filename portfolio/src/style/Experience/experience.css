@@ -247,10 +247,10 @@
 /* show contribution animation */
 @keyframes contributionInfo {
   0%{
-    transform: translateY(-50px);
+   opacity: 0;
   }
   100%{
-    transform: translateY(0px);
+   opacity: 1;
   }
 }
 
@@ -263,13 +263,14 @@
   width: 18px; /* Set equal width and height */
   height: 18px; /* Set equal width and height */
   cursor: pointer;
-  transition: 1s ease-in;
+  transition: 0.8s ease-in;
   vertical-align: middle;
   border: #0d3d4d solid;
 }
 
 .Experience_closebtn:hover {
   color: #F500BD;
+  transform: rotate(360deg);
 }
 
 
