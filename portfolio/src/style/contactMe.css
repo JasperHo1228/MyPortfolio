@@ -1,3 +1,102 @@
-contactMe-container{
+#ContactMe{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
+.contactMe-container{
     position: relative;
+}
+.contactMe-content{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.MyLink-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mylink-option{
+    text-align: center;
+}
+
+.LinkName{
+    font-family: Tomorrow, sans-serif;
+    border-radius: 0.7rem;
+    background: linear-gradient(315deg,#2a0e2c,#6c0c79);
+    padding:1.2rem;
+    text-align: center;
+    border: #00BE67 solid;
+    transition: ease-in-out 1s;
+    cursor: pointer;
+    color:#00BE67;
+    top:10px;
+    text-shadow: 0 0 0.2rem rgba(204, 194, 194, 0.467),
+    0 0 0.5rem  #06c57c;
+}
+.contact-icon{
+  font-size: 150%;
+  color:#00BE67;
+}
+
+.LinkName:hover{
+    background: #001D31;
+}
+
+.ContactlinkTitle{
+  position: relative;
+  bottom:5px;
+  margin-left:10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+textarea{
+    font-family: Tomorrow, sans-serif;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: #00BE67 solid;
+    resize: none;
+    color: #00BE67;
+    background: linear-gradient(315deg,#2a0e2c,#6c0c79);
+    font-size: 110%;
+    margin-left:15%;
+    margin-right: 15%;
+    max-width: 800px;
+}
+::placeholder{
+    color:rgb(97, 209, 131);
+    font-size: 110%;
+}
+
+.submit-btn{
+    background-color: #00BE67;
+    color: #6c0c79;
+    width: 100%;
+    padding: 1.5rem;
+    max-width: 800px;
+}
+@media screen and (max-width :1024px) {
+    .contactMe-content{
+        grid-template-columns: 1fr;
+        gap:2rem;
+    }
+}
+
+
+@media screen and (max-width :600px) {
+    .contactMe-content{
+        width:90% ;
+        grid-template-columns: 1fr;
+        gap:2rem;
+    }
 }

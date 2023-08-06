@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
 import CV from '../asset/CV/Jasper.pdf'
+
 import '../style/home.css'
 
 
@@ -15,7 +16,7 @@ function Home(){
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
-        words: ["< / >Hello World, I'm"],
+        words: ["Hello World, I'm"],
         loop:1,
         typeSpeed:100,
       });
@@ -33,6 +34,7 @@ function Home(){
 
         return (
             <div className="home-container" id="Home">
+              <div className="home-wrapper">
                  <h1 className="Topic">
                    <span>{topic}</span>
                    {cursorVisible && <span className="cursorTopic" style={{ color: '#F500BD' }}><Cursor cursorStyle = "|" /></span>}
@@ -47,7 +49,10 @@ function Home(){
                                           I am specifically focused on tackling complex problems.<br/>
                                           My interest lies in investigating real-world issues and solving them using software solutions.
                </p>
-               <a href={CV} download className='Download_CV'>Download My CV</a>
+      
+                  <a href={CV} download className='Download_CV'>Download CV</a>
+      
+                  </div>
             </div>
  
           );

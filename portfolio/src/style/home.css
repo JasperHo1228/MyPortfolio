@@ -1,13 +1,16 @@
 
-.home-container{
-   position: relative;
-   padding-left:17%;
-   margin-left: 8%;
-   margin-right: 15%;
-   padding-top:15%;
-   padding-bottom:20%;
+.home-container {
+  position: relative;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.home-wrapper{
+   display: block;
+}
  .Topic{
   font-family: Tomorrow, sans-serif;
   color:#00BE67;
@@ -25,6 +28,8 @@
   color:#00BE67;
   font-size: 15px;
   margin-top:25px;
+  justify-content: start;
+  align-items: center;
 }
 
 ::after,
@@ -33,7 +38,7 @@
 }
 
 .Download_CV{
-  margin-top:25px;
+  margin-top:15px;
   font-family: Tomorrow, sans-serif;
   display:inline-block;
   position: relative;
@@ -94,6 +99,24 @@
 .Download_CV:focus::after,
 .Download_CV:hover::after{
   opacity: 1;
+}
+
+.myInfo{
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
+}
+
+.mylinkOptions{
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 10px;
+}
+
+
+.contact-icon{
+  font-size: 170%;
+  color:#181617;
 }
 
 html{

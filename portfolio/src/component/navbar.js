@@ -1,7 +1,6 @@
 import '../style/navbar.css';
 import React, { useState, useEffect} from 'react';
 import { myRoute } from '../component/Route.js';
-import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
 
@@ -56,28 +55,6 @@ function NavBar() {
                </a>
             </li>
           ))}
-
-          <li className="remove">
-            <a href="https://www.linkedin.com/in/tsun-yin-ho-46981222b/" className="barlink">
-              <span className="icon">
-                <ion-icon>
-                  <BsLinkedin />
-                </ion-icon>
-              </span>
-              <title>LinkedIn</title>
-            </a>
-          </li>
-
-          <li className="remove">
-            <a href="https://github.com/JasperHo1228" className="barlink">
-              <span className="icon">
-                <ion-icon>
-                  <BsGithub />
-                </ion-icon>
-              </span>
-              <title>GitHub</title>
-            </a>
-          </li>
         </ul>
       </nav>
     </div>

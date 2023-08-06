@@ -1,11 +1,3 @@
-.project-container{
-   display: grid;
-   justify-content: center;
-   align-items: center;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 3rem;
-}
-
 @media screen and (max-width: 1024px) {
     .project-container{
         grid-template-columns:repeat(2, 1fr);
@@ -89,19 +81,22 @@
     align-items: center;
 }
 
-/* red #ff2770
-blue #45f3ff
-#6B0082 purple
-#A60057 midnight red */
+.project-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1300px; 
+  gap: 2.5rem;
+  margin: 0 auto; 
+}
 
 .frame{
     background-color: rgba(0, 0, 0, 0.5);
-    max-width: 100%;
     padding: 1.2rem;
     border-radius: 0.5rem;
     position: relative;
     overflow: hidden;
     justify-content: center;
+    align-items: center;
     height: 100%; 
     width: 100%;
 }
@@ -112,7 +107,7 @@ blue #45f3ff
     inset: -100% -200%;   
     background: linear-gradient(0deg, #1c6242,#0fff93);
     transition: 0.5s;
-    animation: animation-item 1s linear infinite;
+    animation: animation-item 1s linear infinite;    
 }
 
 @keyframes animation-item{
