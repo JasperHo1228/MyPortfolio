@@ -1,7 +1,8 @@
 @media screen and (max-width: 1024px) {
     .project-container{
-        grid-template-columns:repeat(2, 1fr);
-        gap:1.2rem;
+        grid-template-columns:repeat(2, 1fr) !important;
+        gap:1.2rem !important;
+        max-width: 0px;
      }
      .linkInfo{
       position: relative;
@@ -30,7 +31,7 @@
   @media screen and (max-width: 658px) {
 
     .project-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr!important;
         gap: 1rem;
      }
      .btn{
