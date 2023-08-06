@@ -49,9 +49,7 @@ function Home(){
                                           I am specifically focused on tackling complex problems.<br/>
                                           My interest lies in investigating real-world issues and solving them using software solutions.
                </p>
-      
                   <a href={CV} download className='Download_CV'>Download CV</a>
-      
                   </div>
             </div>
  
