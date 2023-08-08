@@ -1,11 +1,10 @@
 
 #Home{
   height: 100vh;
-  margin-bottom: 0;
+  max-height: 100vh;
   left: 0;
   bottom: 0;
-  margin-right: auto;
-  margin-left: auto;
+ 
 }
 
 .home-container {

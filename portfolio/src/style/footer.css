@@ -1,0 +1,39 @@
+.Footer-container{
+    position: relative;
+    background: #00BE67; 
+    border-radius: 1.5rem;
+}
+.footer-wrapper{
+    padding:3.5rem;
+    text-align: center;
+    font-size:130%;
+}
+
+.footer-title{
+    position: relative;
+    font-family: Tomorrow, sans-serif;
+    bottom: 55px;
+    color:#6c0c79;
+}
+
+.socialmedia-link{
+    position: absolute;
+    display: flex;
+    gap: 2.5rem;
+    right:50%;
+    left:50%;
+    justify-content: center;
+    align-items: center;
+    bottom: 60px;
+}
+
+.contact-icon{
+    color:#6c0c79;
+}
+.contact-icon.linkedIn:hover{
+    color:rgb(3, 103, 202)
+}
+
+.contact-icon.github:hover{
+  color:#000;
+}

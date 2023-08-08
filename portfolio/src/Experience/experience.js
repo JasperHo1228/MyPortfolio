@@ -6,7 +6,7 @@ import { MdWork } from 'react-icons/md';
 import {ImCross} from 'react-icons/im'
 
 // control timeline animation
-function timelineAnimation(addClassName, selectId, threshold){
+function timelineAnimation(addClassName, selectclassName, threshold){
 
   const createObserverOptions = (threshold) => ({
     root: null,
@@ -18,13 +18,11 @@ function timelineAnimation(addClassName, selectId, threshold){
       const { target, isIntersecting } = entry;
       if (isIntersecting) {
         target.classList.add(addClassName);
-      } else {
-        target.classList.remove(addClassName);
-      }
+      } 
     });
   }, createObserverOptions(threshold));
 
-  const elements = document.querySelectorAll(selectId);
+  const elements = document.querySelectorAll(selectclassName);
   elements.forEach((element) => observer.observe(element));
 
   return observer;
@@ -34,8 +32,8 @@ function timelineAnimation(addClassName, selectId, threshold){
 function Experience() {
   useEffect(() => {
     // timeline should run first so threshold should be smaller
-    const timeline = timelineAnimation('animate-timeline','.timeline-container',0.1);
-    const content = timelineAnimation('animate-container','.observe-container',0.3);
+    const timeline = timelineAnimation('animate-timeline','.timeline-container',0.3);
+    const content = timelineAnimation('animate-container','.observe-container',0.5);
 
     return () => {
       timeline.disconnect();

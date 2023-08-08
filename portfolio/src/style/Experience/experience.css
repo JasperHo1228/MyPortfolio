@@ -174,34 +174,46 @@
 }
 
 .experience_container.right_position.animate-container {
-  animation: fadeInRight 1s forwards;
+  animation: bounce-in-right 1s forwards;
 }
 
 .experience_container.left_position.animate-container {
-  animation: fadeInLeft 1s forwards;
+  animation:  bounce-in-left 1s forwards;
 }
 
-@keyframes fadeInRight {
+@keyframes bounce-in-right {
   0% {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(2000px);
   }
-  100% {
+  60% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-40px);
   }
+
+  80% { transform: translateX(30px); }
+  100% { 
+    opacity: 1;
+    transform: translateX(0); }
 }
 
-@keyframes fadeInLeft {
+@keyframes bounce-in-left {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-2000px);
   }
-  100% {
+  60% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(40px);
   }
+
+  80% { transform: translateX(-30px); }
+  100% { 
+    opacity: 1;
+    transform: translateX(0); }
 }
+
+
 
 .TapMebtn{
   position: relative;

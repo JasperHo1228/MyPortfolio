@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../style/project.css';
 import { project_json } from './project_json';
 import {ImCross} from 'react-icons/im'
@@ -8,6 +8,38 @@ function Project() {
   const projects = [...project_json];
 
   const [currentProject, setCurrentProject] = useState(null);
+
+// control timeline animation
+function project_animate(addClassName, selectclassName, threshold){
+
+  const createObserverOptions = (threshold) => ({
+    root: null,
+    rootMargin: '0px',
+    threshold });
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { target, isIntersecting } = entry;
+      if (isIntersecting) {
+        target.classList.add(addClassName);
+      } 
+    });
+  }, createObserverOptions(threshold));
+
+  const elements = document.querySelectorAll(selectclassName);
+  elements.forEach((element) => observer.observe(element));
+
+  return observer;
+}
+
+  useEffect(() => {
+    // timeline should run first so threshold should be smaller
+    const timeline = project_animate('animate-frame','.frame-container',0.3);
+  
+    return () => {
+      timeline.disconnect();
+    };
+  }, []);
   
   const handleMoreDetailClick = (index) => {
     const frame = document.getElementById(`frame-${index}`);
@@ -29,9 +61,6 @@ function Project() {
     }
   };
   
-      
-
-  
   const handleOverlayClose = () => {
     const frame = document.getElementById(`frame-${currentProject}`);
     frame.classList.toggle('overlay-visible', false);
@@ -48,7 +77,7 @@ function Project() {
       <h1><div className='green-title'>Project</div></h1>
       <div className='project-container'>
         {projects.map((link, index) => (
-          <div className='frame'
+          <div className='frame frame-container'
           id={`frame-${index}`}
           key={index}>
             <div className='project_item'>

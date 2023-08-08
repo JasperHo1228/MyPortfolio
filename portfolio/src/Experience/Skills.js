@@ -5,19 +5,50 @@ import LayerData from '../Experience/skill_json';
 
 function Skills() {
 
+
+
   const [showMotto, setShowMotto] = useState(true);
   const [clickedLayer, setClickedLayer] = useState(null);
+  function skillAnimation(addClassName, selectclassName, threshold){
+
+  const createObserverOptions = (threshold) => ({
+    root: null,
+    rootMargin: '0px',
+    threshold });
   
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { target, isIntersecting } = entry;
+      if (isIntersecting) {
+        target.classList.add(addClassName);
+      } 
+    });
+  }, createObserverOptions(threshold));
+
+  const elements = document.querySelectorAll(selectclassName);
+  elements.forEach((element) => observer.observe(element));
+
+  return observer;
+}
+
   const onionRef = useRef(null);
+
   useEffect(() => {
     // Add event listener when component mounts
     document.addEventListener('click', handleOutsideClick);
+    //animation onion
+    const onion_img = skillAnimation('onion-appear-animation','.onion-container',0.6);
+
+    //animation motto
+    const motto = skillAnimation('mottto-appear-animate','.motto-container',0.3);
 
     // Remove event listener when component unmounts
     return () => {
       document.removeEventListener('click', handleOutsideClick);
+      onion_img.disconnect();
+      motto.disconnect();
     };
-  }, []);
+  }, );
 
 
   const handleClickOnionLayer = (layerIndex) => {
@@ -31,12 +62,14 @@ function Skills() {
       setClickedLayer(null);
     }
   };
+  
+
 
   return (
     <div className="skill-container" id="Skills">
      <h1><div className="red-title">Skills</div></h1> 
       <div className="skillset-content">
-        <div className="onion-img"  ref={onionRef}>
+        <div className="onion-img onion-container"  ref={onionRef}>
           <Onion layers={LayerData} 
            handleClickOnionLayer={handleClickOnionLayer}
            clickedLayer={clickedLayer}
@@ -44,21 +77,20 @@ function Skills() {
         </div>
         
         {showMotto && (
-          <div className="motto" >
+           <div className= "motto motto-container">
             <h3>Software development:<br/> 
                <div className="motto-content">
                 Layers of Skills, Just Like an Onion!
                 </div>
             </h3>
             <div className='Click-hints'>
-
-                  <click>
-                    Click each layer<br /> 
-                    of the left half onion to view stack skills.
-                  </click>
+                  <div className='click'>
+                    Click each layer of the left half onion to view stack skills.
+                  </div>
               </div>
           </div>
-        )}
+        )
+        }
     
         {!showMotto && (
           <div className="eachLayerContent">
