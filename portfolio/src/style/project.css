@@ -129,20 +129,9 @@
     position: absolute;
     inset: -100% -200%;   
     background: linear-gradient(0deg, #1c6242,#0fff93);
-    transition: 0.5s;
-    animation: animation-item 1s linear infinite;    
+    transition: 0.5s;    
 }
 
-@keyframes animation-item{
-
-    0%{
-        transform: rotate(0deg);
-    }
-
-    100%{
-        transform: rotate(360deg);
-    }
-}
 
 .frame::after{
     content: '';
@@ -378,6 +367,7 @@
   left:15px;
   top:20px;
   transition: 0.5s ease-in;
+  font-size: 100%;
 }
 
 .closebtn:hover{

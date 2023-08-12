@@ -8,8 +8,8 @@ export const project_json = [
         id:1,
         image:AR_APP,
         title: "AR Route Map iOS APP",
-        description:"Creating a wayfinding path in AR style that/n" +
-                     "allow user easily find their way around"+
+        description:"Creating a wayfinding path in AR style that " +
+                     "allow user easily find their way around "+
                      "the University campus.",
         youtube_link: "https://www.youtube.com/watch?v=UBDnyYBA4eU",
         source_code:"https://github.com/JasperHo1228/AR_Navigation-Uni_Leeds-",

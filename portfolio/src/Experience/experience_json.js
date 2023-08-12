@@ -9,10 +9,17 @@ export const experience_json = [
         position:"left_position",
         arrow:"left-arrow",
         contribution:(
-          <div>• Developed a social media app for food enthusiasts, 
-                 <br/>responsible for building the frontend user interfacetoimprove the user experience.
+          <div> 
+            <ul>
+                 <li> Developed a social media app for food enthusiasts,<br/>
+                     responsible for building the frontend user interface to improve the user experience.
+                 </li> 
                  <br/>
-                 <br/>• Utilised XCode and SwiftUI to create and test the social media application.
+                 <br/>
+                 <li>Utilised XCode and SwiftUI to create 
+                           and test the social media application.
+                 </li>
+                </ul>
           </div>
           ),
     },

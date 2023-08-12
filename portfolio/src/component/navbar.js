@@ -45,13 +45,12 @@ function NavBar() {
           )}
 
           {myOwnRoute.map((link) => (
-      
             <li className="remove">
                   <a href={link.direct} className="barlink"> 
                   <span className="icon">
                    <ion-icon>{link.icon}</ion-icon>
                   </span>
-              <title>{link.title}</title>
+              <span className='navtitle'>{link.title}</span>
                </a>
             </li>
           ))}

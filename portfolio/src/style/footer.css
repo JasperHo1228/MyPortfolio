@@ -29,9 +29,11 @@
 
 .contact-icon{
     color:#6c0c79;
+    transition: ease-in 1s;
 }
+
 .contact-icon.linkedIn:hover{
-    color:rgb(3, 103, 202)
+    color:rgb(3, 103, 202);
 }
 
 .contact-icon.github:hover{

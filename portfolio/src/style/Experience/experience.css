@@ -213,8 +213,6 @@
     transform: translateX(0); }
 }
 
-
-
 .TapMebtn{
   position: relative;
   font-family: Tomorrow, sans-serif;
@@ -275,16 +273,15 @@
   width: 18px; /* Set equal width and height */
   height: 18px; /* Set equal width and height */
   cursor: pointer;
-  transition: 0.8s ease-in;
+  transition: 0.4s ease-in;
   vertical-align: middle;
   border: #0d3d4d solid;
 }
 
 .Experience_closebtn:hover {
   color: #F500BD;
-  transform: rotate(360deg);
+  transform: rotate(90deg);
 }
-
 
 .Experience_closebtn.btn-hidden {
   display: none;
@@ -301,6 +298,10 @@
   pointer-events: none;
   animation: close-contribution 0.5s forwards;
   transition: ease-out 250ms;
+}
+
+ul{
+  list-style-position: inside;
 }
 
 @keyframes experience_closebtn {
