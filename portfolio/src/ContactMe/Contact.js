@@ -1,4 +1,4 @@
-import React, { useRef,useEffect} from 'react';
+import React, { useRef,useEffect,useState} from 'react';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -74,6 +74,7 @@ function ContactMe() {
      return emailRegex.test(String(email).toLowerCase());
    }
 
+    //confiming all the information is correct before sending the email
     const validateInputs = (e) => {
       e.preventDefault();
       
@@ -106,30 +107,66 @@ function ContactMe() {
           break;
         }
       }
-
+      //if all the thing valid send it
       if (isValid) {
         sendEmail(e);
       }
     };
     
+const [focusedInput, setFocusedInput] = useState(null);
+
+  // ... rest of your code ...
+
+  const handleFocus = (inputName) => {
+    setFocusedInput(inputName);
+  };
+
+  const handleBlur = () => {
+    setFocusedInput(null);
+  };
 
   return (
     <div className="contactMe-container" id="ContactMe">
       <h1>
-        <div className="green-title">
-          Contact Me
-        </div>
+        <div className="green-title">Contact Me</div>
       </h1>
       <div className="contactMe-content contact-animation">
-        <form id='form' className="contactForm" ref={form}>
-          <input type="text" name="name" placeholder="Your Full Name" id='name'/> 
-          <input type="text" name="email" placeholder="Your Email" id="email"/>
-          <textarea name="message" rows="7"  placeholder="Your Message" id="yourMessage"></textarea>
-          <button type="submit" className="submit-button" onClick={validateInputs}>Send</button>
+        <form id="form" className="contactForm" ref={form}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            id="name"
+            onFocus={() => handleFocus('name')}
+            onBlur={handleBlur}
+            className={focusedInput === 'name' ? 'focused' : ''}
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Your Email"
+            id="email"
+            onFocus={() => handleFocus('email')}
+            onBlur={handleBlur}
+            className={focusedInput === 'email' ? 'focused' : ''}
+          />
+          <textarea
+            name="message"
+            rows="7"
+            placeholder="Your Message"
+            id="yourMessage"
+            onFocus={() => handleFocus('yourMessage')}
+            onBlur={handleBlur}
+            className={focusedInput === 'yourMessage' ? 'focused' : ''}
+          ></textarea>
+          <button type="submit" className="submit-button" onClick={validateInputs}>
+            Send
+          </button>
         </form>
       </div>
     </div>
   );
 }
+
 
 export default ContactMe; 

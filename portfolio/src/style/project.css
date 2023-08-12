@@ -128,10 +128,20 @@
     content:'';
     position: absolute;
     inset: -100% -200%;   
-    background: linear-gradient(0deg, #1c6242,#0fff93);
-    transition: 0.5s;    
+    background: linear-gradient(0deg, #1a5038,#00e880);
+    transition: 0.5s ease-in;
+    animation: animation-item 1.5s linear infinite;    
 }
 
+@keyframes animation-item{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 .frame::after{
     content: '';
