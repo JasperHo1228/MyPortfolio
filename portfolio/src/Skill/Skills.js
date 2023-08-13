@@ -1,47 +1,22 @@
 import React, { useState,useEffect,useRef } from 'react';
-import '../style/Experience/skills.css';
+import '../style/skills.css';
 import Onion from '../component/onion.js';
-import LayerData from '../Experience/skill_json';
-
+import LayerData from './skill_json';
+import scrollAnimation from '../component/scrollAnimation';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Skills() {
-
-
 
   const [showMotto, setShowMotto] = useState(true);
   const [clickedLayer, setClickedLayer] = useState(null);
-  function skillAnimation(addClassName, selectclassName, threshold){
-
-  const createObserverOptions = (threshold) => ({
-    root: null,
-    rootMargin: '0px',
-    threshold });
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { target, isIntersecting } = entry;
-      if (isIntersecting) {
-        target.classList.add(addClassName);
-      } 
-    });
-  }, createObserverOptions(threshold));
-
-  const elements = document.querySelectorAll(selectclassName);
-  elements.forEach((element) => observer.observe(element));
-
-  return observer;
-}
-
   const onionRef = useRef(null);
 
   useEffect(() => {
     // Add event listener when component mounts
     document.addEventListener('click', handleOutsideClick);
     //animation onion
-    const onion_img = skillAnimation('onion-appear-animation','.onion-container',0.6);
-
+    const onion_img = scrollAnimation('onion-appear-animation','.onion-container',0.6);
     //animation motto
-    const motto = skillAnimation('mottto-appear-animate','.motto-container',0.3);
-
+    const motto = scrollAnimation('mottto-appear-animate','.motto-container',0.3);
     // Remove event listener when component unmounts
     return () => {
       document.removeEventListener('click', handleOutsideClick);
@@ -104,7 +79,7 @@ function Skills() {
                     <div className = "skillToolContainer">
                        {layer.content.skillItem.map((toolItem, index) => (
                       <div className="toolsItem" key={index}>
-                         <img src={toolItem.icon} alt="Skill Icon" />
+                         <LazyLoadImage src={toolItem.icon} alt={toolItem.alt} effect='blur'/>
                           <div className='toolsName'>{toolItem.name}</div>
                       </div>
                     ))} 

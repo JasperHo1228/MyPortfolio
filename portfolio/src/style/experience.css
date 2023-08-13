@@ -236,7 +236,7 @@
                0 0 0.5em  #0d3d4d;
   box-shadow: inset 0 0 1rem  #F500BD,
                     0 0 1rem  #F500BD;
-  transition: ease-in-out 1s ;
+  transition: ease-in-out 0.5s ;
 }
 
 /* action need to be done when trigger the className:moreInfoVisible */

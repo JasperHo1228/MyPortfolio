@@ -3,32 +3,11 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../style/contactMe.css';
-
+import scrollAnimation from '../component/scrollAnimation';
 function ContactMe() { 
   
-  function skillAnimation(addClassName, selectclassName, threshold){
-  
-    //scrolling effect
-    const createObserverOptions = (threshold) => ({
-      root: null,
-      rootMargin: '0px',
-      threshold });
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const { target, isIntersecting } = entry;
-        if (isIntersecting) {
-          target.classList.add(addClassName);
-        } 
-      });
-    }, createObserverOptions(threshold));
-    const elements = document.querySelectorAll(selectclassName);
-    elements.forEach((element) => observer.observe(element));
-    return observer;
-  }
-
   useEffect(()=>{
-    const contact_animation = skillAnimation('contact-appear-animation','.contact-animation',0.6);
+    const contact_animation = scrollAnimation('contact-appear-animation','.contact-animation',0.6);
     return() => { 
       contact_animation.disconnect();
     }

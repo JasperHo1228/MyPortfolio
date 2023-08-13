@@ -10,16 +10,11 @@ export const experience_json = [
         arrow:"left-arrow",
         contribution:(
           <div> 
-            <ul>
-                 <li> Developed a social media app for food enthusiasts,<br/>
+                   • Developed a social media app for food enthusiasts,
                      responsible for building the frontend user interface to improve the user experience.
-                 </li> 
                  <br/>
                  <br/>
-                 <li>Utilised XCode and SwiftUI to create 
-                           and test the social media application.
-                 </li>
-                </ul>
+                 • Utilised XCode and SwiftUI to create and test the social media application.
           </div>
           ),
     },
@@ -43,8 +38,10 @@ export const experience_json = [
         arrow: "left-arrow",
         contribution:(
         <div>
-          • An Honourable Mention was received in my own School of Computing for my Final Year Project,<br/>
-          along with a Bronze Prize at the Green Idea Invention and Design Fair Technology competition.<br/><br/>
+          • An Honourable Mention was received in my own School of Computing for my Final Year Project,
+            along with a Bronze Prize at the Green Idea Invention and Design Fair Technology competition.
+            <br/>
+            <br/>
           • Achieved a bachelor’s degree with 2:1 Class.
         </div>
           )

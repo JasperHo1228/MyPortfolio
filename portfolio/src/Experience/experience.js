@@ -1,39 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import '../style/Experience/experience.css';
+import '../style/experience.css';
 import { experience_json } from './experience_json';
 import { IoSchool } from 'react-icons/io5';
 import { MdWork } from 'react-icons/md';
 import {ImCross} from 'react-icons/im'
-
-// control timeline animation
-function timelineAnimation(addClassName, selectclassName, threshold){
-
-  const createObserverOptions = (threshold) => ({
-    root: null,
-    rootMargin: '0px',
-    threshold });
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { target, isIntersecting } = entry;
-      if (isIntersecting) {
-        target.classList.add(addClassName);
-      } 
-    });
-  }, createObserverOptions(threshold));
-
-  const elements = document.querySelectorAll(selectclassName);
-  elements.forEach((element) => observer.observe(element));
-
-  return observer;
-}
+import scrollAnimation from '../component/scrollAnimation';
 
 
 function Experience() {
   useEffect(() => {
     // timeline should run first so threshold should be smaller
-    const timeline = timelineAnimation('animate-timeline','.timeline-container',0.3);
-    const content = timelineAnimation('animate-container','.observe-container',0.5);
+    const timeline = scrollAnimation('animate-timeline','.timeline-container',0.3);
+    const content = scrollAnimation('animate-container','.observe-container',0.5);
 
     return () => {
       timeline.disconnect();
@@ -88,8 +66,7 @@ function Experience() {
           return (
             <div
               className={`experience_container ${element.position} observe-container`}
-              key={element.id}
-            >
+              key={element.id}>
               <div className='experienceIcon'>
                 {isWorkIcon ? <MdWork /> : <IoSchool />}
               </div>
@@ -105,7 +82,7 @@ function Experience() {
                 <h3 className='experience-subtitle'>{element.subtitle}</h3>
                 <h5 className='experience-date'>{element.date}</h5>
                 <div className="TapMebtn" onClick={() => handleMoreDetailClick(index)}>View More</div>
-                <p className='experience-contribution' id={`contribution-${index}`}>{element.contribution}</p>
+                <div className='experience-contribution' id={`contribution-${index}`}>{element.contribution}</div>
                 <span className={element.arrow}></span>
               </div>
             </div>

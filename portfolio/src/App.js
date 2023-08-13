@@ -14,7 +14,7 @@ function App() {
         </aside> 
         <main className='main_content'>
           {myOwnRoute.map((route)=>
-                <section id={route.title}>{route.element}</section>
+                <section id={route.title} key={route.id}>{route.element}</section>
           )}
             <ToastContainer theme='colored' autoClose={2500}/>
             <div><Footer/></div>

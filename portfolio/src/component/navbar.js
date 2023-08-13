@@ -31,7 +31,7 @@ function NavBar() {
     <div className='navbar'>
       {/* Overlay to reduce the brightness */}
       {isNavbarOpen && <div className="overlay active" />}
-      <nav id={isNavbarOpen ? 'open' : 'close'}>
+      <nav id={isNavbarOpen ? 'open' : 'close'} >
         <ul className="wholeul">
           {isNavbarOpen ? (
             <hamburger-icon onClick={togglerNavbar} className="close-icon">
@@ -45,7 +45,7 @@ function NavBar() {
           )}
 
           {myOwnRoute.map((link) => (
-            <li className="remove">
+            <li className="remove" key={link.id}>
                   <a href={link.direct} className="barlink"> 
                   <span className="icon">
                    <ion-icon>{link.icon}</ion-icon>

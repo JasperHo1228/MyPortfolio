@@ -29,7 +29,6 @@
   }
 
   @media screen and (max-width: 658px) {
-
     .project-container{
         grid-template-columns: 1fr!important;
         gap: 1rem;
@@ -150,7 +149,7 @@
     background: linear-gradient(315deg,#2a0e2c,#6c0c79);
     filter:blur(40px);
     border-radius: 0.5rem;
-    filter:blur(2px)
+    filter:blur(1.5px)
 }
 
 .project_item{
@@ -376,7 +375,7 @@
   z-index: 3;
   left:15px;
   top:20px;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
   font-size: 100%;
 }
 
