@@ -10,7 +10,7 @@ const myOwnRoute = [...myRoute];
 
 function YourComponentName() {
   useEffect(() => {
-    document.title = "Jasper's Portifolio"; // Replace with your desired title
+    document.title = "Jasper's Portfolio"; // Replace with your desired title
   }, []);
 }
 function App() {
