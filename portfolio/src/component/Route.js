@@ -19,26 +19,26 @@ export const myRoute = [
     },
     {
         id:2,
-        direct:"#Project",
-        title: "Project",
-        element:<Project/>,
-        icon:<PiProjectorScreenChartFill/>
-    },
-    
-    {
-        id:3,
         direct:"#Experience",
         title: "Experience", 
         element:<Experience />,
         icon:<BiSolidBriefcaseAlt2/>
     },
-
+    
     {
-        id:4,
+        id:3,
         direct:"#Skills",
         title: "Skills", 
         element:<Skills/>,
         icon:<GiSkills/>
+    },
+
+    {
+        id:4,
+        direct:"#Project",
+        title: "Project",
+        element:<Project/>,
+        icon:<PiProjectorScreenChartFill/>
     },
 
     {

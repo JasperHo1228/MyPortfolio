@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
-import CV from '../asset/CV/Jasper.pdf'
-
 import '../style/home.css'
-
+import CV from '../asset/CV/Jasper.pdf'
 
 function Home(){
     const [text] =  useTypewriter({
@@ -44,12 +42,15 @@ function Home(){
                     <span style={{'color':'#00BE67'}}><Cursor cursorStyle='|'/></span>
                 </h2>
                 
-               <p className='content'>
-                                          With a passion for high quality, innovative app development,<br/>
-                                          I am specifically focused on tackling complex problems.<br/>
-                                          My interest lies in investigating real-world issues and solving them using software solutions.
+               <p className='content'>   
+                                       Passionate about innovative app development, I specialise in solving complex problems.<br/> 
+                                       With a robust academic and professional software development background,<br/> 
+                                       I collaborate effectively to improve communication and problem-solving.<br/> 
+                                       My focus is on addressing real-world challenges through software solutions.
                </p>
-                  <a href={CV} download className='Download_CV'>Download CV</a>
+                  <a href={CV}
+                          className='Download_CV'  target='_blank'
+                          rel='noreferrer'>Download CV</a>
                   </div>
             </div>
  

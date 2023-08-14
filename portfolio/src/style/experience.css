@@ -376,14 +376,19 @@ ul{
 
       .experience_container.left_position.animate-container,
       .experience_container.right_position.animate-container { 
-        animation: fadeInUp 1s forwards;
+        animation: bounce-in-ver2 1s forwards;
       }
 
-      @keyframes fadeInUp{
+      @keyframes bounce-in-ver2{
         0% {
           opacity: 0;
-          transform: translateY(-100px);
+          transform: translateY(-1000px);
         }
+        60% {
+          opacity: 1;
+          transform: translateY(50px);
+        } 
+        80% { transform: translateY(-30px); }
         100% {
           opacity: 1;
           transform: translateY(0);
@@ -394,6 +399,11 @@ ul{
         border-right:15px solid #0d3d4d;
         border-left: 0;
         left: -15px;
+     }
+     
+     .Experience_closebtn{
+       padding-left: 2.5px;
+       padding-top:2.2px;
      }
   }
  

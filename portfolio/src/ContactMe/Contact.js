@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../style/contactMe.css';
 import scrollAnimation from '../component/scrollAnimation';
+
 function ContactMe() { 
   
   useEffect(()=>{
@@ -115,11 +116,31 @@ const [focusedInput, setFocusedInput] = useState(null);
   const handleBlur = () => {
     setFocusedInput(null);
   };
+  //copy email function
+  const copyEmail = async () => {
+    const email = 'tsunyinho1996@gmail.com';
+  
+    try {
+      await navigator.clipboard.writeText(email);
+      toast.success('Email copied successfully');
+    } catch (error) {
+      console.error('Failed to copy email:', error);
+      toast.error('Failed to copy email');
+    }
+  };
 
   return (
     <div className="contactMe-container" id="ContactMe">
       <h1>
-        <div className="green-title">Contact Me</div>
+        <div className="green-title">Let's talk shall we?</div>
+        <p className='more-info'>If you're interested in knowing more about me, I'd be happy to chat.</p>
+           <p className='more-info'>Email me at
+           <span className='myEmail'> tsunyinho1996@gmail.com </span>
+           <button className='copybtn'
+            onClick={copyEmail}>
+              Copy
+            </button>
+            <br/>or<br/>fill out the form below.</p>
       </h1>
       <div className="contactMe-content contact-animation">
         <form id="form" className="contactForm" ref={form}>
