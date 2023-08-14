@@ -16,6 +16,7 @@ function ContactMe() {
 
     const form = useRef();
     const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 2000));
+
     const sendEmail = (e) => {
       e.preventDefault();
       emailjs.sendForm('service_tl93m5j', 'template_ac1fy8z', form.current, 'Hg1PER7alrGpDygyB')
@@ -52,7 +53,18 @@ function ContactMe() {
      const emailRegex = /^[a-zA-Z0-9]+([._%+-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
      return emailRegex.test(String(email).toLowerCase());
    }
-
+    
+   const isValidMessage = (value) => {
+    // Count the number of words in the value
+    const wordCount = value.trim().split(/\s+/).length;
+  
+    // Check if the word count is greater than two
+    if (wordCount > 5) {
+      return true; // Valid
+    } else {
+      return false; // Invalid
+    }
+  };
     //confiming all the information is correct before sending the email
     const validateInputs = (e) => {
       e.preventDefault();
@@ -60,7 +72,7 @@ function ContactMe() {
       const fields = [
         { id: 'name', validation: isValidName, message: 'Name is required', message_1: 'Name can only be included alphabets' },
         { id: 'email', validation: isValidEmail, message: 'Email is required', message_1: 'Wrong email format' },
-        { id: 'yourMessage', message: 'Your Message is required' }
+        { id: 'yourMessage',validation:isValidMessage, message: 'Your Message is required', message_1:'Your message should more then 5 words'}
       ];
 
       //check field function 
