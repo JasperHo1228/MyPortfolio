@@ -4,7 +4,7 @@
   max-height: 100vh;
   left: 0;
   bottom: 0;
- 
+  z-index: 1;
 }
 
 .home-container {
@@ -45,6 +45,7 @@
 }
 
 .Download_CV{
+  position: relative;
   margin-top:15px;
   font-family: Tomorrow, sans-serif;
   display:inline-block;
@@ -75,7 +76,7 @@
     scale(1,0.4);
   filter:blur(0.7rem);
   opacity:0.7;
-  pointer-events: none;
+ pointer-events: none;
 }
 
 .Download_CV::after{
@@ -88,6 +89,7 @@
   box-shadow: 0 0 2em 0.5em #F500BD;
   opacity: 0;
   transition:opacity 120ms linear;
+
 }
 
 .Download_CV:hover,

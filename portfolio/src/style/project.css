@@ -9,6 +9,10 @@
       margin-top: 20%;
       gap:1.2rem;
     }
+    /* .frame::before{ 
+      animation: none !important;     
+  } */
+
   }
   @media  screen and (max-width:1280px) {
     .project_tool_group{
@@ -126,10 +130,10 @@
 .frame::before{
     content:'';
     position: absolute;
-    inset: -100% -200%;   
-    background: linear-gradient(0deg, #1a5038,#00e880);
+    inset: -150% -250%;   
+    background: linear-gradient(0deg, #1e4031,#00e880);
     transition: 0.5s ease-in;
-    animation: animation-item 1.5s linear infinite;    
+    animation: animation-item 1s linear infinite;    
 }
 
 @keyframes animation-item{

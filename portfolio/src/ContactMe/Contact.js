@@ -14,10 +14,10 @@ function ContactMe() {
     }
   })
 
-
     const form = useRef();
+    //loading process toast
     const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 2000));
-
+    //send Email
     const sendEmail = (e) => {
       e.preventDefault();
       emailjs.sendForm('service_tl93m5j', 'template_ac1fy8z', form.current, 'Hg1PER7alrGpDygyB')
@@ -107,8 +107,6 @@ function ContactMe() {
     
 const [focusedInput, setFocusedInput] = useState(null);
 
-  // ... rest of your code ...
-
   const handleFocus = (inputName) => {
     setFocusedInput(inputName);
   };
@@ -116,6 +114,7 @@ const [focusedInput, setFocusedInput] = useState(null);
   const handleBlur = () => {
     setFocusedInput(null);
   };
+
   //copy email function
   const copyEmail = async () => {
     const email = 'tsunyinho1996@gmail.com';
@@ -133,15 +132,19 @@ const [focusedInput, setFocusedInput] = useState(null);
     <div className="contactMe-container" id="ContactMe">
       <h1>
         <div className="green-title">Let's talk shall we?</div>
-        <p className='more-info'>If you're interested in knowing more about me, I'd be happy to chat.</p>
-           <p className='more-info'>Email me at
+      </h1>
+      <div className="more-info info-animation">
+        <h1 className="contactMe-content contact-animation">
+          <p>If you're interested in knowing more about me, I'd be happy to chat.</p>
+           <p>Email me at
            <span className='myEmail'> tsunyinho1996@gmail.com </span>
            <button className='copybtn'
             onClick={copyEmail}>
               Copy
             </button>
             <br/>or<br/>fill out the form below.</p>
-      </h1>
+            </h1>
+         </div>
       <div className="contactMe-content contact-animation">
         <form id="form" className="contactForm" ref={form}>
           <input

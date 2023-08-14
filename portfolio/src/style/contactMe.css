@@ -10,33 +10,38 @@
 .more-info{
     font-family: Tomorrow, sans-serif;
     text-align: center;
-    color: #F500BD;
+    color: #d882ff;
     font-size: 90%;
-    animation: bounce-in 1s forwards;
 }
+
 .myEmail{
-    color: #F500BD;
+    color: #d47eff;
     text-decoration: underline;
 }
+
+
+.contactMe-content.contact-appear-animation{
+    animation: bounce-in 1s forwards;
+  }
 
 .copybtn{
     font-family: Tomorrow, sans-serif;
     background-color: #001D31;
-    border: #dd0aec solid 2px;
+    border: #0aec11 solid 2px;
     padding:0.7rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    color:#e600ff;
+    color:#77ff00;
     transition: ease-in 0.5s;
     font-size: 80%;
 }
 
 .copybtn:hover{
-  background-color: #dd0aec;
+  background-color: #0aec77;
   text-shadow: 0 0 0.5em #FFF7,
                0 0 1em  #001D31;
-  box-shadow: inset 0 0 1rem  #dd0aec,
-                    0 0 1rem  #dd0aec;
+  box-shadow: inset 0 0 1rem  #91ec0a,
+                    0 0 1rem  #3feb0b;
   color: #001D31;
 }
 
@@ -47,10 +52,8 @@
     align-items: center;
     opacity: 0;
 }
-.contactMe-content.contact-appear-animation{
-    animation: bounce-in 1s forwards;
-  }
-  
+
+
 .MyLink-container{
     display: flex;
     flex-direction: column;
@@ -116,7 +119,7 @@ textarea{
 }
 
 .submit-button:hover{
-    background-color: #001D31;
+    background-color: #100d36;
     color: #00BE67;
     text-shadow: 0 0 0.2em #FFF7,
     0 0 0.3em  #00BE67;
