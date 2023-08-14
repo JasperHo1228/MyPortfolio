@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/MyPortfolio/static/css/main.753addc9.css",
+    "main.js": "/MyPortfolio/static/js/main.7128eec3.js",
+    "static/js/787.1ed0c42c.chunk.js": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Jasper.pdf": "/MyPortfolio/static/media/Jasper.23156408537a5052aa5e.pdf",
+    "static/media/holidayApp.jpg": "/MyPortfolio/static/media/holidayApp.6d8ac9b7e2145b732be7.jpg",
+    "static/media/xcode.svg": "/MyPortfolio/static/media/xcode.32f75a0241ba92d7c04d680af530af7d.svg",
+    "static/media/AR-APP.jpg": "/MyPortfolio/static/media/AR-APP.2d6b02b4bacb68a0a086.jpg",
+    "static/media/react.svg": "/MyPortfolio/static/media/react.4fd8e553f316ea21eb3dba735a08f71c.svg",
+    "static/media/problem-solving.svg": "/MyPortfolio/static/media/problem-solving.7d7afbc75d718cbe0aca14f0d48109ff.svg",
+    "static/media/time-management.svg": "/MyPortfolio/static/media/time-management.afe479e8da8af0733269df5c594cdf8b.svg",
+    "static/media/pycharm.svg": "/MyPortfolio/static/media/pycharm.3dd076dc50e0c7f3b24cf4a16f5071ea.svg",
+    "static/media/mysql.svg": "/MyPortfolio/static/media/mysql.42ee7d4cf77ac6dfda873e70f9fbcac4.svg",
+    "static/media/innovation.svg": "/MyPortfolio/static/media/innovation.8c4464fdc4d1e72789c7dfdadf0b03ed.svg",
+    "static/media/communication.svg": "/MyPortfolio/static/media/communication.fba1cc173aef9f6dfd50b27bc1139273.svg",
+    "static/media/java.svg": "/MyPortfolio/static/media/java.dad6a3020de3bcb800ba32b71a4fd120.svg",
+    "static/media/python.svg": "/MyPortfolio/static/media/python.833e0746791476096f7fc0bb91119779.svg",
+    "static/media/jupyter.svg": "/MyPortfolio/static/media/jupyter.80ed1e708d5afb4703d56e0e7f06192d.svg",
+    "static/media/scrum.svg": "/MyPortfolio/static/media/scrum.6c1e24f7334a55ae21134389f6b4f6e1.svg",
+    "static/media/springboot.svg": "/MyPortfolio/static/media/springboot.460c24336a7cdfb70f2dffe5eb6439ce.svg",
+    "static/media/intellij.svg": "/MyPortfolio/static/media/intellij.9cf27f4cab77fb2148847ae81c900191.svg",
+    "static/media/thymeleaf.svg": "/MyPortfolio/static/media/thymeleaf.4291f8cd07c25741f13b9f4f4c231dd0.svg",
+    "static/media/javascript.svg": "/MyPortfolio/static/media/javascript.9782de3ebea83751d6139ea1b0d1b62b.svg",
+    "index.html": "/MyPortfolio/index.html",
+    "static/media/vscode.svg": "/MyPortfolio/static/media/vscode.801b6dfed5eb5c4c8312c00b4b533773.svg",
+    "static/media/git.svg": "/MyPortfolio/static/media/git.5f2a7a4d935f28320eeb553412c365c9.svg",
+    "static/media/agile.svg": "/MyPortfolio/static/media/agile.661f7e2a2c04c0e5ae1ee3f40ab52d98.svg",
+    "static/media/swiftui.svg": "/MyPortfolio/static/media/swiftui.74101b63a3bb72acc1aa1f1045c756ed.svg",
+    "static/media/eclipse.svg": "/MyPortfolio/static/media/eclipse.608dc840208f79c31eeb3559e10f4471.svg",
+    "static/media/html.svg": "/MyPortfolio/static/media/html.274a89f32b54b9d872dda4d7f1a29ab5.svg",
+    "static/media/css.svg": "/MyPortfolio/static/media/css.4b815f2d720570b20a61d17129f16551.svg",
+    "static/media/pytorch.svg": "/MyPortfolio/static/media/pytorch.d33ff3727ca1516fe50d889e40aec56b.svg",
+    "static/media/uikit.svg": "/MyPortfolio/static/media/uikit.e67fe3e9ed0f3dd2b4780134eab6fee1.svg",
+    "main.753addc9.css.map": "/MyPortfolio/static/css/main.753addc9.css.map",
+    "main.7128eec3.js.map": "/MyPortfolio/static/js/main.7128eec3.js.map",
+    "787.1ed0c42c.chunk.js.map": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.753addc9.css",
+    "static/js/main.7128eec3.js"
+  ]
+}
