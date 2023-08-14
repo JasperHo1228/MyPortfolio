@@ -16,7 +16,6 @@ function Footer(){
             <span className="contact-icon github">
               <BsGithub />
             </span>
-           
           </a>
         </div>
         </div>

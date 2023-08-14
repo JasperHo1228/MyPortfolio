@@ -38,8 +38,6 @@ function Skills() {
     }
   };
   
-
-
   return (
     <div className="skill-container" id="Skills">
      <h1><div className="red-title">Skills</div></h1> 

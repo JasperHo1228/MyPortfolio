@@ -485,9 +485,6 @@
                       0 0 0.6rem  #F500BD;
   z-index: 1;
   cursor: pointer;
-}
-
-.btn:hover{
   animation: textShadow 1.5s infinite;
   background-color: #59244d;
   text-shadow: 0 0 0.2em #FFF7,
@@ -495,6 +492,7 @@
   box-shadow: inset 0 0 0.9rem  #f800b6,
        0 0 0.8rem  #e100ff;
 }
+
 
 .btn2{
     font-family: Tomorrow, sans-serif;
