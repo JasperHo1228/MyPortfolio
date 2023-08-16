@@ -4,6 +4,7 @@ import { project_json } from './project_json';
 import {ImCross} from 'react-icons/im';
 import scrollAnimation from '../component/scrollAnimation';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { handleMoreDetailClickAnimation, handleClosingDetailInfo } from '../component/moreInfoAnimation';
 //overlay function 
 const FrameOverlay = ({link, index}) => {
   return(
@@ -46,43 +47,25 @@ function Project() {
   const projects = [...project_json];
 
   const [currentProject, setCurrentProject] = useState(null);
-
+  
+  //track the change on the page
   useEffect(() => {
     // timeline should run first so threshold should be smaller
     const project_animate = scrollAnimation('animate-frame','.frame-container',0.3);
+     // Remove event listener when component unmounts
     return () => {
       project_animate.disconnect();
     };
   }, []);
   
   const handleMoreDetailClick = (index) => {
-    const frame = document.getElementById(`frame-${index}`);
-  
-    // If the clicked item is already open, close it
-    if (currentProject === index) {
-      frame.classList.toggle('overlay-visible', false);
-      setCurrentProject(null);
-    } else {
-      // If another item is already open, close it first
-      const currentFrame = document.getElementById(`frame-${currentProject}`);
-      if (currentFrame) {
-        currentFrame.classList.toggle('overlay-visible', false);
-      }
-  
-      // Open the clicked item
-      frame.classList.toggle('overlay-visible', true);
+      handleMoreDetailClickAnimation('frame', index, currentProject, 'overlay-visible', 'overlay');
       setCurrentProject(index);
-    }
   };
   
+  //close animation
   const handleOverlayClose = () => {
-    const frame = document.getElementById(`frame-${currentProject}`);
-    frame.classList.toggle('overlay-visible', false);
-    const overlay = document.getElementById(`overlay-${currentProject}`);
-    overlay.setAttribute('closing', '');
-    overlay.addEventListener('animationend', () => {
-      overlay.removeAttribute('closing');
-    }, { once: true });
+    handleClosingDetailInfo('frame', currentProject,'overlay','overlay-visible');
     setCurrentProject(null);
   };
   
@@ -97,7 +80,7 @@ function Project() {
             <div className='project_item'>
               <div className='project_img'>
                 <div className={`closebtn ${
-                      currentProject === index ? 'btn-visible neon-light' : 'btn-hidden'}`}
+                      currentProject === index ? 'btn-visible' : 'btn-hidden'}`}
                     onClick={handleOverlayClose}>
                     <ImCross/>
                 </div>

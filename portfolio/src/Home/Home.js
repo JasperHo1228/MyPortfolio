@@ -10,7 +10,8 @@ function Home(){
         typeSpeed:120,
         deleteSpeed:80
       });
-    
+      
+      //for topic cursor
       const [cursorVisible, setCursorVisible] = useState(true);
 
       const [topic] = useTypewriter({
@@ -18,7 +19,8 @@ function Home(){
         loop:1,
         typeSpeed:100,
       });
-    
+      
+      //when topic status change useEffect function while be running.
       useEffect(() => {
         const typingDuration = topic.length; 
         // After the typing animation is completed, set the cursor to transparent

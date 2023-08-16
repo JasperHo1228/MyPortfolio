@@ -9,11 +9,9 @@
       margin-top: 20%;
       gap:1.2rem;
     }
-    /* .frame::before{ 
-      animation: none !important;     
-  } */
-
   }
+
+  
   @media  screen and (max-width:1280px) {
     .project_tool_group{
       padding-left:8%;
@@ -370,29 +368,35 @@
   }
 }
 
-
+@keyframes coverFrame-closebtn{
+  0%{
+    transform: translateY(-700px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 .closebtn {
   position: absolute;
   cursor: pointer;
   color: #F500BD;
   font-size: 1.5rem;
   z-index: 3;
-  left:15px;
+  left:20px;
   top:20px;
   transition: 0.2s ease-in;
   font-size: 100%;
+  padding-top: 3px;
+  display: none;
 }
 
 .closebtn:hover{
   color: #00BE67;
 }
 
-.closebtn.btn-hidden {
-  display: none;
-}
 
 .closebtn.btn-visible {
-  animation: coverFrame 1.5s forwards;
+  animation:coverFrame-closebtn 1.5s forwards;
   display: block;
 }
 

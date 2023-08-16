@@ -8,6 +8,7 @@ function Skills() {
 
   const [showMotto, setShowMotto] = useState(true);
   const [clickedLayer, setClickedLayer] = useState(null);
+  //set the onion area
   const onionRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function Skills() {
   };
 
   const handleOutsideClick = (event) => {
+     //when you are not clicking the onion then trigger inside the condition
     if (!onionRef.current.contains(event.target)) {
       setShowMotto(true);
       setClickedLayer(null);
@@ -58,7 +60,8 @@ function Skills() {
             </h3>
             <div className='Click-hints'>
                   <div className='click'>
-                    Click each layer of the left half onion to view stack skills.
+                   <span className='normal-hint'>Click each layer of the</span>  <span className='left-half'>LEFT HALF </span> 
+                   <span className='normal-hint'>onion to view stack skills.</span>
                   </div>
               </div>
           </div>

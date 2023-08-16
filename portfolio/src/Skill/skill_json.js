@@ -1,10 +1,13 @@
 import skillsetContent from "./skillsetContent_json";
+
+//onion layer skill
 const skill_json = [
 
     {
         className: "left-first-layer",
         SkillclassName:"layer-one",
         path: "M248.326,0.726c-32,88-222.4,160-245.6,278.4c-23.2,120.6,105.6,216.8,236.8,216.8c3.2,0,9.6,0,9.6,0 V0.726H248.326z",
+        //connect to skillsetContent json file which include all the tech tools
         content: skillsetContent[0],
     },
     {

@@ -292,11 +292,70 @@
   animation: bounce 0.8s infinite;
 }
 
+.left-half{
+     color:#fd00c6;
+     text-shadow: 0 0 0.1em #FFF7,
+     0 0 0.1em #fd00c6;
+     animation: clickHints-left-keyword 1s infinite;
+}
+
+@keyframes clickHints-left-keyword {
+  0%{
+      text-shadow: 0 0 0.1em #FFF7,
+      0 0 0.1em  #F500BD;
+  }
+  15%{
+      text-shadow: 0 0 0.15em #FFF7,
+      0 0 0.15em  #F500BD;
+  }
+
+  25%{
+      text-shadow: 0 0 0.25em #FFF7,
+      0 0 0.25em  #F500BD;
+  }
+
+  35%{
+      text-shadow: 0 0 0.35em #FFF7,
+      0 0 0.35em  #F500BD;
+  }
+  45%{
+      text-shadow: 0 0 0.45em #FFF7,
+      0 0 0.45em #F500BD;
+  }
+  55%{
+      text-shadow: 0 0 0.55em #FFF7,
+      0 0 0.55em  #F500BD;
+  }
+  65%{
+    text-shadow: 0 0 0.45em #FFF7,
+    0 0 0.45em  #F500BD;
+  }
+  75%{
+      text-shadow: 0 0 0.35em #FFF7,
+      0 0 0.35em  #F500BD;
+  }
+  85%{
+      text-shadow: 0 0 0.25em #FFF7,
+      0 0 0.25em  #F500BD;
+  }
+  95%{
+      text-shadow: 0 0 0.15em #FFF7,
+      0 0 0.15em  #F500BD;
+  }
+  100%{
+      text-shadow: 0 0 0.1em rgba(204, 194, 194, 0.467),
+      0 0 0.1em  #F500BD;
+  }
+}
+
 .click{
+  padding:5px;
+}
+
+.normal-hint{
   color:#00f55e;
   text-shadow: 0 0 0.1em #FFF7,
   0 0 0.1em #00f55e;
-  padding:5px;
   animation: clickHints 1s infinite;
 }
 

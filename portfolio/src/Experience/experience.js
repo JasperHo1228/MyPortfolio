@@ -5,6 +5,7 @@ import { IoSchool } from 'react-icons/io5';
 import { MdWork } from 'react-icons/md';
 import {ImCross} from 'react-icons/im'
 import scrollAnimation from '../component/scrollAnimation';
+import { handleMoreDetailClickAnimation, handleClosingDetailInfo } from '../component/moreInfoAnimation';
 
 
 function Experience() {
@@ -19,42 +20,19 @@ function Experience() {
     };
   }, []);
 
-    const [currentProject, setCurrentProject] = useState(null);
+    const [currentInfo, setCurrentInfo] = useState(null);
     
-    const handleMoreDetailClick = (index) => {
-      const frame = document.getElementById(`text-box-${index}`);
-    
-      // If the clicked item is already open, close it
-      if (currentProject === index) {
-        frame.classList.toggle('moreInfoVisible', false);
-        setCurrentProject(null);
-      }
-      
-      else {
-        // If another item is already open, close it first
-        const currentFrame = document.getElementById(`text-box-${currentProject}`);
-        if (currentFrame) {
-          currentFrame.classList.toggle('moreInfoVisible', false);
-        }
-    
-        // Open the clicked item
-        frame.classList.toggle('moreInfoVisible', true);
-        setCurrentProject(index);
-      }
+    const handleMoreInfoClick = (index) => {
+       //handle open more info animation
+        handleMoreDetailClickAnimation('text-box', index, currentInfo, 'moreInfoVisible', 'contribution');
+        setCurrentInfo(index);
     };
     
   
-    const handleOverlayClose = () => {
-      if (currentProject !== null) {
-        const frame = document.getElementById(`text-box-${currentProject}`);
-        const contribution = document.getElementById(`contribution-${currentProject}`);
-        contribution.setAttribute('closing', '');
-        contribution.addEventListener('animationend', () => {
-          contribution.removeAttribute('closing');
-        }, { once: true });
-        frame.classList.toggle('moreInfoVisible', false);
-        setCurrentProject(null);
-      }
+    const handleInfoClose = () => {
+       //handle closing animation
+        handleClosingDetailInfo('text-box',currentInfo,'contribution', 'moreInfoVisible');
+        setCurrentInfo(null);
     };
     
   return (
@@ -73,15 +51,15 @@ function Experience() {
               <div className='text-box' id={`text-box-${index}`}>
               <div
                   className={`Experience_closebtn ${
-                    currentProject === index ? 'btn-visible' : 'btn-hidden'
+                    currentInfo === index ? 'btn-visible' : ''
                   }`}
-                  onClick={handleOverlayClose}>
+                  onClick={handleInfoClose} id="closeBtn">
                           <ImCross/>
                 </div>
                 <h2 className='experience-title'>{element.title}</h2>
                 <h3 className='experience-subtitle'>{element.subtitle}</h3>
                 <h5 className='experience-date'>{element.date}</h5>
-                <div className="TapMebtn" onClick={() => handleMoreDetailClick(index)}>View More</div>
+                <div className="TapMebtn" onClick={() => handleMoreInfoClick(index)}>View More</div>
                 <div className='experience-contribution' id={`contribution-${index}`}>{element.contribution}</div>
                 <span className={element.arrow}></span>
               </div>

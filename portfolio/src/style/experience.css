@@ -250,7 +250,7 @@
 }
 
 /* Trigger closing animation when a new button is clicked */
-.moreInfoVisible.closing {
+.moreInfoVisible[closing] {
   animation: close-contribution 1s forwards;
 }
 
@@ -276,11 +276,11 @@
   transition: 0.4s ease-in;
   vertical-align: middle;
   border: #0d3d4d solid;
+  display: none;
 }
 
 .Experience_closebtn:hover {
   color: #F500BD;
-  transform: rotate(90deg);
 }
 
 .Experience_closebtn.btn-hidden {
