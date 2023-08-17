@@ -170,7 +170,9 @@
 .experience-contribution{
    color:#f500bd;
    font-family: Tomorrow, sans-serif;
-   display: none;
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 1s;
 }
 
 .experience_container.right_position.animate-container {
@@ -241,8 +243,10 @@
 
 /* action need to be done when trigger the className:moreInfoVisible */
 .moreInfoVisible .experience-contribution{
+  position: relative;
   display: block;
   animation:  contributionInfo 1s forwards;
+  max-height:400px;
 }
 
 .moreInfoVisible .TapMebtn{

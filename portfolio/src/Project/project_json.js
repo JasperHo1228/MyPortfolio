@@ -7,7 +7,7 @@ export const project_json = [
        {
         id:1,
         image:AR_APP,
-        title: "AR Route Map iOS APP",
+        title: <div>AR Route Map<br/>iOS APP</div>,
         description:"Creating a wayfinding path in AR style that " +
                      "allow user easily find their way around "+
                      "the University campus.",
@@ -18,7 +18,7 @@ export const project_json = [
        {   
         id:2,
         image: CM_system,
-        title: "Customer Managment System",
+        title: <div>Customer Managment<br/>System</div>,
         description:"This software system is for people who is working as an admin to easily manage customer data.",
         youtube_link: "https://youtu.be/Ribh8SJNaic",
         youtube_link2:"https://youtu.be/LUfA0d6VwHI",
@@ -29,7 +29,7 @@ export const project_json = [
        {
         id:3,
         image: holidayApp,
-        title: "Holiday Searching App",
+        title: <div>Holiday Searching<br/>App</div>,
         description:"This application is to help people to filter up all the holiday that they want to know.",
         youtube_link: "https://www.youtube.com/watch?v=yHbijo6srVs",
         source_code:"https://github.com/JasperHo1228/HolidaySearchingApp",

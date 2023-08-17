@@ -30,7 +30,7 @@ body{
 section{
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start; 
+    
 }
 
 .red-title{
@@ -57,7 +57,6 @@ section{
         justify-content: center;
         margin-right: 6%;
         margin-left: 6%;
-        
     }
 }
 

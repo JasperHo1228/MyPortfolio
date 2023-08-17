@@ -9,7 +9,7 @@ import { handleMoreDetailClickAnimation, handleClosingDetailInfo } from '../comp
 const FrameOverlay = ({link, index}) => {
   return(
     <div className='frame-overlay' id={`overlay-${index}`}>
-    <div className='project_detail' >
+     <div className='project_detail' >
       <h1 className='projectAim'>Project Aim <br/>& <br/>Used Tools</h1>
       <h3 className="project_description">{link.description}</h3>
       <div className="project_tool_group">
@@ -84,6 +84,8 @@ function Project() {
                     onClick={handleOverlayClose}>
                     <ImCross/>
                 </div>
+       
+            
                 <LazyLoadImage src={link.image} className='projectImg' alt={link.alt} effect='blur'/>
               </div>
 
@@ -92,8 +94,8 @@ function Project() {
                   <h3>{link.title}</h3>
                 </div>
               </div>
-
-              <div className='project_link'>
+              
+              <div className='project_link_2'>
                 <div className="detailbtn" 
                   onClick={() => handleMoreDetailClick(index)}>
                    <div className="gradient-text">
@@ -101,9 +103,9 @@ function Project() {
                     </div>
                 </div>
               </div>
-
-              {/* overlay function */}
-             <FrameOverlay link={link} index={index}/>
+            {/* overlay function */}
+            <FrameOverlay className='frame-cover' link={link} index={index}/>
+           
             </div>
           </div>
         ))}
