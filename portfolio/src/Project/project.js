@@ -83,12 +83,9 @@ function Project() {
                       currentProject === index ? 'btn-visible' : 'btn-hidden'}`}
                     onClick={handleOverlayClose}>
                     <ImCross/>
-                </div>
-       
-            
+                </div>     
                 <LazyLoadImage src={link.image} className='projectImg' alt={link.alt} effect='blur'/>
               </div>
-
               <div className='project_link'>
                 <div className='title'>
                   <h3>{link.title}</h3>

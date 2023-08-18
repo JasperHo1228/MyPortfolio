@@ -34,8 +34,6 @@
     transition: 1s ease-in;
 }
 
-
-
 .left_position{
     left:0;
 }
@@ -69,6 +67,7 @@
   position: relative;
 }
 
+/* arrow */
 .timeline_experience::before { 
   content: '';
   width: 0; 
@@ -84,6 +83,7 @@
   z-index: 0; 
 }
 
+/* vertical line */
 .timeline_experience::after {
   content: '';
   position: absolute;

@@ -1,59 +1,24 @@
-@media screen and (max-width: 1024px) {
-    .project-container{
-        grid-template-columns:repeat(2, 1fr) !important;
-        gap:1.2rem !important;
-        max-width: 0px;
-     }
-     .linkInfo{
-      position: relative;
-      margin-top: 20%;
-      gap:1.2rem;
-    }
-  }
 
+
+@media  screen and (max-width:1280px) {
+  .project_tool_group{
+    padding-left:8%;
+    padding-right:6%;
+  }
+}
+
+/* 1-1  side change */
+@media screen and (max-width: 1105px){
+  .project-container{
+    font-size: 94% !important;
+  }
+  .projectAim{
+    font-size: 130% !important;
+  }
   
-  @media  screen and (max-width:1280px) {
-    .project_tool_group{
-      padding-left:8%;
-      padding-right:6%;
-    }
+  .project_description{
+    font-size: 92% !important;
   }
-  @media screen and (max-width: 665px) {
-    .btn{
-      left: 10px;
-      position: relative;
-    }
-    .btn2{
-      position: relative;
-      right: 10px;
-    }
-   
-  }
-
-  @media screen and (max-width: 658px) {
-    .project-container{
-        grid-template-columns: 1fr!important;
-        gap: 1rem;
-     }
-     .btn{
-      left: 0px;
-      position: relative;
-    }
-    .btn2{
-      position: relative;
-      right: 0px;
-    }
-  }
-
-
-  @media screen and (max-width: 395px) {  
-    .project{
-      font-size:100%;
-    }  
-    .project_tool_group{
-      padding-left:8%;
-      padding-right:6%;
-    }
     .btn{
       left: 10px;
       position: relative;
@@ -64,9 +29,116 @@
     }
 }
 
+/* 2-1 second size change */
+@media screen and (max-width: 1024px) {
+    .project-container{
+        grid-template-columns:repeat(2, 1fr) !important;
+        gap:4rem !important;
+        font-size: 110% !important;
+     }
+     .projectAim{
+      font-size: 140% !important;
+    }
+    
+    .project_description{
+      font-size: 100% !important;
+    }
+     .linkInfo{
+      position: relative;
+      margin-top:10% !important;;
+      gap:1.2rem;
+    }
+  }
+/* 2-2 size change */
+  @media screen and (max-width: 800px) {
+    .project-container{
+      font-size: 94% !important;
+    }
+    .projectAim{
+      font-size: 130% !important;
+    }
+    
+    .project_description{
+      font-size: 92% !important;
+    }
+  }
+
+
+/* 2-3 size change  */
+  @media screen and (max-width: 677px) {
+    .project-container{
+     font-size: 94% !important;
+   }
+   .projectAim{
+    font-size: 110% !important;
+  }
+  
+  .project_description{
+    font-size: 80% !important;
+  }
+  }
+
+  /* 3-1 size change */
+  @media screen and (max-width: 658px) {
+    .project-container{
+        grid-template-columns: 1fr!important;
+        gap: 5rem !important;
+        font-size: 120% !important;
+     }
+     .projectAim{
+      font-size: 115% !important;
+    }
+    
+    .project_description{
+      font-size: 105% !important;
+    }
+
+     .btn{
+      font-size: 94% !important;
+      left: 0px !important;
+      position: relative;
+    }
+    .btn2{
+      font-size: 94% !important;
+      position: relative;
+      right: 0px !important;
+    }
+  }
+
+ /* 3-2 size change */
+  @media screen and (max-width: 395px) {  
+    .project{
+      font-size:100% !important;
+    }  
+    .projectAim{
+      font-size: 100% !important;
+    }
+    
+    .project_description{
+      font-size: 87% !important;
+    }
+    .project_tool_group{
+      padding-left:8%;
+      padding-right:6%;
+    }
+    .btn{
+      left: 10px !important;
+      position: relative ;
+      font-size: 90% !important;
+    }
+    .btn2{
+      position: relative;
+      right: 10px !important;
+      font-size: 90% !important;
+    }
+}
+
   @media screen and (max-width:280px){
+    .project{
+      font-size:115% !important;
+    } 
     .project_tools .toolsName{
-      width:80px !important;           
+      width:80px !important;         
     }
     .project_tool_group{
       grid-template-columns: repeat( auto-fill, minmax(75px, 1fr)) !important;
@@ -99,7 +171,7 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    height: 107%; 
     width: 100%;
     opacity: 0;
     
@@ -193,7 +265,14 @@
     margin-bottom:1rem;
     z-index: 1;
 } 
-.project_link_2{}
+.project_link_2{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 2rem;
+  right: 2rem;
+  left: 2rem;
+}
 
 .detailbtn,
 .detailbtnh:after {
