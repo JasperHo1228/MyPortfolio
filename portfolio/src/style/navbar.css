@@ -144,7 +144,6 @@ nav .wholeul .remove .barlink::before {
   border-radius: 20px;
   box-shadow: inset 0 0 0.6rem  #F500BD,
   0 0 0.6rem  #F500BD;
-  z-index: -1;
   opacity: 0; /* Initially transparent */
   transition: opacity 0.3s ease-in-out;
 }
@@ -209,6 +208,7 @@ nav .wholeul .remove .barlink:hover,
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 
 /* Apply a transition to smoothly show/hide the overlay */
@@ -218,7 +218,7 @@ nav .wholeul .remove .barlink:hover,
   animation: blur-background 1s forwards;
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
-  z-index: 5;
+  z-index: 2;
 }
 
 .overlay.close{
