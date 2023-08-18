@@ -6,26 +6,24 @@
 
 
 @media screen and (max-width: 995px) {
-  .skillset-content{
-    gap: 6rem !important;
+  .skill-container .skillset-content{
+    gap: 6rem;
   }
-  .skillToolContainer {
-    grid-template-columns: repeat(2, 1fr) !important; 
+   .skillToolContainer {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 
-@media screen and (max-width: 690px) {
-  .onion-svg {
+@media screen and (max-width:835px) {
+  .onion-container .onion-svg {
     position: relative;
     justify-content: center;
     align-items: center;
   }
-
   .skillset-content {
     flex-direction: column; 
   }
-
   .motto {
     text-align: center; 
     margin-top: -180px; 
@@ -46,28 +44,33 @@
   }
 }
 @media screen and (max-width:400px){
-  .onion-svg {
+  .onion-container .onion-svg {
     height:360px;
     width:360px;
+  }
+  .skill-container .skillset-content{
+    gap: 1rem;
   }
 }
 
 
 @media screen and (max-width:340px){
-  .onion-svg {
-    height:260px !important;
-    width:260px !important;
+.onion-container .onion-svg {
+    height:260px;
+    width:260px;
   }
   .motto {
     text-align: center; 
     margin-top: -380px; 
+  }
+  .skill-container .skillset-content{
+    gap: 6rem;
   }
 }
 
 .onion-svg {
   height:480px;
   width: 350px; 
-  aspect-ratio: auto;
 }
 
 /* initial onion */

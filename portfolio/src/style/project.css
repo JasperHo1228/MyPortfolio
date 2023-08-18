@@ -10,14 +10,14 @@
 /* 1-1  side change */
 @media screen and (max-width: 1105px){
   .project-container{
-    font-size: 94% !important;
+    font-size: 94%;
   }
   .projectAim{
-    font-size: 130% !important;
+    font-size: 130%;
   }
   
   .project_description{
-    font-size: 92% !important;
+    font-size: 92%;
   }
     .btn{
       left: 10px;
@@ -31,91 +31,91 @@
 
 /* 2-1 second size change */
 @media screen and (max-width: 1024px) {
-    .project-container{
-        grid-template-columns:repeat(2, 1fr) !important;
-        gap:4rem !important;
-        font-size: 110% !important;
+    .project .project-container{
+        grid-template-columns:repeat(2, 1fr);
+        gap:4rem;
+        font-size: 110%;
      }
      .projectAim{
-      font-size: 140% !important;
+      font-size: 140%;
     }
     
     .project_description{
-      font-size: 100% !important;
+      font-size: 100%;
     }
      .linkInfo{
       position: relative;
-      margin-top:10% !important;;
+      margin-top:10%;
       gap:1.2rem;
     }
   }
 /* 2-2 size change */
   @media screen and (max-width: 800px) {
-    .project-container{
-      font-size: 94% !important;
+    .project .project-container{
+      font-size: 94%;
     }
     .projectAim{
-      font-size: 130% !important;
+      font-size: 130%;
     }
     
     .project_description{
-      font-size: 92% !important;
+      font-size: 92%;
     }
   }
 
 
 /* 2-3 size change  */
   @media screen and (max-width: 677px) {
-    .project-container{
-     font-size: 94% !important;
+  .project .project-container{
+     font-size: 94%;
    }
    .projectAim{
-    font-size: 110% !important;
+    font-size: 110%;
   }
   
   .project_description{
-    font-size: 80% !important;
+    font-size: 80%;
   }
   }
 
   /* 3-1 size change */
   @media screen and (max-width: 658px) {
-    .project-container{
-        grid-template-columns: 1fr!important;
-        gap: 5rem !important;
-        font-size: 120% !important;
+   .project .project-container{
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        font-size: 120%;
      }
      .projectAim{
-      font-size: 115% !important;
+      font-size: 115%;
     }
     
     .project_description{
-      font-size: 105% !important;
+      font-size: 105%;
     }
 
      .btn{
-      font-size: 94% !important;
-      left: 0px !important;
+      font-size: 94%;
+      left: 0px;
       position: relative;
     }
     .btn2{
-      font-size: 94% !important;
+      font-size: 94%;
       position: relative;
-      right: 0px !important;
+      right: 0px;
     }
   }
 
  /* 3-2 size change */
   @media screen and (max-width: 395px) {  
     .project{
-      font-size:100% !important;
+      font-size:100%;
     }  
     .projectAim{
-      font-size: 100% !important;
+      font-size: 100%;
     }
     
     .project_description{
-      font-size: 87% !important;
+      font-size: 87%;
     }
     .project_tool_group{
       padding-left:8%;
@@ -135,16 +135,16 @@
 
   @media screen and (max-width:280px){
     .project{
-      font-size:115% !important;
+      font-size:115%;
     } 
     .project_tools .toolsName{
-      width:80px !important;         
+      width:80px;         
     }
     .project_tool_group{
-      grid-template-columns: repeat( auto-fill, minmax(75px, 1fr)) !important;
+      grid-template-columns: repeat( auto-fill, minmax(75px, 1fr));
     }
     .gradient-text{
-      font-size: 150% !important;
+      font-size: 150%;
     }
   }
 
@@ -319,7 +319,6 @@
   text-shadow: -1px -1px 0px #2a0e2c, 1px 1px 0px #6c0c79;
   clip-path: var(--slice-0);
 }
-
 
 .detailbtn:hover{
   box-shadow: inset 0 0 1rem #13df83, 0 0 1rem #10fe10;

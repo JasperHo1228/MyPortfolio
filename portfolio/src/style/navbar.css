@@ -174,7 +174,6 @@ nav .wholeul .remove .barlink:hover,
   letter-spacing: 3px;
 }
 
-
 @keyframes glowing {
   0% {
     opacity: 0.5; /* Initial opacity */
@@ -223,7 +222,6 @@ nav .wholeul .remove .barlink:hover,
 
 .overlay.close{
   animation: display-background 1s forwards;
-  background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
   pointer-events: none; 
   transition: opacity 500ms ease-in-out 500ms;
@@ -280,7 +278,6 @@ nav .wholeul .remove .barlink:hover,
   justify-content: center;
   display: none;
 }
-
 
 .mobileButton.menu-icon{
   border: 3px #00ffaa solid;
