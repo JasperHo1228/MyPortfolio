@@ -214,11 +214,11 @@ nav .wholeul .remove .barlink:hover,
 /* Apply a transition to smoothly show/hide the overlay */
 .overlay.active {
   display: block;
-  transition: ease-in 1.5s;
+  transition: opacity 500ms ease-in-out 500ms;
   animation: blur-background 1s forwards;
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
-  z-index: 2;
+  z-index: 5;
 }
 
 .overlay.close{
@@ -226,12 +226,15 @@ nav .wholeul .remove .barlink:hover,
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
   pointer-events: none; 
-  transition: ease-in 1.5s;
+  transition: opacity 500ms ease-in-out 500ms;
 }
 
 @keyframes blur-background {
   0%{
     opacity: 0;
+  }
+  50%{
+    opacity: 1;
   }
   100%{
     opacity: 1;
@@ -263,12 +266,12 @@ nav .wholeul .remove .barlink:hover,
   padding:10px;
   transition: ease-in-out 0.1s;
   display: none;
-  z-index: 10;
+  z-index: 100;
 }
 
 .mobileNavBar .mobileNavBar-wrapper{
   position: fixed;
-  z-index: 8;
+  z-index: 10;
   width: 100%;
   cursor: pointer;
   display: flex;
