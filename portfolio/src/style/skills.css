@@ -4,7 +4,7 @@
 }
 
 
-/* Add media queries for smaller screens */
+
 @media screen and (max-width: 995px) {
   .skillset-content{
     gap: 6rem !important;
@@ -15,7 +15,7 @@
 }
 
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 690px) {
   .onion-svg {
     position: relative;
     justify-content: center;
@@ -51,6 +51,8 @@
     width:360px;
   }
 }
+
+
 @media screen and (max-width:340px){
   .onion-svg {
     height:260px !important;
