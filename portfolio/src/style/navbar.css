@@ -227,6 +227,7 @@ nav .wholeul .remove .barlink:hover,
   backdrop-filter: blur(10px); 
   pointer-events: none; 
   transition: opacity 500ms ease-in-out 500ms;
+  z-index: -1;
 }
 
 @keyframes blur-background {
