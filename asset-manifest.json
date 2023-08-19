@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyPortfolio/static/css/main.00dc8737.css",
-    "main.js": "/MyPortfolio/static/js/main.79fbe9a9.js",
+    "main.js": "/MyPortfolio/static/js/main.400e1fb7.js",
     "static/js/787.1ed0c42c.chunk.js": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Jasper.pdf": "/MyPortfolio/static/media/Jasper.23156408537a5052aa5e.pdf",
     "static/media/holidayApp.jpg": "/MyPortfolio/static/media/holidayApp.6d8ac9b7e2145b732be7.jpg",
@@ -22,8 +22,8 @@
     "static/media/intellij.svg": "/MyPortfolio/static/media/intellij.9cf27f4cab77fb2148847ae81c900191.svg",
     "static/media/thymeleaf.svg": "/MyPortfolio/static/media/thymeleaf.4291f8cd07c25741f13b9f4f4c231dd0.svg",
     "static/media/javascript.svg": "/MyPortfolio/static/media/javascript.9782de3ebea83751d6139ea1b0d1b62b.svg",
-    "index.html": "/MyPortfolio/index.html",
     "static/media/vscode.svg": "/MyPortfolio/static/media/vscode.801b6dfed5eb5c4c8312c00b4b533773.svg",
+    "index.html": "/MyPortfolio/index.html",
     "static/media/git.svg": "/MyPortfolio/static/media/git.5f2a7a4d935f28320eeb553412c365c9.svg",
     "static/media/agile.svg": "/MyPortfolio/static/media/agile.661f7e2a2c04c0e5ae1ee3f40ab52d98.svg",
     "static/media/swiftui.svg": "/MyPortfolio/static/media/swiftui.74101b63a3bb72acc1aa1f1045c756ed.svg",
@@ -33,11 +33,11 @@
     "static/media/pytorch.svg": "/MyPortfolio/static/media/pytorch.d33ff3727ca1516fe50d889e40aec56b.svg",
     "static/media/uikit.svg": "/MyPortfolio/static/media/uikit.e67fe3e9ed0f3dd2b4780134eab6fee1.svg",
     "main.00dc8737.css.map": "/MyPortfolio/static/css/main.00dc8737.css.map",
-    "main.79fbe9a9.js.map": "/MyPortfolio/static/js/main.79fbe9a9.js.map",
+    "main.400e1fb7.js.map": "/MyPortfolio/static/js/main.400e1fb7.js.map",
     "787.1ed0c42c.chunk.js.map": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.00dc8737.css",
-    "static/js/main.79fbe9a9.js"
+    "static/js/main.400e1fb7.js"
   ]
 }
