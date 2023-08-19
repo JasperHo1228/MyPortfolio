@@ -142,7 +142,8 @@ const [focusedInput, setFocusedInput] = useState(null);
             onClick={copyEmail}>
               Copy
             </button>
-            <br/>or<br/>fill out the form below.</p>
+             <br/>or<br/></p>
+            <p className='formHint'>fill out the form below.</p>
             </h1>
          </div>
       <div className="contactMe-content contact-animation">

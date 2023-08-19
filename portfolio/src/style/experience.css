@@ -1,5 +1,7 @@
 #Experience{
-  margin-top: 30vh;
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+  padding-top: 5px;
 }
 
 .timeline_experience{
@@ -22,7 +24,7 @@
     width: 50%;
     position: relative;
     opacity: 0;
-}
+  }
 
 .text-box{
     padding:20px 30px;

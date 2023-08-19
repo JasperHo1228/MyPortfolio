@@ -2,7 +2,7 @@ function scrollAnimation(addClassName, selectclassName, threshold){
 
     const createObserverOptions = (threshold) => ({
       root: null,
-      rootMargin: '0px',
+      rootMargin: '100px 0px 0px 0px', 
       threshold });
     
     const observer = new IntersectionObserver((entries) => {

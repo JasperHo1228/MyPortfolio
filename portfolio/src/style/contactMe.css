@@ -1,6 +1,7 @@
 #ContactMe{
-    margin-top: 20vh;
+    margin-top: 15vh;
     margin-bottom: 10vh;
+    padding-top: 30px;
 }
 
 .contactMe-container{
@@ -19,13 +20,17 @@
     text-decoration: underline;
 }
 
-
 .contactMe-content.contact-appear-animation{
     animation: bounce-in 1s forwards;
   }
 
-.copybtn{
-    
+.formHint{
+    position: relative;
+    bottom:10px;
+}
+
+.copybtn{  
+    margin-left: 7px;
     font-family: Tomorrow, sans-serif;
     background-color: #001D31;
     border: #0aec11 solid 2px;
@@ -34,7 +39,7 @@
     cursor: pointer;
     color:#77ff00;
     transition: ease-in 0.5s;
-    font-size: 80%;
+    font-size: 80%; 
 }
 
 .copybtn:hover{
@@ -170,3 +175,11 @@ textarea{
   color: #00A1D5;
 }
 
+@media screen and (max-width:637px) {
+    .copybtn{
+        margin-top:5px;
+    }
+    .formHint{
+        bottom:20px !important;
+    }
+}

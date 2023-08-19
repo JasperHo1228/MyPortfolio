@@ -1,8 +1,9 @@
 
 #Skills {
-  margin-top: 30vh;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  padding-top: 5px;
 }
-
 
 
 @media screen and (max-width: 995px) {
@@ -258,7 +259,6 @@
   width: 100%;
   padding: 0 1px;
   max-width: 870px;
-  margin-top: 70px;
 }
 
 .skillset-tool {
