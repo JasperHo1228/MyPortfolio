@@ -52,7 +52,7 @@ function Home(){
                </p>
                   <a href={CV}
                           className='Download_CV'  target='_blank'
-                          rel='noreferrer'>Download CV</a>
+                          rel='noopener noreferrer'>Download CV</a>
                   </div>
             </div>
  

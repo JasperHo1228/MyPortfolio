@@ -7,11 +7,8 @@ import Footer from './Footer/Footer.js';
 import { ToastContainer } from 'react-toastify';
 
 const myOwnRoute = [...myRoute];
-function YourComponentName() {
-  useEffect(() => {
-    document.title = "Jasper's Portfolio"; // Replace with your desired title
-  }, []);
-}
+
+
 function App() {
   const [isNavbarOpen, setNavbarOpen] = useState(null);
 
@@ -39,8 +36,7 @@ function App() {
 
   return (
     <div className='app'>
-      <YourComponentName/>
-      <aside className='sidebar'>
+    <aside className='sidebar'>
         <Navbar isNavbarOpen={isNavbarOpen} togglerNavbar={togglerNavbar} />
       </aside>
       <div className='mobileNavBar'>

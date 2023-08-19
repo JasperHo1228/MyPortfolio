@@ -79,7 +79,6 @@
   top: 0;
   transform: translateY(90px) rotate(-90deg);
   opacity: 0;
-  z-index: 0; 
 }
 
 /* vertical line */
@@ -90,16 +89,14 @@
   height: 0;
   background-color: #f500bd;
   top: 120px;
-  left: 50%; 
+  left:50%;
   transform: translateX(-50%);
   z-index: -1; 
-  transition: height 1s ease-in-out;
 }
   
 .timeline-container.animate-timeline::before {
   animation: arrowAppear 0.3s forwards;
 }
-
    @keyframes arrowAppear {
     0%{
       opacity: 0;
@@ -114,8 +111,7 @@
 
   
   .timeline-container.animate-timeline::after {
-    animation: timelineMove 1s forwards; 
-    transition: ease-in 2s;
+    animation: timelineMove 2s forwards; 
   }
   
   @keyframes timelineMove {
@@ -305,9 +301,6 @@
   transition: max-height 0.8s;
 }
 
-ul{
-  list-style-position: inside;
-}
 
 @keyframes experience_closebtn {
   0%{
@@ -343,13 +336,14 @@ ul{
     .timeline_experience{
         margin: 50px auto;
      }
+
     .timeline_experience::before{
       left:16px;
-    }
 
-     .timeline_experience::after{
-        left:31px;
-     }
+    }
+    .timeline_experience::after{
+      left:31px;
+    }
 
      .experience_container{
         width: 100%;
@@ -370,7 +364,7 @@ ul{
   
      .experienceIcon{
         float: none;
-        clear:none;
+        clear: none;
      }
 
      .right_position .experienceIcon,  
