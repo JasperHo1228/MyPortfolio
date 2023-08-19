@@ -167,7 +167,7 @@
    font-family: Tomorrow, sans-serif;
    overflow: hidden;
    max-height: 0;
-   transition: max-height 1.7s;
+   transition: max-height 2.2s;
 }
 
 .experience_container.right_position.animate-container {
