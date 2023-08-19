@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect} from 'react';
 import { myRoute } from './component/Route.js';
 import './style/index.css';
 import Navbar from './component/navbar';
@@ -7,7 +7,6 @@ import Footer from './Footer/Footer.js';
 import { ToastContainer } from 'react-toastify';
 
 const myOwnRoute = [...myRoute];
-
 function YourComponentName() {
   useEffect(() => {
     document.title = "Jasper's Portfolio"; // Replace with your desired title
@@ -16,24 +15,27 @@ function YourComponentName() {
 function App() {
   const [isNavbarOpen, setNavbarOpen] = useState(null);
 
+
   const togglerNavbar = () => {
     setNavbarOpen(!isNavbarOpen);
   };
+
   useEffect(() => {
     // Add event listener to close the sidebar when clicking outside of it
     const handleOutsideClick = (e) => {
-      if (!e.target.closest('#open')) {
-        setNavbarOpen(false); // Reset the state to null
+      if (!e.target.closest('#open') && isNavbarOpen !== null) {
+        setNavbarOpen(false); 
       }
     };
-
-
     document.addEventListener('mousedown', handleOutsideClick);
 
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
-  }, []);
+  }, [isNavbarOpen]);
+
+
+  // Rest of your component code
 
   return (
     <div className='app'>

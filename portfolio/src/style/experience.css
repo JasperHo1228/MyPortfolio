@@ -386,7 +386,7 @@ ul{
       @keyframes bounce-in-ver2{
         0% {
           opacity: 0;
-          transform: translateY(-1000px);
+          transform: translateY(-500px);
         }
         60% {
           opacity: 1;

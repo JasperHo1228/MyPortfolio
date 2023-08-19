@@ -1,5 +1,5 @@
 import '../style/navbar.css';
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import { myRoute } from '../component/Route.js';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
