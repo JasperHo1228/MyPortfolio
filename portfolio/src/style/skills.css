@@ -195,7 +195,6 @@
   100% { 
     opacity: 1;
     transform: translateX(0); }
-
 }
 
 @keyframes mottoAnimation{
@@ -266,6 +265,7 @@
   display: flex;
 }
 
+
 .motto{
   color:#00BE67;
   font-family: Tomorrow, sans-serif;
@@ -286,7 +286,6 @@
 .motto-content{
   color:#fd00c6;
 }
-
 
 .Click-hints{
   position: relative;
@@ -401,6 +400,29 @@
 .left-fifth-layer.active-layer{
   fill:#AF64A1;
   animation: clickColor 1s forwards;
+}
+.textHintClick{
+  font-family: Minecraftia;
+  fill:#00BE67;
+}
+.arrowHints {
+  fill:#00BE67;
+}
+
+.animated-click-hints {
+  animation: moveDown 800ms linear infinite;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-5px);
+  }
 }
 
 .layer-one,

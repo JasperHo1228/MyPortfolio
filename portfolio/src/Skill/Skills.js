@@ -48,6 +48,7 @@ function Skills() {
           <Onion layers={LayerData} 
            handleClickOnionLayer={handleClickOnionLayer}
            clickedLayer={clickedLayer}
+           showMotto={showMotto}
            />
         </div>
         
