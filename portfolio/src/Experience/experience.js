@@ -20,20 +20,24 @@ function Experience() {
     };
   }, []);
 
-    const [currentInfo, setCurrentInfo] = useState(null);
-    
-    const handleMoreInfoClick = (index) => {
-       //handle open more info animation
-        handleMoreDetailClickAnimation('text-box', index, currentInfo, 'moreInfoVisible', 'contribution');
-        setCurrentInfo(index);
-    };
-    
+  const [openStates, setOpenStates] = useState(experience_json.map(() => false));
   
-    const handleInfoClose = () => {
-       //handle closing animation
-        handleClosingDetailInfo('text-box',currentInfo,'contribution', 'moreInfoVisible');
-        setCurrentInfo(null);
-    };
+  const handleMoreInfoClick = (index) => {
+    // Toggle the open state for the clicked box
+    const newOpenStates = [...openStates];
+    newOpenStates[index] = !newOpenStates[index];
+    setOpenStates(newOpenStates);
+    handleMoreDetailClickAnimation('text-box', index, 'moreInfoVisible', 'contribution');
+  };
+
+  const handleInfoClose = (index) => {
+    const newOpenStates = [...openStates];
+    newOpenStates[index] = null;
+    handleClosingDetailInfo('text-box', index, 'contribution', 'moreInfoVisible');
+    setOpenStates(newOpenStates);
+  };
+  
+
     
   return (
     <div className='timeline_experience timeline-container' id='Experience'>
@@ -51,9 +55,9 @@ function Experience() {
               <div className='text-box' id={`text-box-${index}`}>
               <div
                   className={`Experience_closebtn ${
-                    currentInfo === index ? 'btn-visible' : ''
+                    openStates[index] ? 'btn-visible' : ''
                   }`}
-                  onClick={handleInfoClose} id="closeBtn">
+                  onClick={()=>handleInfoClose(index)} id="closeBtn">
                           <ImCross/>
                 </div>
                 <h2 className='experience-title'>{element.title}</h2>

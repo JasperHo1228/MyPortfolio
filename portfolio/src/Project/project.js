@@ -46,8 +46,7 @@ const FrameOverlay = ({link, index}) => {
 function Project() {
   const projects = [...project_json];
 
-  const [currentProject, setCurrentProject] = useState(null);
-  
+  const [openStates, setOpenStates] = useState(project_json.map(() => false));
   //track the change on the page
   useEffect(() => {
     // timeline should run first so threshold should be smaller
@@ -58,15 +57,20 @@ function Project() {
     };
   }, []);
   
+
   const handleMoreDetailClick = (index) => {
-      handleMoreDetailClickAnimation('frame', index, currentProject, 'overlay-visible', 'overlay');
-      setCurrentProject(index);
+    const newOpenStates = [...openStates];
+    newOpenStates[index] = !newOpenStates[index];
+    handleMoreDetailClickAnimation('frame', index, 'overlay-visible', 'overlay');
+    setOpenStates(newOpenStates);
   };
   
   //close animation
-  const handleOverlayClose = () => {
-    handleClosingDetailInfo('frame', currentProject,'overlay','overlay-visible');
-    setCurrentProject(null);
+  const handleOverlayClose = (index) => {
+    const newOpenStates = [...openStates];
+    newOpenStates[index] = false
+    handleClosingDetailInfo('frame', index ,'overlay','overlay-visible');
+    setOpenStates(newOpenStates);
   };
   
   return (
@@ -80,8 +84,8 @@ function Project() {
             <div className='project_item'>
               <div className='project_img'>
                 <div className={`closebtn ${
-                      currentProject === index ? 'btn-visible' : 'btn-hidden'}`}
-                    onClick={handleOverlayClose}>
+                      openStates[index] ? 'btn-visible' : 'btn-hidden'}`}
+                    onClick={()=>handleOverlayClose(index)}>
                     <ImCross/>
                 </div>     
                 <LazyLoadImage src={link.image} className='projectImg' alt={link.alt} effect='blur'/>

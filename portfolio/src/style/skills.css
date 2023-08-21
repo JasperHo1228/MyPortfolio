@@ -46,8 +46,8 @@
 }
 @media screen and (max-width:400px){
   .onion-container .onion-svg {
-    height:360px;
-    width:360px;
+    height:400px;
+    width:330px;
   }
   .skill-container .skillset-content{
     gap: 1rem;
@@ -57,8 +57,8 @@
 
 @media screen and (max-width:340px){
 .onion-container .onion-svg {
-    height:260px;
-    width:260px;
+    height:270px;
+    width:230px;
   }
   .motto {
     text-align: center; 
