@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.6ba866a1.css",
-    "main.js": "/MyPortfolio/static/js/main.400e1fb7.js",
+    "main.css": "/MyPortfolio/static/css/main.87221664.css",
+    "main.js": "/MyPortfolio/static/js/main.37e20c65.js",
     "static/js/787.1ed0c42c.chunk.js": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Jasper.pdf": "/MyPortfolio/static/media/Jasper.23156408537a5052aa5e.pdf",
     "static/media/holidayApp.jpg": "/MyPortfolio/static/media/holidayApp.6d8ac9b7e2145b732be7.jpg",
@@ -32,12 +32,12 @@
     "static/media/css.svg": "/MyPortfolio/static/media/css.4b815f2d720570b20a61d17129f16551.svg",
     "static/media/pytorch.svg": "/MyPortfolio/static/media/pytorch.d33ff3727ca1516fe50d889e40aec56b.svg",
     "static/media/uikit.svg": "/MyPortfolio/static/media/uikit.e67fe3e9ed0f3dd2b4780134eab6fee1.svg",
-    "main.6ba866a1.css.map": "/MyPortfolio/static/css/main.6ba866a1.css.map",
-    "main.400e1fb7.js.map": "/MyPortfolio/static/js/main.400e1fb7.js.map",
+    "main.87221664.css.map": "/MyPortfolio/static/css/main.87221664.css.map",
+    "main.37e20c65.js.map": "/MyPortfolio/static/js/main.37e20c65.js.map",
     "787.1ed0c42c.chunk.js.map": "/MyPortfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ba866a1.css",
-    "static/js/main.400e1fb7.js"
+    "static/css/main.87221664.css",
+    "static/js/main.37e20c65.js"
   ]
 }
