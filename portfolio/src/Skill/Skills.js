@@ -11,10 +11,10 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const allStatus = (state, action) => {
   switch (action.type) {
     case 'CLICK_ONION_LAYER':
-      return { showMotto: false, clickedLayer: action.index };
+      return { ...state, showMotto: false, clickedLayer: action.index };
 
     case 'CLICK_OUTSIDE_ONION':
-      return {  showMotto: true, clickedLayer: null };
+      return {  ...state, showMotto: true, clickedLayer: null };
 
     default:
       return state;
@@ -48,13 +48,7 @@ function Skills() {
   };
 
   const handleOutsideClick = (event) => {
-    const svgBoundingBox = onionRef.current.getBoundingClientRect();
-    const clickedInsideSVG = event.clientX >= svgBoundingBox.left &&
-                             event.clientX <= svgBoundingBox.right &&
-                             event.clientY >= svgBoundingBox.top &&
-                             event.clientY <= svgBoundingBox.bottom;
-
-    if (!clickedInsideSVG || state.clickedLayer === null) {
+    if (!onionRef.current.contains(event.target)) {
       dispatch({ type: 'CLICK_OUTSIDE_ONION' });
     }
   };
@@ -70,8 +64,10 @@ function Skills() {
           showMotto={state.showMotto}
            />
         </div>
-        
-        {state.showMotto && (
+      
+        {state.showMotto ? 
+          // show the motto
+           (
            <div className= "motto motto-container">
             <h3>Software development:<br/> 
                <div className="motto-content">
@@ -86,10 +82,9 @@ function Skills() {
                   </div>
               </div>
           </div>
-        )
-        }
-    
-        {!state.showMotto && (
+          ):
+          // show the skillset
+          (
           <div className="eachLayerContent">
             {LayerData.map((layer, index) => (
               <div key={index} className={state.clickedLayer === index ? layer.SkillclassName : 'hidden'}>
@@ -109,8 +104,8 @@ function Skills() {
               </div>
             ))}
           </div>
-        )}
-
+        )
+        }
       </div>
     </div>
   );

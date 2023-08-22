@@ -5,6 +5,7 @@ import {ImCross} from 'react-icons/im';
 import scrollAnimation from '../component/scrollAnimation';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { handleMoreDetailClickAnimation, handleClosingDetailInfo } from '../component/moreInfoAnimation';
+
 //overlay function 
 const FrameOverlay = ({link, index}) => {
   return(
@@ -40,8 +41,6 @@ const FrameOverlay = ({link, index}) => {
     </div>
   );
 }
-
-
 
 function Project() {
   const projects = [...project_json];
@@ -83,8 +82,8 @@ function Project() {
           key={link.id}>
             <div className='project_item'>
               <div className='project_img'>
-                <div className={`closebtn ${
-                      openStates[index] ? 'btn-visible' : 'btn-hidden'}`}
+                <div className={`closebtn 
+                    ${openStates[index] ? 'btn-visible' : 'btn-hidden'}`}
                     onClick={()=>handleOverlayClose(index)}>
                     <ImCross/>
                 </div>     
@@ -104,6 +103,7 @@ function Project() {
                     </div>
                 </div>
               </div>
+
             {/* overlay function */}
             <FrameOverlay className='frame-cover' link={link} index={index}/>
            

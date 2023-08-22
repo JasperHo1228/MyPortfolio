@@ -1,6 +1,6 @@
 import React from 'react';
 import { myRoute } from '../component/Route.js';
-import Overlay from './Overlay.js';
+import {Overlay} from './Overlay.js';
 import '../style/navbar.css';
 
 function MobileNavBar({ isNavbarOpen, togglerNavbar }) {
