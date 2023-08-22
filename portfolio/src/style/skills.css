@@ -70,8 +70,8 @@
 }
 
 .onion-svg {
-  height:480px;
-  width: 350px; 
+  height:435px;
+  width: 380px; 
 }
 
 /* initial onion */
@@ -242,6 +242,7 @@
     opacity: 1;
   }
 }
+
 
 .skill-container {
   position: relative;

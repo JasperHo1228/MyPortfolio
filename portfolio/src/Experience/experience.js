@@ -20,6 +20,7 @@ function Experience() {
     };
   }, []);
 
+  //set the states view more is not open
   const [openStates, setOpenStates] = useState(experience_json.map(() => false));
   
   const handleMoreInfoClick = (index) => {

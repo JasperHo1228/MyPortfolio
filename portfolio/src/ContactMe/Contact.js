@@ -56,7 +56,7 @@ function ContactMe() {
    }
     
    const isValidMessage = (value) => {
-    // Count the number of words in the value
+    // Count the number of words in the value not included space value
     const wordCount = value.trim().split(/\s+/).length;
   
     // Check if the word count is greater than two

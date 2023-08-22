@@ -23,7 +23,7 @@ const Onion = ({ layers, handleClickOnionLayer, clickedLayer, showMotto}) => {
         { 
           showMotto && (
           <g className="animated-click-hints">
-            <text x="0" y="30" fontSize="21" className="textHintClick" fill="white">
+            <text x="0" y="30" fontSize="21" className="textHintClick">
               Click each layer
             </text>
             <path className="arrowHints" d="M100 100 L120 75 L106 75 L106 45 L95 45 L95 75 L80 75 Z"/>
