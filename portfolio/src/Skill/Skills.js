@@ -61,7 +61,7 @@ function Skills() {
             </h3>
             <div className='Click-hints'>
                   <div className='click'>
-                   <span className='normal-hint'>Click each layer of the</span>  <span className='left-half'>LEFT HALF </span> 
+                   <span className='normal-hint'>Click each layer of the</span>  <span className='left-half'>left half </span> 
                    <span className='normal-hint'>onion to view stack skills.</span>
                   </div>
               </div>

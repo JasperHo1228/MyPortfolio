@@ -4,15 +4,10 @@
   margin-bottom: 10vh;
   padding-top: 5px;
 }
-@media  screen and (max-width:1280px) {
-  .project_tool_group{
-    padding-left:8%;
-    padding-right:6%;
-  }
-}
+
 
 /* 1-1  side change */
-@media screen and (max-width: 1105px){
+@media screen and (max-width: 1180px){
   .project-container{
     font-size: 94%;
   }
@@ -23,16 +18,24 @@
   .project_description{
     font-size: 92%;
   }
-    .btn{
-      left: 10px;
-      position: relative;
-    }
-    .btn2{
-      position: relative;
-      right: 10px;
-    }
+  .project_detail .project_tool_group{
+    grid-template-columns:repeat(2, 1fr);
+  }
+  .project_detail .linkInfo{
+    margin-top: 75%;
+  }
 }
-
+@media screen and (max-width:930px) {
+  .btn{
+    left: 10px;
+    position: relative;
+  }
+  .btn2{
+    position: relative;
+    right: 10px;
+  }
+  
+}
 /* 2-1 second size change */
 @media screen and (max-width: 1024px) {
     .project .project-container{
@@ -48,9 +51,17 @@
       font-size: 100%;
     }
      .linkInfo{
-      position: relative;
-      margin-top:10%;
+      margin-top:100px;
       gap:1.2rem;
+    }
+  }
+
+  @media screen and (max-width:930px) {
+    .project_detail .project_tool_group{
+      grid-template-columns:repeat(2, 1fr);
+    }
+    .project_detail .linkInfo{
+      margin-top: 65%;
     }
   }
 /* 2-2 size change */
@@ -64,6 +75,9 @@
     
     .project_description{
       font-size: 92%;
+    }
+    .project_detail .linkInfo{
+      margin-top: 75%;
     }
   }
 
@@ -96,19 +110,45 @@
     .project_description{
       font-size: 105%;
     }
-
+    .project_detail .project_tool_group{
+      grid-template-columns:repeat(3, 1fr);
+    }
      .btn{
       font-size: 94%;
-      left: 0px;
       position: relative;
+      left: -3%;
+    
     }
     .btn2{
       font-size: 94%;
       position: relative;
-      right: 0px;
+      right: -3%;
     }
   }
+@media screen and (max-width:500px){
+  .project_detail .project_tool_group{
+    grid-template-columns:repeat(2, 1fr);
+  }
+   .btn{
+    font-size: 94%;
+    position: relative;
+    left: 0px;
+  
+  }
+  .btn2{
+    font-size: 94%;
+    position: relative;
+    right: 0px;
+  }
 
+}
+
+@media screen and (max-width:442px) {
+  .project_detail .linkInfo{
+    margin-top: 65%;
+  }
+  
+}
  /* 3-2 size change */
   @media screen and (max-width: 395px) {  
     .project{
@@ -121,19 +161,19 @@
     .project_description{
       font-size: 87%;
     }
-    .project_tool_group{
-      padding-left:8%;
-      padding-right:6%;
+    .project_detail .linkInfo{
+      margin-top: 75%;
     }
+
     .btn{
-      left: 10px !important;
-      position: relative ;
-      font-size: 90% !important;
+      font-size: 90%;
+      position: relative;
+      left: 10px;
     }
     .btn2{
+      font-size: 90%;
       position: relative;
-      right: 10px !important;
-      font-size: 90% !important;
+      right: 10px;
     }
 }
 
@@ -144,11 +184,12 @@
     .project_tools .toolsName{
       width:80px;         
     }
-    .project_tool_group{
-      grid-template-columns: repeat( auto-fill, minmax(75px, 1fr));
-    }
+
     .gradient-text{
       font-size: 150%;
+    }
+    .project_detail .linkInfo{
+      margin-top: 78%;
     }
   }
 
@@ -410,8 +451,8 @@
 
 .project_detail{
   position: relative;
-  padding:20px;
-  bottom: 15%;
+  padding:15px;
+  bottom: 28%;
   display: block;
 }
 
@@ -488,7 +529,7 @@
 
 .projectAim{
   font-family: Tomorrow, sans-serif;
-  margin-top: 70%;
+  
   color: #F500BD;
   text-shadow: 0 0 0.1em #FFF7,
                0 0 0.3em  #ef0dd1;
@@ -518,13 +559,15 @@
 }
 
 .project_tool_group{
-  position: relative;
+  position: absolute;
   display: grid;
   flex-direction: column;
-  grid-template-columns: repeat( auto-fill, minmax(95px, 1fr) );
+  grid-template-columns: repeat(3, 1fr);
   justify-content: flex-start;
   gap:0.7rem;
   align-items: center;
+  left: 3%;
+  right:3%;
 }
 
 .project_tools .toolsName{
@@ -552,9 +595,11 @@
 }
 
 .linkInfo{
-  position: relative;
-  margin-top: 20%;
+  position: absolute;
+  margin-top: 65%;
   display: flex;
+  right:3%;
+  left:3%;
 }
 
 .btn{
