@@ -1,6 +1,7 @@
 import React from "react";
 import '../style/footer.css'
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import {FaCopyright} from 'react-icons/fa';
 function Footer(){
     return(
     <footer className="Footer-container">
@@ -17,6 +18,9 @@ function Footer(){
               <BsGithub />
             </span>
           </a>
+        </div>
+        <div className="copyRight">
+          <span className="copyRight-icon"><FaCopyright/></span> 2023 by Jasper Ho. All Rights Reserved.
         </div>
         </div>
     </footer>);

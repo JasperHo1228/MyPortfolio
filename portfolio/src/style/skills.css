@@ -1,73 +1,9 @@
-
 #Skills {
   margin-top: 8vh;
   margin-bottom: 10vh;
   padding-top: 5px;
 }
 
-
-@media screen and (max-width: 995px) {
-  .skill-container .skillset-content{
-    gap: 6rem;
-  }
-   .skillToolContainer {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-
-@media screen and (max-width:835px) {
-  .onion-container .onion-svg {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  .skillset-content {
-    flex-direction: column; 
-  }
-  .motto {
-    text-align: center; 
-    margin-top: -180px; 
-  }
-
-  .skillset-tool {
-    font-size: 12px;
-  }
-  .eachLayerContent{
-    margin-top: -180px;
-  }
-}
-
-
-@media screen and (max-width:458px){
-  .skillset-tool{
-    font-size: 12px;
-  }
-}
-@media screen and (max-width:400px){
-  .onion-container .onion-svg {
-    height:400px;
-    width:330px;
-  }
-  .skill-container .skillset-content{
-    gap: 1rem;
-  }
-}
-
-
-@media screen and (max-width:340px){
-.onion-container .onion-svg {
-    height:270px;
-    width:230px;
-  }
-  .motto {
-    text-align: center; 
-    margin-top: -380px; 
-  }
-  .skill-container .skillset-content{
-    gap: 6rem;
-  }
-}
 
 .onion-svg {
   height:435px;
@@ -476,3 +412,75 @@
   display: block;
 }
 
+/* screen size */
+
+@media screen and (max-width: 995px) {
+  .skill-container .skillset-content{
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width:835px) {
+  .onion-container .onion-svg {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillset-content {
+    flex-direction: column; 
+  }
+  .motto {
+    text-align: center; 
+    margin-top: -180px; 
+  }
+
+  .skillset-tool {
+    font-size: 12px;
+  }
+  .eachLayerContent{
+    margin-top: -180px;
+  }
+}
+
+
+@media screen and (max-width:458px){
+  .skillset-tool{
+    font-size: 12px;
+  }
+  .skillToolContainer {
+    grid-template-columns: repeat(2, 1fr); 
+}
+}
+
+
+@media screen and (max-width:400px){
+  .onion-container .onion-svg {
+    height:400px;
+    width:330px;
+  }
+  .skill-container .skillset-content{
+    gap: 1rem;
+
+  }
+}
+
+
+
+@media screen and (max-width:340px){
+.onion-container .onion-svg {
+    height:270px;
+    width:340px;
+  }
+  .motto {
+    text-align: center; 
+    margin-top: -380px; 
+  }
+
+  .skill-container .skillset-content{
+    gap: 6rem;
+  }
+  .eachLayerContent{
+    margin-top: -350px; 
+}
+}

@@ -58,6 +58,7 @@ section{
         align-items: center;
     }
     .main_content{
+        position: relative;
         justify-content: center;
         margin-right: 6%;
         margin-left: 6%;
