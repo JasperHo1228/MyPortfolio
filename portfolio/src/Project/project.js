@@ -49,11 +49,8 @@ function Project() {
   //track the change on the page
   useEffect(() => {
     // timeline should run first so threshold should be smaller
-    const project_animate = scrollAnimation('animate-frame','.frame-container',0.3);
+    scrollAnimation('animate-frame','.frame-container',0.3);
      // Remove event listener when component unmounts
-    return () => {
-      project_animate.disconnect();
-    };
   }, []);
   
 

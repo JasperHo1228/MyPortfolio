@@ -1,4 +1,4 @@
-import React, {useEffect,useRef,useReducer } from 'react';
+import React, {useEffect,useRef,useReducer} from 'react';
 import '../style/skills.css';
 import Onion from '../component/onion.js';
 import LayerData from './skill_json';
@@ -25,34 +25,47 @@ function Skills() {
   const initialState = { showMotto: true, clickedLayer: null };
   const [state, dispatch] = useReducer(allStatus, initialState);
 
+  //skill page area
+  const hasAnimatedRef = useRef(false);
+
   //set the onion area
   const onionRef = useRef(null);
+  
+  const handleClickOnionLayer = (layerIndex) => {
+    dispatch({type: 'CLICK_ONION_LAYER', index:layerIndex})
+   };
+ 
+   const handleOutsideClick = (event) => {
+     if (!onionRef.current.contains(event.target)) {
+       dispatch({ type: 'CLICK_OUTSIDE_ONION' });
+     }
+   };
 
   useEffect(() => {
-    // Add event listener when component mounts
-    document.addEventListener('click', handleOutsideClick);
-    //animation onion
-    const onion_img = scrollAnimation('onion-appear-animation','.onion-container',0.6);
-    //animation motto
-    const motto = scrollAnimation('mottto-appear-animate','.motto-container',0.3);
-    // Remove event listener when component unmounts
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-      onion_img.disconnect();
-      motto.disconnect();
-    };
-  });
-
-  const handleClickOnionLayer = (layerIndex) => {
-   dispatch({type: 'CLICK_ONION_LAYER', index:layerIndex})
-  };
-
-  const handleOutsideClick = (event) => {
-    if (!onionRef.current.contains(event.target)) {
-      dispatch({ type: 'CLICK_OUTSIDE_ONION' });
+    //make sure to run once only
+    if (!hasAnimatedRef.current) {
+      // Animation onion
+      scrollAnimation('onion-appear-animation', '.onion-container', 0.6);
+      // Animation motto
+      scrollAnimation('mottto-appear-animate', '.motto-container', 0.3);
+      hasAnimatedRef.current = true;
     }
-  };
-  
+  }, []);
+
+  //get back motto after clicking outside the onion
+  useEffect(() => {
+      // Add event listener when component mounts
+      document.addEventListener('click', handleOutsideClick);
+      if (state.showMotto) {
+        //get back the motto 
+        scrollAnimation('mottto-appear-animate', '.motto-container', 0.0);
+      // Remove event listener when component unmounts
+      return () => {
+        document.removeEventListener('click', handleOutsideClick);
+      };
+      }
+  }, [state.showMotto]);
+
   return (
     <div className="skill-container" id="Skills">
      <h1><div className="red-title">Skills</div></h1> 
@@ -61,7 +74,7 @@ function Skills() {
           <Onion layers={LayerData} 
            handleClickOnionLayer={handleClickOnionLayer}
            clickedLayer={state.clickedLayer}
-          showMotto={state.showMotto}
+           showMotto={state.showMotto}
            />
         </div>
       

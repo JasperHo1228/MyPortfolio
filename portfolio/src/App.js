@@ -10,9 +10,8 @@ const myOwnRoute = [...myRoute];
 
 
 function App() {
+
   const [isNavbarOpen, setNavbarOpen] = useState(null);
-
-
   const togglerNavbar = () => {
     setNavbarOpen(!isNavbarOpen);
   };
@@ -33,7 +32,6 @@ function App() {
 
 
   // Rest of your component code
-
   return (
     <div className='app'>
     <aside className='sidebar'>

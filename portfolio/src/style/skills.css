@@ -220,6 +220,9 @@
   animation: mottoAnimation 1s forwards;
 }
 
+/* .motto.motto-container{
+  animation: mottoAnimation 1s forwards;
+} */
 .motto-content{
   color:#fd00c6;
 }

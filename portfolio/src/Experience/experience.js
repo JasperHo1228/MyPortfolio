@@ -11,13 +11,8 @@ import { handleMoreDetailClickAnimation, handleClosingDetailInfo } from '../comp
 function Experience() {
   useEffect(() => {
     // timeline should run first so threshold should be smaller
-    const timeline = scrollAnimation('animate-timeline','.timeline-container',0.3);
-    const content = scrollAnimation('animate-container','.observe-container',0.5);
-
-    return () => {
-      timeline.disconnect();
-      content.disconnect();
-    };
+    scrollAnimation('animate-timeline','.timeline-container',0.3);
+    scrollAnimation('animate-container','.observe-container',0.5);
   }, []);
 
   //set the states view more is not open

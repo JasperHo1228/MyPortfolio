@@ -8,11 +8,8 @@ import scrollAnimation from '../component/scrollAnimation';
 function ContactMe() { 
   
   useEffect(()=>{
-    const contact_animation = scrollAnimation('contact-appear-animation','.contact-animation',0.6);
-    return() => { 
-      contact_animation.disconnect();
-    }
-  })
+    scrollAnimation('contact-appear-animation','.contact-animation',0.6);
+  },[])
 
     const form = useRef();
     //loading process toast
