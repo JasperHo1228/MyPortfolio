@@ -379,6 +379,7 @@
   text-shadow: 0 0 0.2em #FFF7,
                0 0 0.3em  #f712c1;
   animation: mottoAnimation 1.5s forwards;
+  text-align: center;
 }
 
 .hidden{
@@ -401,14 +402,17 @@
 }
 
 .skillToolContainer{
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
   margin-bottom:120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  min-width: 0;
   animation: mottoAnimation 1.5s forwards;
+}
+
+.skillToolContainer.soft-skills{
+  grid-template-columns: repeat(2, 1fr); 
 }
 
 .toolsItem{

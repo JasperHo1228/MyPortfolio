@@ -106,7 +106,7 @@ function Skills() {
                     {layer.content.title}
                   </div>
                 </h1>
-                    <div className = "skillToolContainer">
+                 <div className={`skillToolContainer ${layer.content.title === 'Soft Skills' ? 'soft-skills' : ''}`}>
                        {layer.content.skillItem.map((toolItem, index) => (
                       <div className="toolsItem" key={index}>
                          <LazyLoadImage src={toolItem.icon} alt={toolItem.alt} effect='blur'/>

@@ -140,23 +140,23 @@ const skillsetContent_json = [
         ],
     },
     {
-        title:"Soft Skill",
+        title:"Soft Skills",
         skillItem:[
             {
-                icon:create,
-                name:"Creative Skills"
-            },
-            {
                 icon:time,
-                name:"Time Management"
+                name:<div>Time<br/>Management</div>
             },
             {
                 icon:solve,
-                name:"Problem Solving"
+                name:<div>Problem<br/>Solving</div>
             },
             {
                 icon:communication,
-                name:"Communication Skills"
+                name:<div>Communication<br/>Skills</div>
+            },
+            {
+                icon:create,
+                name:<div>Creative<br/>Skills</div>
             },
         ]
     }
