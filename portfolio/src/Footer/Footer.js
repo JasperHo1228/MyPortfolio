@@ -20,7 +20,7 @@ function Footer(){
           </a>
         </div>
         <div className="copyRight">
-          <span className="copyRight-icon"><FaCopyright/></span> 2023 by Jasper Ho. All Rights Reserved.
+          <span className="copyRight-icon"><FaCopyright/></span> 2023 Jasper Ho. All rights reserved.
         </div>
         </div>
     </footer>);
