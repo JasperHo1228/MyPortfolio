@@ -179,7 +179,6 @@
   }
 }
 
-
 .skill-container {
   position: relative;
   display: flex;
@@ -191,10 +190,13 @@
 .skillset-content {
   display: flex;
   align-items: center;
-  gap: 12rem;
-  width: 100%;
+  width: 870px;
   padding: 0 1px;
   max-width: 870px;
+}
+
+.skill-container .skillset-content{
+  gap: 10rem;
 }
 
 .skillset-tool {
@@ -402,12 +404,13 @@
 }
 
 .skillToolContainer{
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   margin-bottom:120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
+  min-width:0;
   animation: mottoAnimation 1.5s forwards;
 }
 
@@ -420,14 +423,7 @@
 }
 
 /* screen size */
-
-@media screen and (max-width: 995px) {
-  .skill-container .skillset-content{
-    gap: 6rem;
-  }
-}
-
-@media screen and (max-width:835px) {
+@media screen and (max-width:987px) {
   .onion-container .onion-svg {
     position: relative;
     justify-content: center;
@@ -436,17 +432,20 @@
 
   .skillset-content {
     flex-direction: column; 
+    width: 400px;
   }
+  
   .motto {
     text-align: center; 
-    margin-top: -180px; 
+    margin-top: -250px; 
   }
 
   .skillset-tool {
     font-size: 12px;
   }
+  
   .eachLayerContent{
-    margin-top: -180px;
+    margin-top: -250px;
   }
 }
 
@@ -458,6 +457,9 @@
   .skillToolContainer {
     grid-template-columns: repeat(2, 1fr); 
 }
+  .skillset-content {
+    width: 95%;
+  }
 }
 
 
@@ -468,7 +470,6 @@
   }
   .skill-container .skillset-content{
     gap: 1rem;
-
   }
 }
 
