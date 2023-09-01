@@ -24,7 +24,7 @@ function ContactMe() {
     
       const formData = {
         sender: email,
-        subject: name,
+        name: name,
         message: message,
       };
     
