@@ -1,5 +1,4 @@
 import React, { useRef,useEffect,useState} from 'react';
-import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,29 +13,7 @@ function ContactMe() {
 
     const form = useRef();
     //loading process toast
-    const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 10000));
-    //send Email
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-    //   emailjs.sendForm('service_tl93m5j', 'template_ac1fy8z', form.current, 'Hg1PER7alrGpDygyB')
-    //     .then(() => {
-    //       toast.promise(
-    //         functionThatReturnPromise,
-    //         {
-    //           pending: 'Sending email...',
-    //           success: 'Form submitted successfully',
-    //         }
-    //       );
-    //     }, () => {
-    //       toast.error('Failed to send email!');
-    //     });
-    //     if (form.current) {
-    //       form.current.reset();
-    //     }
-    // };
-
-
-
+    const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 5000));
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -53,6 +30,9 @@ function ContactMe() {
       
       try {
         await axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData);
+        if (form.current) {
+          form.current.reset();
+        }
         toast.promise(
           functionThatReturnPromise,
           {
@@ -60,12 +40,9 @@ function ContactMe() {
             success: 'Form submitted successfully',
           }
         );
-          if (form.current) {
-          form.current.reset();
-        }
       } catch (error) {
         toast.error('Failed to send email!');
-      }
+      }      
     };
     
 
