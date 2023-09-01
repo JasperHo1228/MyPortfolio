@@ -12,12 +12,16 @@ function ContactMe() {
   },[])
 
     const form = useRef();
-    //loading process toast
-
+  
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    
+
+    const clearFormField = () => {
+      setName('');
+      setEmail('');
+      setMessage('');
+    } 
     
     const handleSubmit = async (e) => {
       e.preventDefault();
@@ -41,7 +45,7 @@ function ContactMe() {
       try {
         // Wait for the email sending process to complete
         await promise;
-        form.current.reset();
+        clearFormField();
         
       } catch (error) {
          console.log("something is wrong")
