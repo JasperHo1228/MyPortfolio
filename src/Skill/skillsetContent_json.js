@@ -9,7 +9,7 @@ import uiKit from '../asset/picture_source/project_icon/Software_Tool/Frontend/u
 
 // backend icon
 import java from '../asset/picture_source/project_icon/Software_Tool/Backend/java.svg'
-import spring from '../asset/picture_source/project_icon/Software_Tool//Backend/springboot.svg'
+import spring from '../asset/picture_source/project_icon/Software_Tool/Backend/springboot.svg'
 import mysql from '../asset/picture_source/project_icon/Software_Tool/Backend/mysql.svg'
 import python from '../asset/picture_source/project_icon/Software_Tool/Backend/python.svg'
 import pytorch from '../asset/picture_source/project_icon/Software_Tool/Backend/pytorch.svg'

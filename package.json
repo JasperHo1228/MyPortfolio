@@ -18,7 +18,8 @@
     "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
     "react-toastify": "^9.1.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "proxy": "https://spring-boot-contactme.onrender.com/api/send-email"
   },
   "scripts": {
     "predeploy": "npm run build",

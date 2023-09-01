@@ -1,6 +1,6 @@
 import '../style/navbar.css';
 import React from 'react';
-import { myRoute } from '../component/Route.js';
+import { myRoute } from './Route.js';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
 function NavBar({isNavbarOpen, togglerNavbar}) {

@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from 'react';
 import { myRoute } from './component/Route.js';
 import './style/index.css';
-import Navbar from './component/navbar';
+import Navbar from './component/navbar.js';
 import MobileNavBar from './component/mobileNavBar.js';
 import Footer from './Footer/Footer.js';
 import { ToastContainer } from 'react-toastify';
