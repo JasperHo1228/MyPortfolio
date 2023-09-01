@@ -47,7 +47,7 @@ function ContactMe() {
           form.current.reset();
         }
       } catch (error) {
-        toast.error('Failed to send email!');
+         console.log("something is wrong")
       }
     };
     
