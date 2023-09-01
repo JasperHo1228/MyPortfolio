@@ -6,7 +6,6 @@ import '../style/contactMe.css';
 import scrollAnimation from '../component/scrollAnimation';
 
 function ContactMe() { 
-  
   useEffect(()=>{
     scrollAnimation('contact-appear-animation','.contact-animation',0.6);
   },[])
@@ -36,9 +35,9 @@ function ContactMe() {
       const promise = toast.promise(
         axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
         {
-          pending: 'Sending email...',
-          success: 'Form submitted successfully',
-          error: 'Failed to send email!',
+          pending: 'Sending your form... Please wait...',
+          success: 'Thank you for submitting the form. I will get back to you soon!',
+          error: 'Failed to send form!',          
         }
       );
     
@@ -46,7 +45,7 @@ function ContactMe() {
         // Wait for the email sending process to complete
         await promise;
         clearFormField();
-        
+
       } catch (error) {
          console.log("something is wrong")
       }
