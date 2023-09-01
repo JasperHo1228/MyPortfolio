@@ -13,39 +13,31 @@ function ContactMe() {
 
     const form = useRef();
     //loading process toast
-    const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 5000));
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     
-    //send Email
+    
     const handleSubmit = async (e) => {
       e.preventDefault();
-    
+
       const formData = {
         recipient: email,
         subject: name,
         message: message,
       };
-      
-      try {
-        await axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData);
-        if (form.current) {
-          form.current.reset();
-        }
-        toast.promise(
-          functionThatReturnPromise,
-          {
-            pending: 'Sending email...',
-            success: 'Form submitted successfully',
-          }
-        );
-      } catch (error) {
-        toast.error('Failed to send email!');
-      }      
-    };
-    
 
+    // Show the "Sending email..." toast immediately
+    toast.promise(
+      await axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
+      {
+        pending: 'Sending email...',
+        success: 'Form submitted successfully',
+        error: 'Failed to send email!',
+      }
+    );
+  }
 
    //check name format
    const isValidName = name => {
