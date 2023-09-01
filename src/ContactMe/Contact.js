@@ -23,7 +23,7 @@ function ContactMe() {
       e.preventDefault();
     
       const formData = {
-        recipient: email,
+        sender: email,
         subject: name,
         message: message,
       };
@@ -41,11 +41,8 @@ function ContactMe() {
       try {
         // Wait for the email sending process to complete
         await promise;
-    
-        // Reset the form after the request is completed
-        if (form.current) {
-          form.current.reset();
-        }
+        form.current.reset();
+        
       } catch (error) {
          console.log("something is wrong")
       }
