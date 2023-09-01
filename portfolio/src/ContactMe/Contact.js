@@ -1,6 +1,7 @@
 import React, { useRef,useEffect,useState} from 'react';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import '../style/contactMe.css';
 import scrollAnimation from '../component/scrollAnimation';
@@ -13,32 +14,61 @@ function ContactMe() {
 
     const form = useRef();
     //loading process toast
-    const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 2000));
+    const functionThatReturnPromise = () => new Promise(resolve => setTimeout(resolve, 10000));
     //send Email
-    const sendEmail = (e) => {
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   emailjs.sendForm('service_tl93m5j', 'template_ac1fy8z', form.current, 'Hg1PER7alrGpDygyB')
+    //     .then(() => {
+    //       toast.promise(
+    //         functionThatReturnPromise,
+    //         {
+    //           pending: 'Sending email...',
+    //           success: 'Form submitted successfully',
+    //         }
+    //       );
+    //     }, () => {
+    //       toast.error('Failed to send email!');
+    //     });
+    //     if (form.current) {
+    //       form.current.reset();
+    //     }
+    // };
+
+
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    
+    //send Email
+    const handleSubmit = async (e) => {
       e.preventDefault();
-      emailjs.sendForm('service_tl93m5j', 'template_ac1fy8z', form.current, 'Hg1PER7alrGpDygyB')
-        .then(() => {
-          toast.promise(
-            functionThatReturnPromise,
-            {
-              pending: 'Sending email...',
-              success: 'Form submitted successfully',
-            }
-          );
-        }, () => {
-          toast.promise(
-            functionThatReturnPromise,
-            {
-              pending: 'Sending email...',
-              error: 'Failed to send email!',
-            }
-          );
-        });
-        if (form.current) {
+    
+      const formData = {
+        recipient: email,
+        subject: name,
+        message: message,
+      };
+      
+      try {
+        await axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData);
+        toast.promise(
+          functionThatReturnPromise,
+          {
+            pending: 'Sending email...',
+            success: 'Form submitted successfully',
+          }
+        );
+          if (form.current) {
           form.current.reset();
         }
+      } catch (error) {
+        toast.error('Failed to send email!');
+      }
     };
+    
+
 
    //check name format
    const isValidName = name => {
@@ -57,7 +87,7 @@ function ContactMe() {
     const wordCount = value.trim().split(/\s+/).length;
   
     // Check if the word count is greater than two
-    if (wordCount > 5) {
+    if (wordCount >= 5) {
       return true; // Valid
     } else {
       return false; // Invalid
@@ -98,7 +128,7 @@ function ContactMe() {
       }
       //if all the thing valid send it
       if (isValid) {
-        sendEmail(e);
+        handleSubmit(e);
       }
     };
     
@@ -143,6 +173,7 @@ const [focusedInput, setFocusedInput] = useState(null);
             <p className='formHint'>fill out the form below.</p>
             </h1>
          </div>
+
       <div className="contactMe-content contact-animation">
         <form id="form" className="contactForm" ref={form}>
           <input
@@ -153,6 +184,8 @@ const [focusedInput, setFocusedInput] = useState(null);
             onFocus={() => handleFocus('name')}
             onBlur={handleBlur}
             className={focusedInput === 'name' ? 'focused' : ''}
+            onChange={(e) => setName(e.target.value)}
+            value={name}
           />
           <input
             type="text"
@@ -162,6 +195,8 @@ const [focusedInput, setFocusedInput] = useState(null);
             onFocus={() => handleFocus('email')}
             onBlur={handleBlur}
             className={focusedInput === 'email' ? 'focused' : ''}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
           <textarea
             name="message"
@@ -171,6 +206,8 @@ const [focusedInput, setFocusedInput] = useState(null);
             onFocus={() => handleFocus('yourMessage')}
             onBlur={handleBlur}
             className={focusedInput === 'yourMessage' ? 'focused' : ''}
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
           ></textarea>
           <button type="submit" className="submit-button" onClick={validateInputs}>
             Send
