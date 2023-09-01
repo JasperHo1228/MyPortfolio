@@ -21,24 +21,36 @@ function ContactMe() {
     
     const handleSubmit = async (e) => {
       e.preventDefault();
-
+    
       const formData = {
         recipient: email,
         subject: name,
         message: message,
       };
-
-    // Show the "Sending email..." toast immediately
-    toast.promise(
-      await axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
-      {
-        pending: 'Sending email...',
-        success: 'Form submitted successfully',
-        error: 'Failed to send email!',
+    
+      // Show the "Sending email..." toast immediately
+      const promise = toast.promise(
+        axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
+        {
+          pending: 'Sending email...',
+          success: 'Form submitted successfully',
+          error: 'Failed to send email!',
+        }
+      );
+    
+      try {
+        // Wait for the email sending process to complete
+        await promise;
+    
+        // Reset the form after the request is completed
+        if (form.current) {
+          form.current.reset();
+        }
+      } catch (error) {
+        toast.error('Failed to send email!');
       }
-    );
-  }
-
+    };
+    
    //check name format
    const isValidName = name => {
       const nameRegex = /^[A-Za-z\s]+$/;
