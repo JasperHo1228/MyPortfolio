@@ -35,7 +35,7 @@ function ContactMe() {
       const promise = toast.promise(
         axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
         {
-          pending: 'Sending your form...',
+          pending: 'Sending your form – please expect a brief delay.',
           success: 'Form submitted successfully!',
           error: 'Failed to send the form!',
           
