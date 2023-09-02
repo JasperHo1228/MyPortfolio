@@ -161,7 +161,7 @@ const [focusedInput, setFocusedInput] = useState(null);
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder="Name"
             id="name"
             onFocus={() => handleFocus('name')}
             onBlur={handleBlur}
@@ -172,7 +172,7 @@ const [focusedInput, setFocusedInput] = useState(null);
           <input
             type="text"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email"
             id="email"
             onFocus={() => handleFocus('email')}
             onBlur={handleBlur}
@@ -183,7 +183,7 @@ const [focusedInput, setFocusedInput] = useState(null);
           <textarea
             name="message"
             rows="7"
-            placeholder="Your Message"
+            placeholder="Comment"
             id="yourMessage"
             onFocus={() => handleFocus('yourMessage')}
             onBlur={handleBlur}
