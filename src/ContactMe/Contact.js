@@ -31,13 +31,14 @@ function ContactMe() {
         message: message,
       };
     
-      // Show the "Sending email..." toast immediately
+      // Show the "Sending email..." toast immediately 
       const promise = toast.promise(
         axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
         {
-          pending: 'Sending your form... Please wait...',
-          success: 'Thank you for submitting the form. I will get back to you soon!',
-          error: 'Failed to send form!',          
+          pending: 'Sending your form...',
+          success: 'Form submitted successfully!',
+          error: 'Failed to send the form!',
+          
         }
       );
     

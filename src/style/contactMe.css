@@ -156,11 +156,26 @@ textarea{
               0 0 0.9rem  #00BE67;
 }
 
-.Toastify__progress-bar--success,
+.Toastify__toast-theme--colored.Toastify__toast--default {
+    font-family: Tomorrow, sans-serif;
+    background-color: #16b5f9;
+    border-radius: 0.5rem;
+    color: #001D31;
+    text-shadow: 0 0 2em #FFF7, 0 0 2em #001D31;
+    box-shadow: inset 0 0 0.9rem #18b6ce, 0 0 0.9rem #77a9db;
+}
+
+
 .Toastify__progress-bar--error {
-  background-color: #001D31;
-  box-shadow: inset 0 0 1.2rem  #033d64,
-              0 0 1.2rem  #0c588b;
+  background-color: #e129cf;
+  box-shadow: inset 0 0 1.2rem  #f874f2,
+              0 0 1.2rem  #ed50ea;
+}
+
+.Toastify__progress-bar--success{
+    background-color: #95fccc;
+    box-shadow: inset 0 0 1.2rem  #8ef298,
+                0 0 1.2rem  #a5f7c0;
 }
 
 /* close button */
