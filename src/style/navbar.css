@@ -218,7 +218,7 @@ nav .wholeul .remove .barlink:hover,
 /* Apply a transition to smoothly show/hide the overlay */
 .overlay.active {
   display: block;
-  transition: opacity 500ms ease-in-out 500ms;
+  transition: opacity 0ms ease-in-out 500ms;
   animation: blur-background 1s forwards;
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
@@ -435,8 +435,9 @@ nav .wholeul .remove .barlink:hover,
   height: 98vh;
   border:#F500BD solid;
   background-color: #001D31; 
-  margin-top: -3px; 
-  padding-top: 125px;
+  margin-top: -2px; 
+ 
+  padding-top: 30vh; /* Vertically center the element */
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 0 0.2em #FFF7, 0 0 0.3em #F500BD;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
