@@ -27,6 +27,7 @@ body{
     margin-left: 110px;
 }
 
+
 section{
     align-items: center;
     justify-content: center;
@@ -51,6 +52,13 @@ section{
     bottom:15px;
 }
 
+/* Hide the mobileNavBar container when the screen width is greater than or equal to 759px */
+@media screen and (min-width: 759px) {
+    .mobileNavBar {
+      display: none;
+    }
+  }
+  
 
 @media screen and (max-width: 760px) {
     .app{

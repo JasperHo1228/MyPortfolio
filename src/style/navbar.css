@@ -20,25 +20,29 @@
   top: 3%;
 } 
 
+
 @media screen and (max-width: 758px) {
   .sidebar {
-    display: none !important;
+    display: none ;
   }
-  .mobileButton{
-    display: block !important;
+  .mobileNavBar-wrapper .mobileButton{
+    display: block;
   }
 
   .mobileNavBar .mobileNavBar-wrapper{
-    display: block !important;
+    display: block;
     cursor: pointer;
+  }
+  .mobileNavBar-wrapper .mobile-wholeul{
+    display: block;
   }
 }
 @media screen and (max-width: 320px) {
-  .mobile-wholeul{
-    width: 240px !important;
+  .mobileNavBar-wrapper .mobile-wholeul{
+    width: 240px;
   }
-  .mobile-wholeul .EachLink{
-    width: 235px !important;
+ .mobileNavBar-wrapper .mobile-wholeul .EachLink{
+    width: 235px ;
   }
 }
 nav#open {
@@ -219,6 +223,7 @@ nav .wholeul .remove .barlink:hover,
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
   z-index: 5;
+  pointer-events: auto;
 }
 
 .overlay.close{
@@ -249,9 +254,9 @@ nav .wholeul .remove .barlink:hover,
 }
 /* mobile navbar */
 .mobileNavBar-container {
-  position: relative;
+ position: fixed;
+ z-index: 100;
 }
-
 
 .mobileButton {
   position: fixed;
@@ -266,17 +271,6 @@ nav .wholeul .remove .barlink:hover,
   z-index: 100;
 }
 
-.mobileNavBar .mobileNavBar-wrapper{
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
 
 .mobileButton.menu-icon{
   border: 3px #00ffaa solid;
@@ -434,23 +428,22 @@ nav .wholeul .remove .barlink:hover,
 
 /* navbar link feature */
 .mobile-wholeul{
-   position: fixed;
-   font-family: Tomorrow, sans-serif;
-   display: flex;
-   flex-direction: column;
-   z-index: 10;
-   margin: 0;
-   padding: 0;
-   background-color: #001D31; 
-   border-radius: 20px;
-   justify-content: center; /* Center vertically */
-   border:  #F500BD solid;
-   text-shadow: 0 0 0.2em #FFF7, 0 0 0.3em #F500BD;
-   box-shadow: inset 0 0 0.6rem #d600ff,
-                    0 0 0.6rem #d600ff;
-  height: 98vh;
+  position: absolute;
+  font-family: Tomorrow, sans-serif;
+  border-radius: 20px;
   width: 300px;
-  transition: transform 1s ease-in-out;
+  height: 98vh;
+  border:#F500BD solid;
+  background-color: #001D31; 
+  margin-top: -3px; 
+  padding-top: 125px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 0.2em #FFF7, 0 0 0.3em #F500BD;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  box-shadow: inset 0 0 0.6rem #d600ff,
+                   0 0 0.6rem #d600ff;
+  display: none;
+  overflow: hidden;
 }
 
 .mobile-wholeul .EachLink{
@@ -484,8 +477,10 @@ nav .wholeul .remove .barlink:hover,
 
 .mobile-wholeul.mobileBar-close{
   transform: translateX(-500%);
+  z-index: -1;
 }
 
 .mobile-wholeul.mobileBar-open{
-  transform: translateX(0);
+  transform: translateX(0); 
 }
+

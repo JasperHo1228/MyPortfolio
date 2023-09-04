@@ -5,16 +5,16 @@ import Navbar from './component/navbar.js';
 import MobileNavBar from './component/mobileNavBar.js';
 import Footer from './Footer/Footer.js';
 import { ToastContainer } from 'react-toastify';
-
+import {Overlay} from './component/Overlay.js';
 const myOwnRoute = [...myRoute];
 
 
 function App() {
-
   const [isNavbarOpen, setNavbarOpen] = useState(null);
   const togglerNavbar = () => {
-    setNavbarOpen(!isNavbarOpen);
+    setNavbarOpen(!isNavbarOpen); 
   };
+  
 
   useEffect(() => {
     // Add event listener to close the sidebar when clicking outside of it
@@ -36,11 +36,12 @@ function App() {
     <div className='app'>
     <aside className='sidebar'>
         <Navbar isNavbarOpen={isNavbarOpen} togglerNavbar={togglerNavbar} />
-      </aside>
+    </aside>
       <div className='mobileNavBar'>
         <MobileNavBar isNavbarOpen={isNavbarOpen} togglerNavbar={togglerNavbar} />
       </div>
-      <main className='main_content'>
+      <Overlay isActive={isNavbarOpen}/>
+      <main className = "main_content">
         {myOwnRoute.map((route) => (
           <section id={route.title} key={route.id}>
             {route.element}
