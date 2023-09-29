@@ -436,8 +436,7 @@ nav .wholeul .remove .barlink:hover,
   border:#F500BD solid;
   background-color: #001D31; 
   margin-top: -2px; 
- 
-  padding-top: 30vh; /* Vertically center the element */
+  padding-top: 25vh; /* Vertically center the element */
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 0 0.2em #FFF7, 0 0 0.3em #F500BD;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
