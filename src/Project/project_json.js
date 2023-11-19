@@ -31,8 +31,8 @@ export const project_json = [
         image: holidayApp,
         title: <div>Holiday Searching<br/>App</div>,
         description:"This application is to help people to filter up all the holiday that they want to know.",
-        youtube_link: "https://www.youtube.com/watch?v=yHbijo6srVs",
-        source_code:"https://github.com/JasperHo1228/HolidaySearchingApp",
+        youtube_link: "https://youtu.be/49q6aCrweT8",
+        source_code:"https://github.com/JasperHo1228/UK_HolidaySearchApp",
         tools:["Spring Boot","Bootstraps","Thymeleaf","H2 Database"]
        }
 ];
