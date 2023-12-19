@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
 import '../style/home.css'
-import CV from '../asset/CV/Jasper.pdf'
 
 function Home(){
     const [text] =  useTypewriter({
@@ -50,9 +49,7 @@ function Home(){
                                        I collaborate effectively to improve communication and problem-solving.<br/> 
                                        My focus is on addressing real-world challenges through software solutions.
                </p>
-                  <a href={CV}
-                          className='Download_CV'  target='_blank'
-                          rel='noopener noreferrer'>Download CV</a>
+                  
                   </div>
             </div>
  
