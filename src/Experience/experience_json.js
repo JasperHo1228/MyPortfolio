@@ -10,10 +10,10 @@ export const experience_json = [
         arrow:"left-arrow",
         contribution:(
           <div>      
-              • Worked with **Project Managers** to analyse requirements and deliver technical solutions that meet user needs.
+              • Worked with Project Managers to analyse requirements and deliver technical solutions that meet user needs.
                  <br/>
                  <br/>         
-              • Investigated and resolved **production issues**, including API errors, data inconsistencies, and performance problems.
+              • Investigated and resolved production issues, including API errors, data inconsistencies, and performance problems.
           </div>
           ),
     },  
@@ -30,10 +30,13 @@ export const experience_json = [
               • Developed Java/Spring Boot features for WMS, including warehouse workflows and business logic.
                  <br/>
                  <br/>
-              •  Optimised **MySQL/Hibernate queries**, reducing operation time and eliminating **N+1 query issues**.
+              •  Optimised MySQL/Hibernate queries, reducing operation time and eliminating N+1 query issues.
                  <br/>
                  <br/>             
               • Integrated RabbitMQ and REST APIs for communication between WMS and external services.
+                 <br/>
+                 <br/> 
+              • Collaborated with QA throughout feature development to ensure functionality met requirements. 
           </div>
           ),
     },
