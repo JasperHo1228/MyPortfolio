@@ -3,6 +3,8 @@ import '../style/footer.css'
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import {FaCopyright} from 'react-icons/fa';
 function Footer(){
+  const today = new Date();
+  const curYear = today.getFullYear();
     return(
     <footer className="Footer-container">
         <div className="footer-wrapper">
@@ -20,7 +22,7 @@ function Footer(){
           </a>
         </div>
         <div className="copyRight">
-          <span className="copyRight-icon"><FaCopyright/></span> 2023 Jasper Ho. All rights reserved.
+          <span className="copyRight-icon"><FaCopyright/></span> {curYear} Jasper Ho. All rights reserved.
         </div>
         </div>
     </footer>);
