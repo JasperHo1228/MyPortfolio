@@ -1,11 +1,11 @@
 import React, { useState,useEffect} from 'react';
-import { myRoute } from './component/Route.js';
+import { myRoute } from './component/Route.jsx';
 import './style/index.css';
-import Navbar from './component/navbar.js';
-import MobileNavBar from './component/mobileNavBar.js';
-import Footer from './Footer/Footer.js';
+import Navbar from './component/navbar.jsx';
+import MobileNavBar from './component/mobileNavBar.jsx';
+import Footer from './Footer/Footer.jsx';
 import { ToastContainer } from 'react-toastify';
-import {Overlay} from './component/Overlay.js';
+import {Overlay} from './component/Overlay.jsx';
 const myOwnRoute = [...myRoute];
 
 

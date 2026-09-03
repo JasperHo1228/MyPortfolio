@@ -1,8 +1,8 @@
 import React, {useEffect,useRef,useReducer} from 'react';
 import '../style/skills.css';
-import Onion from '../component/onion.js';
+import Onion from '../component/onion.jsx';
 import LayerData from './skill_json';
-import scrollAnimation from '../component/scrollAnimation';
+import scrollAnimation from '../component/scrollAnimation.jsx';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 

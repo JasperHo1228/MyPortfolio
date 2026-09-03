@@ -1,5 +1,5 @@
 import React from 'react';
-import { myRoute } from './Route.js';
+import { myRoute } from './Route.jsx';
 
 import '../style/navbar.css';
 
