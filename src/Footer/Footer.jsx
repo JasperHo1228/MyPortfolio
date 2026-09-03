@@ -10,7 +10,7 @@ function Footer(){
         <div className="footer-wrapper">
           <h2><div className="footer-title"><div className="gradient-text-footer">Check out my social media</div></div></h2>
           <div className="socialmedia-link">
-          <a href="https://www.linkedin.com/in/tsun-yin-ho-46981222b/" target="_blank" rel="noreferrer" className="LinkName">
+          <a href="https://www.linkedin.com/in/jasper-ho-46981222b/" target="_blank" rel="noreferrer" className="LinkName">
             <span className="contact-icon linkedIn">
               <BsLinkedin />
             </span>
