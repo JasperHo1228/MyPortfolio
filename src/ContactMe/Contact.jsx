@@ -30,10 +30,12 @@ function ContactMe() {
         name: name,
         message: message,
       };
-    
+      
+      const API_URL = import.meta.env.VITE_API_URL;
+
       // Show the "Sending email..." toast immediately 
       const promise = toast.promise(
-        axios.post('https://spring-boot-contactme.onrender.com/api/send-email', formData),
+        axios.post(`${API_URL}/api/send-email`, formData),
         {
           pending: 'Sending your form – please expect a brief delay.',
           success: 'Form submitted successfully!',
