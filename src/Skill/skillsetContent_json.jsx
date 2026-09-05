@@ -12,7 +12,7 @@ import java from '../asset/picture_source/project_icon/Software_Tool/Backend/jav
 import spring from '../asset/picture_source/project_icon/Software_Tool/Backend/springboot.svg'
 import mysql from '../asset/picture_source/project_icon/Software_Tool/Backend/mysql.svg'
 import python from '../asset/picture_source/project_icon/Software_Tool/Backend/python.svg'
-import pytorch from '../asset/picture_source/project_icon/Software_Tool/Backend/pytorch.svg'
+import rabbitmq from '../asset/picture_source/project_icon/Software_Tool/Backend/rabbitmq.svg'
 
 //IDE
 import intellij from '../asset/picture_source/project_icon/Software_Tool/IDE/intellij.svg'
@@ -23,9 +23,8 @@ import jupyter from '../asset/picture_source/project_icon/Software_Tool/IDE/jupy
 import pycharm from '../asset/picture_source/project_icon/Software_Tool/IDE/pycharm.svg'
 
 //devops
-import agile from '../asset/picture_source/project_icon/Software_Tool/DevOps/agile.svg'
 import git from '../asset/picture_source/project_icon/Software_Tool/DevOps/git.svg'
-import scrum from '../asset/picture_source/project_icon/Software_Tool/DevOps/scrum.svg'
+import gitlab from '../asset/picture_source/project_icon/Software_Tool/DevOps/gitlab.svg'
 
 
 //soft skill
@@ -88,8 +87,8 @@ const skillsetContent_json = [
                 name:"Python"
             },
             {
-                icon:pytorch,
-                name:"Pytorch"
+                icon:rabbitmq,
+                name:"RabbitMQ"
             },
         ],
     },
@@ -126,16 +125,12 @@ const skillsetContent_json = [
         title:"DevOps",
         skillItem:[     
             {
-                icon:agile,
-                name:"Agile"
-            },
-            {
-                icon:scrum,
-                name:"Scrum"
-            },
-            {
                 icon:git,
                 name:"Git"
+            },
+            {
+                icon:gitlab,
+                name:"GitLab"
             },
         ],
     },

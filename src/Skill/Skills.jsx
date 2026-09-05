@@ -99,23 +99,32 @@ function Skills() {
           // show the skillset
           (
           <div className="eachLayerContent">
-            {LayerData.map((layer, index) => (
-              <div key={index} className={state.clickedLayer === index ? layer.SkillclassName : 'hidden'}>
-                <h1>
-                  <div className = "Skillset-title">
-                    {layer.content.title}
-                  </div>
-                </h1>
-                 <div className={`skillToolContainer ${layer.content.title === 'Soft Skills' ? 'soft-skills' : ''}`}>
-                       {layer.content.skillItem.map((toolItem, index) => (
-                      <div className="toolsItem" key={index}>
-                         <LazyLoadImage src={toolItem.icon} alt={toolItem.alt} effect='blur'/>
-                          <div className='toolsName'>{toolItem.name}</div>
-                      </div>
-                    ))} 
+            {LayerData.map((layer, index) => {
+              const columnCount = [2, 4].includes(layer.content.skillItem.length) ? 2 : 3;
+
+              return (
+                <div key={index} className={state.clickedLayer === index ? layer.SkillclassName : 'hidden'}>
+                  <h1>
+                    <div className = "Skillset-title">
+                      {layer.content.title}
                     </div>
-              </div>
-            ))}
+                  </h1>
+                  <div
+                    className="skillToolContainer"
+                    style={{
+                      gridTemplateColumns: `repeat(${columnCount}, minmax(110px, 1fr))`
+                    }}
+                  >
+                    {layer.content.skillItem.map((toolItem, itemIndex) => (
+                      <div className="toolsItem" key={itemIndex}>
+                        <LazyLoadImage src={toolItem.icon} alt={toolItem.alt} effect='blur'/>
+                        <div className='toolsName'>{toolItem.name}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         )
         }

@@ -409,17 +409,22 @@
   align-items: center;
   margin-bottom:120px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
   min-width:0;
   animation: mottoAnimation 1.5s forwards;
 }
 
-.skillToolContainer.soft-skills{
-  grid-template-columns: repeat(2, 1fr); 
+.toolsItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.toolsItem{
+.toolsItem img {
   display: block;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 /* screen size */
