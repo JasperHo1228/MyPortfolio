@@ -44,10 +44,9 @@ function Home(){
                 </h2>
                 
                <p className='content'>   
-                                       Passionate about innovative app development, I specialise in solving complex problems.<br/> 
-                                       With a robust academic and professional software development background,<br/> 
-                                       I collaborate effectively to improve communication and problem-solving.<br/> 
-                                       My focus is on addressing real-world challenges through software solutions.
+                                     A Developer who enjoys turning complex problems into simple,<br/>
+                                     reliable software solutions. With 2+ years of experience in Java and Spring Boot, I build<br/> 
+                                     backend systems and solve real-world challenges through practical, maintainable code.
                </p>
                   
                   </div>
