@@ -100,7 +100,8 @@ function Skills() {
           (
           <div className="eachLayerContent">
             {LayerData.map((layer, index) => {
-              const columnCount = [2, 4].includes(layer.content.skillItem.length) ? 2 : 3;
+              const count = layer.content.skillItem.length;
+              const columnCount = count <= 3 ? count : count === 4 ? 2 : 3;
 
               return (
                 <div key={index} className={state.clickedLayer === index ? layer.SkillclassName : 'hidden'}>
