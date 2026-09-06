@@ -1,9 +1,6 @@
-
-#Home{
-  height: 100vh;
-  max-height: 100vh;
-  left: 0;
-  bottom: 0;
+#Home {
+  min-height: 100svh;
+  width: 100%;
 }
 
 .home-container {
@@ -11,124 +8,238 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100svh;
+  padding: 6rem 2rem;
 }
 
-.home-wrapper{
-   display: block;
+.home-wrapper {
+  width: min(900px, 100%);
 }
 
- .Topic{
+
+.hero-name {
+  font-family: Minecraftia, sans-serif;
+  color: #F500BD;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Job title */
+
+.hero-role {
   font-family: Tomorrow, sans-serif;
-  color:#00BE67;
-  font-size: 300%;
- }
-
-.subTitle{
-  font-family: Minecraftia;
-  color:#F500BD;
-  margin-top:25px;
+  color: #F500BD;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 1.25rem 0 0 0;
 }
 
-.content{
+/* Description */
+
+.hero-description {
   font-family: Tomorrow, sans-serif;
-  color:#00BE67;
-  font-size: 15px;
-  margin-top:25px;
-  justify-content: start;
+  color: #00BE67;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 1.5rem 0 0 0;
+}
+
+.hero-actions {
+  display: flex;
   align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.25rem;
 }
 
-::after,
-::before{
-  box-sizing: border-box;
-}
 
-.Download_CV{
+.primary-cta {
   position: relative;
-  margin-top:15px;
+  display: inline-block;
   font-family: Tomorrow, sans-serif;
-  display:inline-block;
-  position: relative;
-  cursor: pointer;
-  color:#F500BD;
-  border: #F500BD 0.125em solid; 
+  color: #F500BD;
+  border: #F500BD 0.125em solid;
   text-decoration: none;
-  padding:0.25em 1em;
+  padding: 0.55em 1.25em;
   border-radius: 0.35em;
-  text-shadow: 0 0 0.2em #FFF7,
-               0 0 0.3em  #f712c1;
-  box-shadow: inset 0 0 0.6rem  #F500BD,
-                    0 0 0.6rem  #F500BD;
+
+  text-shadow:
+    0 0 0.2em #FFF7,
+    0 0 0.3em #F500BD;
+
+  box-shadow:
+    inset 0 0 0.6rem #F500BD,
+    0 0 0.6rem #F500BD;
+
+  transition:
+    color 150ms linear,
+    background-color 150ms linear,
+    box-shadow 150ms linear;
+
   z-index: 1;
 }
 
-.Download_CV::before{
+/* .primary-cta::before {
   content: "";
   position: absolute;
   top: 120%;
-  left:0;
+  left: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
+
   background-color: #F500BD;
-  transform: 
+
+  transform:
     perspective(1em)
     rotateX(40deg)
-    scale(1,0.4);
-  filter:blur(0.7rem);
-  opacity:0.7;
+    scale(1, 0.4);
+
+  filter: blur(0.7rem);
+  opacity: 0.7;
+
   z-index: -1;
   pointer-events: none;
-}
+} */
 
-.Download_CV::after{
-  content:"";
+/* .primary-cta::after {
+  content: "";
   position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  inset: 0;
+
   box-shadow: 0 0 2em 0.5em #F500BD;
   opacity: 0;
-  transition:opacity 120ms linear;
-}
 
-.Download_CV:hover,
-.Download_CV:focus{
-  color:#01111c;
+  transition: opacity 120ms linear;
+  pointer-events: none;
+} */
+
+.primary-cta:hover,
+.primary-cta:focus-visible {
+  color: #01111c;
   background-color: #F500BD;
+  box-shadow: 0 0 2em 0.5em #F500BD;
   text-shadow: none;
+  transition: color 150ms ease;
 }
 
-.Download_CV:focus::before,
-.Download_CV:hover::before{
+.primary-cta:hover::before,
+.primary-cta:focus-visible::before {
   opacity: 1;
 }
 
-.Download_CV:focus::after,
-.Download_CV:hover::after{
+.primary-cta:hover::after,
+.primary-cta:focus-visible::after {
   opacity: 1;
 }
 
-.myInfo{
-  display: flex;
-  gap: 1.5rem;
+
+.secondary-link {
+  font-family: Tomorrow, sans-serif;
+  color: #00BE67;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+
+  transition: color 150ms ease;
 }
 
-.mylinkOptions{
-  display: flex;
-  gap: 1.5rem;
-  margin-right: 10px;
+.secondary-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #F500BD;
+
+  transition: width 150ms ease;
 }
 
-.contact-icon{
-  font-size: 170%;
-  color:#181617;
+.secondary-link:hover,
+.secondary-link:focus-visible {
+  color: #F500BD;
 }
 
-html{
-  scroll-behavior: smooth;
+.secondary-link:hover::after,
+.secondary-link:focus-visible::after {
+  width: 100%;
 }
 
-::-webkit-scrollbar{
-  display: none;
+/* Keyboard accessibility */
+
+.primary-cta:focus-visible,
+.secondary-link:focus-visible {
+  outline: 2px solid #00BE67;
+  outline-offset: 5px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-cta,
+  .primary-cta::before,
+  .primary-cta::after,
+  .secondary-link,
+  .secondary-link::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .home-container {
+    padding: 5rem 1.5rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.1rem, 10vw, 3.5rem);
+  }
+
+  .hero-role {
+    font-size: 1.05rem;
+    max-width: 600px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .home-container {
+    padding: 4rem 1.25rem;
+  }
+
+  .terminal-greeting {
+    font-size: 0.9rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    margin-top: 1.75rem;
+  }
+}
+
