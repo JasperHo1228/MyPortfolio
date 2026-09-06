@@ -53,6 +53,21 @@ section{
     bottom:15px;
 }
 
+:root {
+  --neon-green: #00C896;
+  --neon-green-bright: #18D9A5;
+  --main-theme-green :#00BE67;
+  --neon-pink: #E94FBF;
+  --neon-pink-light: #ff3faf;
+
+  --dark-blue: #001D31;
+  --text-primary: #D6D6D6;
+  --text-muted: #7F8A87;
+
+  --green-glow: rgba(0, 200, 150, 0.30);
+  --pink-glow: rgba(233, 79, 191, 0.30);
+}
+
 /* Hide the mobileNavBar container when the screen width is greater than or equal to 759px */
 @media screen and (min-width: 759px) {
     .mobileNavBar {
@@ -74,8 +89,15 @@ section{
     }
 }
 
+@media screen and (max-width:400px){
+    .red-title,
+    .green-title {
+        font-size: 180%;
+    }
+}
+
 @media screen and (max-width:280px){
-    .main_content{
+    .main_content {
         font-size: 10px;
     }
 }

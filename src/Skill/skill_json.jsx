@@ -1,4 +1,4 @@
-import skillsetContent from "./skillsetContent_json";
+import skillsetContent from "./skillsData";
 
 //onion layer skill
 const skill_json = [
