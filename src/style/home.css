@@ -56,6 +56,10 @@
   margin-top: 2.25rem;
 }
 
+.hero-actions_socials_link {
+   display: flex;
+   gap: 1.5rem;
+}
 
 .primary-cta {
   position: relative;
@@ -240,6 +244,8 @@
 
   .hero-actions {
     margin-top: 1.75rem;
+    align-items: start;
+    flex-direction: column;
   }
 }
 

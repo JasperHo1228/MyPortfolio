@@ -76,24 +76,25 @@ function Home() {
           >
             View My Work
           </a>
+          <div className="hero-actions_socials_link">
+            <a
+              className="secondary-link"
+              href="https://github.com/JasperHo1228"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
 
-          <a
-            className="secondary-link"
-            href="https://github.com/JasperHo1228"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-
-          <a
-            className="secondary-link"
-            href="https://www.linkedin.com/in/jasper-ho-46981222b/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+            <a
+              className="secondary-link"
+              href="https://www.linkedin.com/in/jasper-ho-46981222b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
 
       </div>

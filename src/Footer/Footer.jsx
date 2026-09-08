@@ -1,30 +1,53 @@
 import React from "react";
-import '../style/footer.css'
-import { BsLinkedin, BsGithub } from 'react-icons/bs';
-import {FaCopyright} from 'react-icons/fa';
-function Footer(){
-  const today = new Date();
-  const curYear = today.getFullYear();
-    return(
+import "../style/footer.css";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { FaCopyright } from "react-icons/fa";
+
+function Footer() {
+  const curYear = new Date().getFullYear();
+
+  return (
     <footer className="Footer-container">
-        <div className="footer-wrapper">
-          <h2><div className="footer-title"><div className="gradient-text-footer">Check out my social media</div></div></h2>
-          <div className="socialmedia-link">
-          <a href="https://www.linkedin.com/in/jasper-ho-46981222b/" target="_blank" rel="noreferrer" className="LinkName">
-            <span className="contact-icon linkedIn">
-              <BsLinkedin />
-            </span>
+      <div className="footer-wrapper">
+
+        <div className="footer-terminal">
+          <span>&gt;</span> connect()
+        </div>
+
+        <h2 className="footer-title">
+          Connect with me
+        </h2>
+
+        <div className="socialmedia-link">
+          <a
+            href="https://www.linkedin.com/in/jasper-ho-46981222b/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            className="social-link"
+          >
+            <BsLinkedin />
           </a>
-          <a href="https://github.com/JasperHo1228" target="_blank" rel="noreferrer" className="LinkName">
-            <span className="contact-icon github">
-              <BsGithub />
-            </span>
+
+          <a
+            href="https://github.com/JasperHo1228"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="social-link"
+          >
+            <BsGithub />
           </a>
         </div>
+
         <div className="copyRight">
-          <span className="copyRight-icon"><FaCopyright/></span> {curYear} Jasper Ho. All rights reserved.
+          <FaCopyright />
+          <span>{curYear} Jasper Ho. All rights reserved.</span>
         </div>
-        </div>
-    </footer>);
+
+      </div>
+    </footer>
+  );
 }
+
 export default Footer;

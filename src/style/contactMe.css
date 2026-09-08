@@ -1,200 +1,446 @@
-#ContactMe{
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-    padding-top: 30px;
+#ContactMe {
+  width: 100%;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  padding: 30px 2rem;
+  box-sizing: border-box;
 }
 
-.contactMe-container{
-    position: relative;
-
+.contact-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.more-info{
-    font-family: Tomorrow, sans-serif;
+
+.contact-title {
+    margin-bottom: 2rem;
+    color: #F500BD;
     text-align: center;
-    color: #d882ff;
-    font-size: 90%;
 }
 
-.myEmail{
-    color: #d47eff;
-    text-decoration: underline;
+.contact-panel {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  padding: 35px;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(0, 200, 150, 0.28);
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0, 200, 150, 0.055),
+      rgba(0, 0, 0, 0.3)
+    );
+
+  box-shadow:
+    0 0 30px rgba(0, 200, 150, 0.07);
+
+  opacity: 0;
 }
 
-.contactMe-content.contact-appear-animation{
-    animation: bounce-in 1s forwards;
+.contact-panel.contact-appear-animation {
+  animation: contactAnimation 0.8s forwards;
+}
+
+@keyframes contactAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
   }
 
-.formHint{
-    position: relative;
-    bottom:10px;
-}
-
-.copybtn{  
-    margin-left: 7px;
-    font-family: Tomorrow, sans-serif;
-    background-color: #001D31;
-    border: #0aec11 solid 2px;
-    padding:0.7rem 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    color:#77ff00;
-    transition: ease-in 0.5s;
-    font-size: 80%; 
-}
-
-.copybtn:hover{
-  background-color: #0aec77;
-  text-shadow: 0 0 0.5em #FFF7,
-               0 0 1em  #001D31;
-  box-shadow: inset 0 0 1rem  #91ec0a,
-                    0 0 1rem  #3feb0b;
-  color: #001D31;
-}
-
-  
-.contactMe-content{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
-.MyLink-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+.contact-terminal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  font-family: "Courier New", monospace;
 }
 
-.mylink-option{
-    text-align: center;
+.terminal-symbol {
+  color: #00BE67;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    justify-content: center;
-    align-items: center;
+.terminal-text {
+  color: #00BE67;
+  font-family: "Courier New", monospace;
+  font-size: 1.15rem;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 8px rgba(0, 190, 103, 0.5);
 }
 
-input,
-textarea{
-    font-family: Tomorrow, sans-serif;
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: #00BE67 solid;
-    resize: none;
-    color: #00BE67;
-    background: linear-gradient(315deg,#2a0e2c,#6c0c79);
-    font-size: 110%;
-    margin-left:15%;
-    margin-right: 15%;
-    max-width: 800px;
+.contact-intro {
+  margin-bottom: 35px;
 }
 
-::placeholder{
-    color:rgb(97, 209, 131);
-    font-size: 110%;
+.contact-intro h2 {
+  margin: 0 0 15px;
+
+  font-family: Minecraftia, sans-serif;
+  color: #F500BD;
+
+  font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+  font-weight: 400;
+
+  line-height: 1.7;
 }
 
-.focused {
-  outline: none; /* Remove default focus outline */
-  border: #00BE67 solid;
-  box-shadow: inset 0 0 1rem  #00BE67,
-                    0 0 1rem  #00BE67;
-  text-shadow: 0 0 0.6em #FFF7,
-  0 0 0.1em  #2df69c;
-  transition: ease-in-out 0.4s;
-}
+.contact-intro p {
+  margin: 0 0 22px;
 
-.submit-button{
-    font-family: Tomorrow, sans-serif;
-    font-size: 120%;
-    border-radius: 0.8rem;
-    background-color: #00BE67;
-    color: #6c0c79;
-    border: #6c0c79 solid;
-    border-width: 3px;
-    width: 100%;
-    padding: 1.5rem;
-    max-width: 800px;
-    cursor: pointer;
-    transition: ease-in 0.5s;
-}
-
-.submit-button:hover{
-    background-color: #100d36;
-    color: #00BE67;
-    text-shadow: 0 0 0.2em #FFF7,
-    0 0 0.3em  #00BE67;
-    box-shadow: 0 0 2em 0.5em #6c0c79;
-}
-
-/* pop up message */
-.Toastify__toast-theme--colored.Toastify__toast--error {
   font-family: Tomorrow, sans-serif;
-  background-color: #F500BD;
-  color:#001D31;
-  border-radius: 0.5rem;
-  text-shadow: 0 0 2em #FFF7,
-  0 0 2em  #001D31;
-  box-shadow: inset 0 0 0.9rem  #F500BD,
-              0 0 0.9rem  #F500BD;
+  color: #00BE67;
+
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.Toastify__toast-theme--colored.Toastify__toast--success {
+
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
   font-family: Tomorrow, sans-serif;
+  font-size: 0.95rem;
+}
+
+.email-label {
+  color: #aaa;
+}
+
+.myEmail {
+  color: #00BE67;
+  text-decoration: none;
+
+  transition:
+    color 150ms ease,
+    text-shadow 150ms ease;
+}
+
+.myEmail:hover {
+  color: #F500BD;
+
+  text-shadow:
+    0 0 8px rgba(245, 0, 189, 0.35);
+}
+
+
+.copybtn {
+  width: 70px;
+  height: 32px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+
+  color: #00BE67;
+
+  background: transparent;
+
+  border: 1px solid #00BE67;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.copybtn:hover,
+.copybtn:focus-visible {
   background-color: #00BE67;
-  border-radius: 0.5rem;
-  color:#001D31;
-  border-radius: 0.5rem;
-  text-shadow: 0 0 2em #FFF7,
-  0 0 2em  #001D31;
-  box-shadow: inset 0 0 0.9rem  #00BE67,
-              0 0 0.9rem  #00BE67;
+  color: #001D31;
+
+  box-shadow:
+    0 0 12px rgba(0, 200, 150, 0.35);
 }
 
-.Toastify__toast-theme--colored.Toastify__toast--default {
-    font-family: Tomorrow, sans-serif;
-    background-color: #16b5f9;
-    border-radius: 0.5rem;
-    color: #001D31;
-    text-shadow: 0 0 2em #FFF7, 0 0 2em #001D31;
-    box-shadow: inset 0 0 0.9rem #18b6ce, 0 0 0.9rem #77a9db;
+.copybtn:focus-visible {
+  outline: 2px solid #F500BD;
+  outline-offset: 4px;
 }
 
 
-.Toastify__progress-bar--error {
-  background-color: #e129cf;
-  box-shadow: inset 0 0 1.2rem  #f874f2,
-              0 0 1.2rem  #ed50ea;
+.contact-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 30px;
+
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.35);
 }
 
-.Toastify__progress-bar--success{
-    background-color: #95fccc;
-    box-shadow: inset 0 0 1.2rem  #8ef298,
-                0 0 1.2rem  #a5f7c0;
+.contact-divider::before,
+.contact-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background:
+    rgba(255, 255, 255, 0.08);
 }
 
-/* close button */
-.Toastify__close-button{
-   color:#001D31;
-   transition: 0.7s ease-in;
-   cursor: pointer;
+.contact-divider span {
+  white-space: nowrap;
 }
 
-.Toastify__close-button:hover,
-.Toastify__close-button:focus {
-  color: #00A1D5;
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
 }
 
-@media screen and (max-width:637px) {
-    .copybtn{
-        margin-top:5px;
-    }
-    .formHint{
-        bottom:20px !important;
-    }
+
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-family: "Courier New", monospace;
+
+  color: #00BE67;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  text-shadow:
+    0 0 8px rgba(0, 190, 103, 0.35);
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 1.2rem;
+  font-family: Tomorrow, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
+  background:
+    rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 190, 103, 0.35);
+  border-radius: 6px;
+  resize: vertical;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.contactForm input {
+  min-height: 50px;
+}
+
+.contactForm textarea {
+  min-height: 160px;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(170, 210, 190, 0.55);
+  font-family: Tomorrow, sans-serif;
+  font-size: 0.9rem;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus,
+.contactForm input.focused,
+.contactForm textarea.focused {
+  outline: none;
+
+  border-color: #00BE67;
+
+  background:
+    rgba(0, 0, 0, 0.35);
+
+  box-shadow:
+    0 0 12px rgba(0, 190, 103, 0.18);
+}
+
+
+.submit-button {
+  align-self: flex-start;
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  padding: 0.65em 1.4em;
+
+  font-family: Tomorrow, sans-serif;
+  font-size: 1rem;
+
+  color: #F500BD;
+
+  background: transparent;
+
+  border: 2px solid #F500BD;
+  border-radius: 0.35em;
+
+  cursor: pointer;
+
+  text-shadow:
+    0 0 0.2em #FFF7,
+    0 0 0.3em #F500BD;
+
+  box-shadow:
+    inset 0 0 0.6rem #F500BD,
+    0 0 0.6rem #F500BD;
+
+  transition:
+    color 150ms linear,
+    background-color 150ms linear,
+    box-shadow 150ms linear;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  color: #01111c;
+
+  background-color: #F500BD;
+
+  box-shadow:
+    0 0 2em 0.5em #F500BD;
+
+  text-shadow: none;
+}
+
+.submit-button:focus-visible {
+  outline: 2px solid #00BE67;
+  outline-offset: 5px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-panel,
+  .copybtn,
+  .myEmail,
+  .contactForm input,
+  .contactForm textarea,
+  .submit-button {
+    animation: none;
+    transition: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  #ContactMe {
+    margin-top: 10vh;
+    padding: 30px 1.5rem;
+  }
+
+  .contact-panel {
+    padding: 30px;
+  }
+
+  .contact-title {
+    margin-bottom: 2rem;
+  }
+
+  .contact-intro h2 {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #ContactMe {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    padding: 25px 1.25rem;
+  }
+
+  .contact-panel {
+    padding: 22px;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .contact-terminal {
+    margin-bottom: 25px;
+  }
+
+  .terminal-text {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-intro h2 {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .contact-intro p {
+    font-size: 0.9rem;
+  }
+
+  .contact-email {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .copybtn {
+    margin-top: 3px;
+  }
+
+  .contactForm {
+    gap: 20px;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
 }
