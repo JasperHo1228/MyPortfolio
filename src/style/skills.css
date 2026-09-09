@@ -32,158 +32,6 @@
 }
 
 
-.onion-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 500px;
-}
-
-.onion-img {
-  height: 340px;
-  margin-bottom: 150px;
-}
-
-
-@media (min-width: 768px) {
-  .onion-wrapper {
-    align-self: start;
-  }
-}
-
-.onion-img.onion-appear-animation {
-  animation: onionAnimation 1s forwards;
-}
-
-
-/* Original SVG size */
-
-.onion-svg {
-  height: 435px;
-  width: 380px;
-}
-
-.left-first-layer {
-  stroke: #F4C1E2;
-  fill: #001D31;
-  stroke-width: 6;
-  cursor: pointer;
-  transition: all 1.5s ease-in-out;
-}
-
-.left-second-layer {
-  stroke: #E2ACD1;
-  fill: #001D31;
-  stroke-width: 6;
-  cursor: pointer;
-}
-
-.left-third-layer {
-  stroke: #D193C1;
-  fill: #001D31;
-  stroke-width: 6;
-  cursor: pointer;
-}
-
-.left-fourth-layer {
-  stroke: #C17CB3;
-  fill: #001D31;
-  stroke-width: 6;
-  cursor: pointer;
-}
-
-.left-fifth-layer {
-  stroke: #AF64A1;
-  fill: #001D31;
-  stroke-width: 6;
-  cursor: pointer;
-}
-
-
-.right-first-layer {
-  fill: #a92a7c;
-  stroke: #b949c3;
-  stroke-width: 8;
-}
-
-.right-second-layer {
-  fill: #ba2c86;
-  stroke: #b53fc0;
-  stroke-width: 8;
-}
-
-.right-third-layer {
-  fill: #b95498;
-  stroke: #c95dd3;
-  stroke-width: 8;
-}
-
-
-
-@keyframes onionAnimation {
-
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translateX(40px);
-  }
-
-  80% {
-    transform: translateX(-30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-
-
-.left-first-layer.active-layer {
-  fill: #F4C1E2;
-  animation: clickColor 1s forwards;
-}
-
-.left-second-layer.active-layer {
-  fill: #E2ACD1;
-  animation: clickColor 1s forwards;
-}
-
-.left-third-layer.active-layer {
-  fill: #D193C1;
-  animation: clickColor 1s forwards;
-}
-
-.left-fourth-layer.active-layer {
-  fill: #C17CB3;
-  animation: clickColor 1s forwards;
-}
-
-.left-fifth-layer.active-layer {
-  fill: #AF64A1;
-  animation: clickColor 1s forwards;
-}
-
-
-@keyframes clickColor {
-
-  0% {
-    transform: translate(-200px, 0);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
 
 .motto {
   width: 100%;
@@ -658,20 +506,6 @@
 
 
 
-.textHintClick {
-  font-family: Minecraftia;
-  fill: #00BE67;
-}
-
-.arrowHints {
-  fill: #00BE67;
-}
-
-.animated-click-hints {
-  animation:
-    moveDown 800ms linear infinite;
-}
-
 .skill-panel-back {
   margin-left: auto;
   flex-shrink: 0;
@@ -739,27 +573,6 @@
     gap: 40px;
   }
 
-  /* Give the onion its own space */
-  .onion-wrapper {
-    width: 100%;
-    min-height: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .onion-img {
-    height: auto;
-    margin-bottom: 0;
-  }
-
-  .onion-svg {
-    width: 350px;
-    height: auto;
-    display: block;
-  }
-
   .motto {
     width: 100%;
     max-width: 650px;
@@ -796,31 +609,6 @@
   .skillset-content {
     width: 92%;
     gap: 35px;
-  }
-
-  /* Onion gets its own contained area */
-  .onion-wrapper {
-    width: 100%;
-    min-height: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .onion-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0;
-
-    display: flex;
-    justify-content: center;
-  }
-
-  .onion-svg {
-    width: min(82vw, 340px);
-    height: auto;
-    display: block;
   }
 
   /* Motto / skill panel */
@@ -892,11 +680,6 @@
     gap: 30px;
   }
 
-  .onion-svg {
-    width: min(78vw, 310px);
-    height: auto;
-  }
-
   .skillToolContainer {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -914,10 +697,6 @@
     gap: 25px;
   }
 
-  .onion-svg {
-    width: 270px;
-    height: auto;
-  }
 
   .motto {
     padding: 20px 15px;

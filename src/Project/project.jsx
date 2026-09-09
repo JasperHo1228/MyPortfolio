@@ -71,7 +71,7 @@ function Project() {
   
   return (
     <div className='project' id='Project'>
-      <h1><div className='green-title'>Project</div></h1>
+      <h1><div className='red-title'>Project</div></h1>
       <div className='project-container'>
         {projects.map((link, index) => (
           <div className='frame frame-container'
@@ -96,7 +96,7 @@ function Project() {
                 <div className="detailbtn" 
                   onClick={() => handleMoreDetailClick(index)}>
                    <div className="gradient-text">
-                        More Detail
+                        &gt; view.details()
                     </div>
                 </div>
               </div>

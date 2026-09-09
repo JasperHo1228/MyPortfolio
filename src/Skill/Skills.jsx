@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer, useRef } from 'react';
 import '../style/skills.css';
+import '../style/onion.css';
 
 import Onion from '../component/onion.jsx';
 import LayerData from './skill_json';

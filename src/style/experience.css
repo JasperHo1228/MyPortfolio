@@ -1,419 +1,734 @@
-#Experience{
+#Experience {
+  width: 100%;
   margin-top: 3vh;
   margin-bottom: 10vh;
   padding-top: 5px;
 }
 
-.timeline_experience{
-    justify-content: center;
-    align-items: center;
-    display: block;
-    position: relative;
-}
-
-.main-experience-container{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin:100px auto;
-    max-width: 1200px;
-}
-
-.experience_container{
-    padding: 10px 50px;
-    width: 50%;
-    position: relative;
-    opacity: 0;
-  }
-
-.text-box{
-    padding:20px 30px;
-    position: relative;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: 600;
-    background-color: #0d3d4d;
-    transition: 1s ease-in;
-}
-
-.left_position{
-    left:0;
-}
-
-.right_position{
-    left:50%;
-}
-
-/* you forgot to set the width and height that's why the backgroud width will increase */
-.experience_container .experienceIcon{
-    position: absolute;
-    font-size: 2rem;
-    top:30px;
-    width: 40px;
-    height: 43px;
-    z-index: 2;
-    background-color: #f500bd;
-    padding: 4px;
-    border-radius: 50%;
-    right: -20px; 
-    color: #001D31;
-}
-
-
-.right_position .experienceIcon {
-    left: -21px; 
-}
-
-.timeline_container {
+.timeline_experience {
   position: relative;
-}
-
-/* arrow */
-.timeline_experience::before { 
-  content: '';
-  width: 0; 
-  height: 0; 
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 30px solid #f500bd;
-  position: absolute;
-  left: calc(50% - 15.5px);
-  top: 0;
-  transform: translateY(90px) rotate(-90deg);
-  opacity: 0;
-}
-
-/* vertical line */
-.timeline_experience::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 0;
-  background-color: #f500bd;
-  top: 120px;
-  left:50%;
-  transform: translateX(-50%);
-  z-index: -1; 
-}
-  
-.timeline-container.animate-timeline::before {
-  animation: arrowAppear 0.3s forwards;
-}
-   @keyframes arrowAppear {
-    0%{
-      opacity: 0;
-    }
-    50%{
-       opacity: 0.5;
-    }
-    100%{
-      opacity: 1;
-    }
-   }
-
-  
-  .timeline-container.animate-timeline::after {
-    animation: timelineMove 2s forwards; 
-  }
-  
-  @keyframes timelineMove {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: 95%;
-    }
-  }
-  
-.left-arrow{
-    height:0;
-    width:0;
-    position: absolute;
-    top:28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid #0d3d4d;
-    right:-15px;
-}
-
-.right-arrow{
-    height:0;
-    width:0;
-    position: absolute;
-    top:28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid #0d3d4d;
-    left:-15px;
+  display: block;
+  width: 100%;
 }
 
 .experience-title{
-   color:#0fb8fa;
-   font-family: Tomorrow, sans-serif;
-}
-
-.experience-subtitle{
-  color:#0fb8fa;
-  font-family: Tomorrow, sans-serif;
-}
-
-.experience-date{
-   color:#0fb8fa;
-   font-family: Tomorrow, sans-serif;
-}
-
-.experience-contribution{
-   color:#f500bd;
-   font-family: Tomorrow, sans-serif;
-   overflow: hidden;
-   max-height: 0;
-   transition: max-height 2.2s;
-}
-
-.experience_container.right_position.animate-container {
-  animation: bounce-in-right 1s forwards;
-}
-
-.experience_container.left_position.animate-container {
-  animation:  bounce-in-left 1s forwards;
-}
-
-@keyframes bounce-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(-40px);
-  }
-
-  80% { transform: translateX(30px); }
-  100% { 
-    opacity: 1;
-    transform: translateX(0); }
-}
-
-@keyframes bounce-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(40px);
-  }
-
-  80% { transform: translateX(-30px); }
-  100% { 
-    opacity: 1;
-    transform: translateX(0); }
-}
-
-.TapMebtn{
-  position: relative;
-  font-family: Tomorrow, sans-serif;
-  border:#f500bd solid;
-  color:#f500bd;
-  border-radius: 0.5rem;
-  display: block;
-  height: 100%;
-  width: 50%;
-  left:25%;
-  padding:0.5rem 1.2rem;
-  justify-content: center;
   text-align: center;
-  cursor: pointer;
 }
 
-.TapMebtn:hover{
-  color:#0d3d4d;
-  background-color: #f500bd;
-  text-shadow: 0 0 0.2em #FFF7,
-               0 0 0.5em  #0d3d4d;
-  box-shadow: inset 0 0 1rem  #F500BD,
-                    0 0 1rem  #F500BD;
-  transition: ease-in-out 0.5s ;
-}
 
-/* action need to be done when trigger the className:moreInfoVisible */
-.moreInfoVisible .experience-contribution{
+.main-experience-container {
   position: relative;
-  display: block;
-  animation:  contributionInfo 1s forwards;
-  max-height:400px;
+  width: min(1200px, 100%);
+  margin: 100px auto 0;
 }
 
-.moreInfoVisible .TapMebtn{
-  display: none;
-}
 
-/* Trigger closing animation when a new button is clicked */
-.moreInfoVisible[closing] {
-  animation: close-contribution 1s forwards;
- 
-}
-
-/* show contribution animation */
-@keyframes contributionInfo {
-  0%{
-   opacity: 0;
-  }
-  100%{
-   opacity: 1;
-  }
-}
-
-/* close button control and style */
-.Experience_closebtn{
+.timeline_experience::after {
+  content: "";
   position: absolute;
-  color:#0fb8fa;
-  left:10px;
-  top: 10px;
-  width: 18px; /* Set equal width and height */
-  height: 18px; /* Set equal width and height */
+
+  width: 2px;
+  height: 0;
+
+  top: 120px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 190, 103, 0.9),
+    rgba(0, 190, 103, 0.25)
+  );
+
+  z-index: 0;
+}
+
+
+/* Timeline animation */
+
+.timeline-container.animate-timeline::after {
+  animation: timelineMove 2s forwards;
+}
+
+@keyframes timelineMove {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 95%;
+  }
+}
+
+
+.timeline_experience::before {
+  content: "";
+
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  top: 115px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border: 2px solid #f500bd;
+  border-radius: 50%;
+
+  background: #001d31;
+
+  box-shadow:
+    0 0 10px rgba(245, 0, 189, 0.35);
+
+  opacity: 0;
+  z-index: 2;
+}
+
+.timeline-container.animate-timeline::before {
+  animation: timelinePointAppear 0.5s forwards;
+}
+
+@keyframes timelinePointAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+.experience_container {
+  position: relative;
+
+  width: 50%;
+  padding: 10px 50px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+  z-index: 1;
+}
+
+
+
+
+.left_position {
+  left: 0;
+}
+
+
+
+
+.right_position {
+  left: 50%;
+}
+
+
+
+.experience_container .experienceIcon {
+  position: absolute;
+
+  top: 30px;
+  right: -20px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: #001d31;
+
+  border: 2px solid #f500bd;
+  border-radius: 50%;
+
+  color: #f500bd;
+
+  font-size: 1.1rem;
+
+  z-index: 3;
+
+  box-shadow:
+    0 0 12px rgba(245, 0, 189, 0.18);
+}
+
+.right_position .experienceIcon {
+  left: -20px;
+}
+
+
+
+.text-box {
+  position: relative;
+
+  padding: 28px 30px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(0, 200, 150, 0.28);
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0, 200, 150, 0.055),
+      rgba(0, 0, 0, 0.3)
+    );
+
+  box-shadow:
+    0 0 30px rgba(0, 200, 150, 0.07);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.text-box:hover {
+  border-color: rgba(0, 190, 103, 0.45);
+
+  box-shadow:
+    0 10px 30px rgba(0, 190, 103, 0.08);
+}
+
+
+
+.experience-card-header {
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* Small WORK / EDUCATION label */
+
+.experience-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: #00be67;
+
+  text-shadow:
+    0 0 8px rgba(0, 190, 103, 0.3);
+}
+
+
+
+
+.experience-title {
+  margin: 0;
+
+  font-family: Minecraftia, sans-serif;
+
+  font-size: clamp(1rem, 2vw, 1.35rem);
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #f500bd;
+}
+
+
+
+
+.experience-subtitle {
+  margin: 8px 0 0;
+
+  font-family: Tomorrow, sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  color: #dddddd;
+}
+
+
+
+
+.experience-date {
+  margin: 8px 0 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 0.8rem;
+
+  line-height: 1.5;
+
+  color: #00be67;
+}
+
+
+
+
+.TapMebtn {
+  position: relative;
+
+  display: block;
+
+  width: 140px;
+
+  margin: 0 auto;
+
+  padding: 0.55rem 1rem;
+
+  box-sizing: border-box;
+
+  border: 1px solid #f500bd;
+  border-radius: 0.35rem;
+
+  background: transparent;
+
+  color: #f500bd;
+
+  font-family: Tomorrow, sans-serif;
+
+  font-size: 0.8rem;
+
+  text-align: center;
+
   cursor: pointer;
-  transition: 0.4s ease-in;
-  vertical-align: middle;
-  border: #0d3d4d solid;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.TapMebtn:hover,
+.TapMebtn:focus-visible {
+  color: #01111c;
+
+  background-color: #f500bd;
+
+  box-shadow:
+    0 0 15px rgba(245, 0, 189, 0.35);
+}
+
+.TapMebtn:focus-visible {
+  outline: 2px solid #00be67;
+  outline-offset: 4px;
+}
+
+
+
+
+.experience-contribution {
+  max-height: 0;
+
+  overflow: hidden;
+
+  margin-top: 0;
+
+  color: #dddddd;
+
+  font-family: Tomorrow, sans-serif;
+
+  font-size: 0.85rem;
+
+  line-height: 1.8;
+
+  opacity: 0;
+
+  transition:
+    max-height 0.8s ease,
+    opacity 0.4s ease,
+    margin-top 0.4s ease;
+}
+
+
+.contribution-terminal {
+  margin-bottom: 15px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 1px;
+
+  color: #00be67;
+
+  text-shadow:
+    0 0 8px rgba(0, 190, 103, 0.25);
+}
+
+
+
+
+.moreInfoVisible .experience-contribution {
+  position: relative;
+
+  display: block;
+
+  max-height: 500px;
+
+  margin-top: 20px;
+
+  opacity: 1;
+}
+
+
+
+.moreInfoVisible .TapMebtn {
   display: none;
 }
 
-.Experience_closebtn:hover {
-  color: #F500BD;
+
+
+
+.Experience_closebtn {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 24px;
+  height: 24px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(0, 190, 103, 0.35);
+  border-radius: 4px;
+
+  background: transparent;
+
+  color: #00be67;
+
+  font-size: 0.65rem;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.Experience_closebtn.btn-hidden {
-  display: none;
+.Experience_closebtn:hover,
+.Experience_closebtn:focus-visible {
+  color: #f500bd;
+
+  border-color: #f500bd;
+
+  box-shadow:
+    0 0 10px rgba(245, 0, 189, 0.2);
+}
+
+.Experience_closebtn:focus-visible {
+  outline: 2px solid #00be67;
+  outline-offset: 3px;
 }
 
 .Experience_closebtn.btn-visible {
-  animation: experience_closebtn 1s forwards;
-  display: block;
+  display: flex;
+
+  animation: experienceCloseButton 0.3s ease forwards;
 }
 
-/* closing the contribute animation */
-.experience-contribution[closing]{
-  display: block;
-  pointer-events: none;
-  animation: close-contribution 1s forwards;
-  transition: ease-out 250ms;
-  transition: max-height 0.8s;
-}
-
-
-@keyframes experience_closebtn {
-  0%{
+@keyframes experienceCloseButton {
+  from {
     opacity: 0;
-  }
-  50%{
-    opacity: 0.5;
+    transform: scale(0.8);
   }
 
-  100%{
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+.left-arrow {
+  position: absolute;
+
+  top: 28px;
+  right: -15px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgba(0, 200, 150, 0.28);
+
+  z-index: 1;
+}
+
+.right-arrow {
+  position: absolute;
+
+  top: 28px;
+  left: -15px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgba(0, 200, 150, 0.28);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   DESKTOP ENTRY ANIMATION
+========================================= */
+
+.experience_container.right_position.animate-container {
+  animation: experience-in-right 0.8s ease forwards;
+}
+
+.experience_container.left_position.animate-container {
+  animation: experience-in-left 0.8s ease forwards;
+}
+
+
+@keyframes experience-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes experience-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-container.animate-timeline::after,
+  .timeline-container.animate-timeline::before,
+  .experience_container.right_position.animate-container,
+  .experience_container.left_position.animate-container,
+  .Experience_closebtn.btn-visible {
+    animation: none;
+  }
+
+  .experience_container {
     opacity: 1;
   }
-}
 
-@keyframes close-contribution{
-  0%{
+  .timeline_experience::after {
+    height: 95%;
+  }
+
+  .timeline_experience::before {
     opacity: 1;
   }
-  100%{
-    opacity: 0;
+
+  .TapMebtn,
+  .text-box,
+  .Experience_closebtn,
+  .experience-contribution {
+    transition: none;
   }
 }
 
-/* screen size tuning */
-@media screen and (max-width: 1160px){
-  .timeline_experience{
-    margin-bottom:25%;
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+  .experience_container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .text-box {
+    padding: 25px;
+  }
+
+  .experience-title {
+    font-size: 1rem;
   }
 }
+
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media screen and (max-width: 758px) {
-
-    .timeline_experience{
-        margin: 50px auto;
-     }
-
-    .timeline_experience::before{
-      left:16px;
-
-    }
-    .timeline_experience::after{
-      left:31px;
-    }
-
-     .experience_container{
-        width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
-        position: relative;
-     }
-
-     .text-box{
-        font-size:13px;
-     }
-
-     .right_position{
-        text-align: left;
-        width:100%;
-        left:0;
-     }
-  
-     .experienceIcon{
-        float: none;
-        clear: none;
-     }
-
-     .right_position .experienceIcon,  
-     .left_position .experienceIcon {
-        left: 10px;
-      }
-
-
-      .experience_container.left_position.animate-container,
-      .experience_container.right_position.animate-container { 
-        animation: bounce-in-ver2 1s forwards;
-      }
-
-      @keyframes bounce-in-ver2{
-        0% {
-          opacity: 0;
-          transform: translateY(-500px);
-        }
-        60% {
-          opacity: 1;
-          transform: translateY(50px);
-        } 
-        80% { transform: translateY(-30px); }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-     .right-arrow, .left-arrow{
-        border-right:15px solid #0d3d4d;
-        border-left: 0;
-        left: -15px;
-     }
-     
-     .Experience_closebtn{
-       padding-left: 2.5px;
-       padding-top:2.2px;
-     }
+  #Experience {
+    margin-bottom: 15vh;
   }
- 
-  @media screen and (max-width: 600px) {
-    .text-box{
-      font-size: 10px;
+
+  .main-experience-container {
+    margin-top: 70px;
+  }
+
+  /* Move timeline to the left */
+
+  .timeline_experience::before {
+    left: 31px;
+  }
+
+  .timeline_experience::after {
+    left: 31px;
+
+    transform: translateX(-50%);
+  }
+
+  /* Full width cards */
+
+  .experience_container {
+    width: 100%;
+
+    left: 0 !important;
+
+    padding:
+      10px
+      25px
+      10px
+      70px;
+  }
+
+  /* Icons */
+
+  .experience_container .experienceIcon,
+  .right_position .experienceIcon,
+  .left_position .experienceIcon {
+    left: 10px;
+    right: auto;
+
+    top: 30px;
+  }
+
+  /* Card */
+
+  .text-box {
+    padding: 24px 22px;
+  }
+
+  /* Remove desktop arrows */
+
+  .left-arrow,
+  .right-arrow {
+    left: -15px;
+    right: auto;
+
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+
+    border-right: 15px solid rgba(0, 200, 150, 0.28);
+    border-left: 0;
+  }
+
+  /* Mobile animation */
+
+  .experience_container.left_position.animate-container,
+  .experience_container.right_position.animate-container {
+    animation: experience-in-mobile 0.7s ease forwards;
+  }
+
+  @keyframes experience-in-mobile {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
     }
-    .TapMebtn{
-      width: 100%;
-      left: 0;
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+  .experience-section-title {
+    font-size: 1.5rem;
+  }
+
+  .main-experience-container {
+    margin-top: 55px;
+  }
+
+  .experience_container {
+    padding-left: 65px;
+    padding-right: 15px;
+  }
+
+  .text-box {
+    padding: 22px 18px;
+  }
+
+  .experience-title {
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+  }
+
+  .experience-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .experience-date {
+    font-size: 0.7rem;
+  }
+
+  .experience-contribution {
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .TapMebtn {
+    width: 100%;
+  }
+
+  .Experience_closebtn {
+    top: 12px;
+    right: 12px;
+  }
+}

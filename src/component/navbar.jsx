@@ -1,37 +1,82 @@
-import '../style/navbar.css';
-import React from 'react';
-import { myRoute } from './Route.jsx';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImCross } from 'react-icons/im';
-function NavBar({isNavbarOpen, togglerNavbar}) {
-  const myOwnRoute = ([...myRoute]);
- 
-  return (
-    <div className='navbar'>
-      {/* Overlay to reduce the brightness */}
-       <nav id={isNavbarOpen ? 'open' : 'close'} >
-        <ul className="wholeul">
-          {isNavbarOpen ? (
-            <hamburger-icon onClick={togglerNavbar} className="close-icon">
-              <ImCross />
-            </hamburger-icon>
-          ) : (
-            <hamburger-icon onClick={togglerNavbar} className="menu-icon">
-              <GiHamburgerMenu />
-            </hamburger-icon>
-          )}
+import React, { useState } from "react";
+import { myRoute } from "./Route.jsx";
+import "../style/navbar.css";
 
-          {myOwnRoute.map((link) => (
-            <li className="remove" key={link.id}>
-                  <a href={link.direct} className="barlink"> 
-                  <span className="icon">
-                   <ion-icon>{link.icon}</ion-icon>
-                  </span>
-              <span className='navtitle'>{link.title}</span>
-               </a>
+function NavBar() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const openNavbar = () => {
+    setIsNavbarOpen(true);
+  };
+
+  const closeNavbar = () => {
+    setIsNavbarOpen(false);
+  };
+
+  return (
+    <div className="navbar">
+
+      {/* Click outside to close */}
+      {isNavbarOpen && (
+        <div
+          className="navbar-overlay"
+          onClick={closeNavbar}
+          aria-hidden="true"
+        />
+      )}
+
+      <nav
+        className={`desktop-navbar ${
+          isNavbarOpen ? "navbar-open" : "navbar-closed"
+        }`}
+      >
+
+        {/* Hamburger / Cross button */}
+        <button
+          type="button"
+          className={`navbar-toggle ${
+            isNavbarOpen ? "is-open" : ""
+          }`}
+          onClick={
+            isNavbarOpen
+              ? closeNavbar
+              : openNavbar
+          }
+          aria-label={
+            isNavbarOpen
+              ? "Close navigation"
+              : "Open navigation"
+          }
+          aria-expanded={isNavbarOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        {/* Navbar area */}
+        <ul className="navbar-list">
+          {myRoute.map((link) => (
+            <li
+              className="navbar-item"
+              key={link.id}
+            >
+              <a
+                href={link.direct}
+                className="navbar-link"
+              >
+                <span className="navbar-icon">
+                  <ion-icon>{link.icon}</ion-icon>
+                </span>
+
+                <span className="navbar-title">
+                  {link.title}
+                </span>
+              </a>
             </li>
           ))}
         </ul>
+
       </nav>
     </div>
   );

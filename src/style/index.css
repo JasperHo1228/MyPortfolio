@@ -47,13 +47,16 @@ section{
     
 }
 
-.red-title{
+.red-title {
     position: relative;
     font-family: Tomorrow, sans-serif;
     color: #F500BD;
     text-align: center;
-    font-size: 200%;
-    bottom:15px;
+    font-size: 180%;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin: 0;
 }
 
 .green-title{

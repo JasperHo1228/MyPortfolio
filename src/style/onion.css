@@ -1,0 +1,474 @@
+/* =========================================================
+   ONION
+========================================================= */
+
+.onion-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+}
+
+.onion-img {
+  height: 340px;
+  margin-bottom: 150px;
+}
+
+
+@media (min-width: 768px) {
+  .onion-wrapper {
+    align-self: start;
+  }
+}
+
+
+.onion-img.onion-appear-animation {
+  animation: onionAnimation 1s ease-out forwards;
+}
+
+
+/* =========================================================
+   ONION SVG
+========================================================= */
+
+.onion-svg {
+  height: 435px;
+  width: 380px;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LEFT ONION LAYERS
+   Light pink → magenta → violet
+========================================================= */
+
+.left-first-layer {
+  stroke: #FFD1F2;
+  fill: #001D31;
+  stroke-width: 6;
+
+  cursor: pointer;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.left-second-layer {
+  stroke: #F6A8DF;
+  fill: #001D31;
+  stroke-width: 6;
+
+  cursor: pointer;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.left-third-layer {
+  stroke: #E879CB;
+  fill: #001D31;
+  stroke-width: 6;
+
+  cursor: pointer;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.left-fourth-layer {
+  stroke: #D94BB7;
+  fill: #001D31;
+  stroke-width: 6;
+
+  cursor: pointer;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.left-fifth-layer {
+  stroke: #B92A96;
+  fill: #001D31;
+  stroke-width: 6;
+
+  cursor: pointer;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* =========================================================
+   RIGHT-SIDE DEPTH
+   Pink → purple depth
+========================================================= */
+
+.right-first-layer {
+  fill: #9C286F;
+  stroke: #E85BC8;
+  stroke-width: 8;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease;
+}
+
+
+.right-second-layer {
+  fill: #8E286F;
+  stroke: #C94BC0;
+  stroke-width: 8;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease;
+}
+
+
+.right-third-layer {
+  fill: #70245F;
+  stroke: #A847A8;
+  stroke-width: 8;
+
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   Green = interaction
+========================================================= */
+
+.left-first-layer:hover,
+.left-second-layer:hover,
+.left-third-layer:hover,
+.left-fourth-layer:hover,
+.left-fifth-layer:hover {
+  stroke: #00BE67;
+
+  filter:
+    drop-shadow(0 0 5px rgba(0, 190, 103, 0.7))
+    drop-shadow(0 0 14px rgba(0, 190, 103, 0.35));
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   ACTIVE LAYERS
+========================================================= */
+
+.left-first-layer.active-layer {
+  fill: rgba(255, 209, 242, 0.22);
+  stroke: #FFD1F2;
+
+  filter:
+    drop-shadow(0 0 7px rgba(255, 209, 242, 0.75))
+    drop-shadow(0 0 18px rgba(245, 0, 189, 0.35));
+
+  animation: clickColor 0.65s ease-out forwards;
+}
+
+
+.left-second-layer.active-layer {
+  fill: rgba(246, 168, 223, 0.22);
+  stroke: #F6A8DF;
+
+  filter:
+    drop-shadow(0 0 7px rgba(246, 168, 223, 0.75))
+    drop-shadow(0 0 18px rgba(245, 0, 189, 0.35));
+
+  animation: clickColor 0.65s ease-out forwards;
+}
+
+
+.left-third-layer.active-layer {
+  fill: rgba(232, 121, 203, 0.22);
+  stroke: #E879CB;
+
+  filter:
+    drop-shadow(0 0 7px rgba(232, 121, 203, 0.75))
+    drop-shadow(0 0 18px rgba(245, 0, 189, 0.4));
+
+  animation: clickColor 0.65s ease-out forwards;
+}
+
+
+.left-fourth-layer.active-layer {
+  fill: rgba(217, 75, 183, 0.22);
+  stroke: #D94BB7;
+
+  filter:
+    drop-shadow(0 0 7px rgba(217, 75, 183, 0.75))
+    drop-shadow(0 0 18px rgba(245, 0, 189, 0.4));
+
+  animation: clickColor 0.65s ease-out forwards;
+}
+
+
+.left-fifth-layer.active-layer {
+  fill: rgba(185, 42, 150, 0.22);
+  stroke: #B92A96;
+
+  filter:
+    drop-shadow(0 0 7px rgba(185, 42, 150, 0.75))
+    drop-shadow(0 0 18px rgba(245, 0, 189, 0.4));
+
+  animation: clickColor 0.65s ease-out forwards;
+}
+
+
+/* =========================================================
+   ONION ENTRANCE
+========================================================= */
+
+@keyframes onionAnimation {
+
+  0% {
+    opacity: 0;
+    transform:
+      translate(-80px, 20px)
+      scale(0.94);
+  }
+
+  60% {
+    opacity: 1;
+    transform:
+      translate(10px, -4px)
+      scale(1.01);
+  }
+
+  80% {
+    transform:
+      translate(-4px, 2px)
+      scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   LAYER CLICK ANIMATION
+========================================================= */
+
+@keyframes clickColor {
+
+  0% {
+    transform:
+      translate(-80px, 0)
+      scale(0.98);
+
+    opacity: 0.35;
+  }
+
+  55% {
+    transform:
+      translate(8px, 0)
+      scale(1.01);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   ONION CLICK HINT
+========================================================= */
+
+.textHintClick {
+  font-family: Minecraftia;
+  fill: #21f500;
+  filter:
+    drop-shadow(0 0 3px rgba(0, 190, 103, 0.45));
+}
+
+
+/* Arrow */
+
+.arrowHints {
+  fill: #21f500;
+  filter:
+    drop-shadow(0 0 3px rgba(245, 0, 189, 0.65))
+    drop-shadow(0 0 8px rgba(245, 0, 189, 0.3));
+}
+
+
+/* Arrow animation */
+
+.animated-click-hints {
+  animation:
+    onionArrow 1.2s ease-in-out infinite;
+}
+
+
+@keyframes onionArrow {
+
+  0% {
+
+    transform:
+      translateY(-3px);
+  }
+
+  50% {
+
+
+    transform:
+      translateY(5px);
+  }
+
+  100% {
+    transform:
+      translateY(-3px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media screen and (max-width: 987px) {
+
+  .onion-wrapper {
+    width: 100%;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .onion-img {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .onion-svg {
+    width: 350px;
+    height: auto;
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .onion-wrapper {
+    width: 100%;
+    min-height: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .onion-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .onion-svg {
+    width: min(82vw, 340px);
+    height: auto;
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .onion-svg {
+    width: min(78vw, 310px);
+    height: auto;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media screen and (max-width: 340px) {
+
+  .onion-svg {
+    width: 270px;
+    height: auto;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .onion-img.onion-appear-animation,
+  .left-first-layer.active-layer,
+  .left-second-layer.active-layer,
+  .left-third-layer.active-layer,
+  .left-fourth-layer.active-layer,
+  .left-fifth-layer.active-layer,
+  .animated-click-hints {
+    animation: none;
+  }
+
+  .left-first-layer,
+  .left-second-layer,
+  .left-third-layer,
+  .left-fourth-layer,
+  .left-fifth-layer,
+  .right-first-layer,
+  .right-second-layer,
+  .right-third-layer {
+    transition: none;
+  }
+}
