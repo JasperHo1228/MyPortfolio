@@ -331,11 +331,9 @@
 
   .mobile-navbar-overlay {
     position: fixed;
-
     inset: 0;
 
     background: rgba(0, 0, 0, 0.35);
-
     backdrop-filter: blur(4px);
 
     z-index: 100;
@@ -356,7 +354,6 @@
     height: 100vh;
 
     box-sizing: border-box;
-
     padding: 110px 20px 30px;
 
     background: #001D31;
@@ -384,10 +381,14 @@
 
   /* ---------------------------------------------------
      Mobile Toggle
+     
+     IMPORTANT:
+     The toggle is NOT inside .mobile-navbar-menu.
+     Therefore it remains visible when the menu is closed.
      --------------------------------------------------- */
 
   .mobile-navbar-toggle {
-    position: absolute;
+    position: fixed;
 
     top: 20px;
     left: 20px;
@@ -408,7 +409,7 @@
 
     cursor: pointer;
 
-    z-index: 102;
+    z-index: 103;
 
     box-shadow:
       0 0 20px rgba(0, 190, 103, 0.06);
@@ -420,7 +421,9 @@
   }
 
 
-  /* Mobile hamburger lines */
+  /* ---------------------------------------------------
+     Mobile Hamburger Lines
+     --------------------------------------------------- */
 
   .mobile-navbar-toggle span {
     position: absolute;
@@ -454,7 +457,9 @@
   }
 
 
-  /* Hover */
+  /* ---------------------------------------------------
+     Toggle Hover
+     --------------------------------------------------- */
 
   .mobile-navbar-toggle:hover {
     border-color: rgba(245, 0, 189, 0.7);
@@ -471,7 +476,7 @@
 
 
   /* ---------------------------------------------------
-     Mobile Hamburger → Cross
+     Hamburger → Cross
      --------------------------------------------------- */
 
   .mobile-navbar-toggle.is-open span:nth-child(1) {
@@ -491,7 +496,9 @@
   }
 
 
-  /* Focus */
+  /* ---------------------------------------------------
+     Focus
+     --------------------------------------------------- */
 
   .mobile-navbar-toggle:focus-visible {
     outline: 2px solid #00BE67;
@@ -500,7 +507,7 @@
 
 
   /* ---------------------------------------------------
-     Mobile Navigation
+     Mobile Navigation List
      --------------------------------------------------- */
 
   .mobile-navbar-list {
@@ -515,7 +522,9 @@
   }
 
 
-  /* Mobile links */
+  /* ---------------------------------------------------
+     Mobile Links
+     --------------------------------------------------- */
 
   .mobile-navbar-link {
     display: flex;
@@ -573,7 +582,9 @@
   }
 
 
-  /* Hover */
+  /* ---------------------------------------------------
+     Hover
+     --------------------------------------------------- */
 
   .mobile-navbar-link:hover,
   .mobile-navbar-link:focus-visible {

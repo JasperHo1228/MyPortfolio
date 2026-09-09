@@ -25,36 +25,31 @@ function MobileNavBar() {
         />
       )}
 
+      {/* Hamburger / Cross button */}
+      <button
+        type="button"
+        className={`mobile-navbar-toggle ${
+          isNavbarOpen ? "is-open" : ""
+        }`}
+        onClick={isNavbarOpen ? closeNavbar : openNavbar}
+        aria-label={
+          isNavbarOpen
+            ? "Close navigation"
+            : "Open navigation"
+        }
+        aria-expanded={isNavbarOpen}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      {/* Sliding Navbar */}
       <div
         className={`mobile-navbar-menu ${
           isNavbarOpen ? "is-open" : ""
         }`}
       >
-
-        {/* Hamburger / Cross button */}
-        <button
-          type="button"
-          className={`mobile-navbar-toggle ${
-            isNavbarOpen ? "is-open" : ""
-          }`}
-          onClick={
-            isNavbarOpen
-              ? closeNavbar
-              : openNavbar
-          }
-          aria-label={
-            isNavbarOpen
-              ? "Close navigation"
-              : "Open navigation"
-          }
-          aria-expanded={isNavbarOpen}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        {/* Navbar area */}
         <ul className="mobile-navbar-list">
           {myRoute.map((link) => (
             <li
@@ -77,8 +72,8 @@ function MobileNavBar() {
             </li>
           ))}
         </ul>
-
       </div>
+
     </div>
   );
 }
